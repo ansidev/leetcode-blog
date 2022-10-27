@@ -1,0 +1,16 @@
+---
+import Default from '@/layouts/Default.astro'
+import PostItem from '@/components/PostItem.astro'
+import siteConfig from '@/site.config'
+const posts = await Astro.glob('./*.md')
+---
+
+<Default title={siteConfig.title}>
+  <main class="flex justify-center">
+    <div class="flex flex-col">
+      {posts
+        .filter(p => /^\/\d{4}\-/i.test(p.url as string))
+        .map((p) => <PostItem title={`${p.frontmatter.title}`} href={`./${p.frontmatter.slug}`} />)}
+    </div>
+  </main>
+</Default>

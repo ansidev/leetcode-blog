@@ -1,0 +1,19 @@
+---
+import Icon from '@/components/Icon.astro'
+
+export interface Props {
+  title: string
+  href: string
+}
+
+const { href, title, body } = Astro.props
+---
+<a href={href}>
+  <div class="w-full inline-flex items-center justify-between mx-3, my-2 p-3 border-2 border-solid border-orange-500 rounded hover:bg-orange-500 hover:text-white">
+    <div>
+      <h2>{title}</h2>
+      <p>{body}</p>
+    </div>
+    <span class="px-2"><Icon name="bi:arrow-right" /></span>
+  </div>
+</a>

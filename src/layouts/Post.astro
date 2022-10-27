@@ -1,0 +1,33 @@
+---
+import Default from './Default.astro'
+import PostHeader from "@components/PostHeader.astro"
+import Breadcrumb from "@components/Breadcrumb.astro"
+
+export interface Props {
+  title: string
+  slug: string
+  author: string
+  date: Date
+}
+
+const { frontmatter } = Astro.props
+---
+
+<Default title={frontmatter.title}>
+  <article class="flex justify-center my-4">
+    <div class="astronomy prose dark:prose-dark">
+      <Breadcrumb items={[
+        { icon: '', title: frontmatter.title, url: '' }
+      ]} />
+      <PostHeader
+        title={frontmatter.title}
+        slug={frontmatter.slug}
+        author={frontmatter.author}
+        date={frontmatter.date}
+      />
+      <div class="p-4 border rounded">
+        <slot />
+      </div>
+    </div>
+  </article>
+</Default>
