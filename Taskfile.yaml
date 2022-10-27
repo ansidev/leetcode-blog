@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  build_prod:
+    desc: Build production site
+    cmds:
+      - pnpm build
+    silent: true
+
+  commit:
+    desc: Commit code for a specific LeetCode problem
+    cmds:
+      - >-
+        git commit -m "content: add solution for problem #{{.CLI_ARGS}}"
+    silent: true
