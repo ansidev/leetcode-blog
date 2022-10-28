@@ -3,7 +3,7 @@ layout: ../layouts/Post.astro
 title: "LeetCode Problems"
 slug: "leetcode-problems"
 author: "ansidev"
-date: "26 Oct 2022"
+pubDate: "2022-10-26T17:15:23+07:00"
 ---
 ## LeetCode Problems
 
