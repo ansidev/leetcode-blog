@@ -1,26 +1,30 @@
 ---
 import siteConfig from '@/site.config'
+import Icon from './Icon.astro'
 import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
 
 const { title, description, author } = siteConfig
 ---
-<header class="flex justify-between items-center my-4">
-  <div />
-  <div class="header-meta flex mx-3">
-    <div class="header-logo mr-3">
-      <a href="/">
-        <img src={author.avatar} alt="Author's avatar" class="rounded-full" style="margin-bottom: 0 !important;" width="56" height="56">
+<header class="sticky top-0 z-10  w-full mx-auto px-4 md:px-7 py-4 bg-white dark:bg-zinc-900 border-b border-stale-300 dark:border-slate-600">
+  <div class="header flex justify-between items-center">
+    <div class="header-meta flex mr-3">
+      <div class="header-logo mr-3">
+        <a href="/">
+          <img src={author.avatar} alt="Author's avatar" class="rounded-full" style="margin-bottom: 0 !important;" width="56" height="56">
+        </a>
+      </div>
+      <div class="flex flex-col">
+        <h1 class="text-xl uppercase font-semibold">
+          <a href="/">{title}</a>
+        </h1>
+        <h2 class="text-default text-sm md:text-base italic">{description}</h2>
+      </div>
+    </div>
+    <div class="header-button flex items-center">
+      <a href="/rss.xml" class="hover:text-black dark:hover:text-white">
+        <Icon name="bi:rss-fill" size={20} clazz="ml-2"/>
       </a>
+      <ThemeSwitcher />
     </div>
-    <div class="flex flex-col">
-      <h1 class="text-xl uppercase font-semibold">
-        <a href="/">{title}</a>
-      </h1>
-      <h2 class="text-default italic">{description}</h2>
-    </div>
-  </div>
-  <div class="header-button">
-    <ThemeSwitcher />
   </div>
 </header>
-<hr class="my-4"/>

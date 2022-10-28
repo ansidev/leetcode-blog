@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props
 ---
 
 <Default title={frontmatter.title}>
-  <article class="post my-4">
+  <article class="post px-4 md:px-0 my-8">
     <Breadcrumb items={[
       { icon: '', title: frontmatter.title, url: '' }
     ]} />
