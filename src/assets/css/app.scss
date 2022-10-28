@@ -40,6 +40,7 @@ a.no-hover {
 
   a {
     @extend %link;
+    @apply break-words;
   }
 
   li:has(> a.new) {

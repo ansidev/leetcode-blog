@@ -24,6 +24,10 @@ export default defineConfig({
     sitemap(),
   ],
   markdown: {
+    shikiConfig: {
+      // Enable word wrap to prevent horizontal scrolling
+      wrap: true,
+    },
     remarkPlugins: [
       [
         wikiLinkPlugin,
