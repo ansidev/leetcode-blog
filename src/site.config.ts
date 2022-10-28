@@ -16,5 +16,11 @@ export default {
     googleAnalytics: {
       id: 'G-TB4840HQCP',
     },
+    swetrix: {
+      pid: 'gSY5AkchhVrX',
+      initOptions: {
+        debug: true,
+      },
+    },
   }
 }
