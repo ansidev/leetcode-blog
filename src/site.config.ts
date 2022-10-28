@@ -11,5 +11,10 @@ export default {
     twitter: 'https://twitter.com/ansidev',
     telegram: 'https://t.me/ansidev',
     reddit: 'https://reddit.com/u/ansidev',
+  },
+  plugins: {
+    googleAnalytics: {
+      id: 'G-TB4840HQCP',
+    },
   }
 }
