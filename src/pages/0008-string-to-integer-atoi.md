@@ -3,7 +3,7 @@ layout: ../layouts/Post.astro
 title: "8. String to Integer (atoi)"
 slug: "0008-string-to-integer-atoi"
 author: "ansidev"
-date: "26 Oct 2022"
+pubDate: "2022-10-26T13:11:00+07:00"
 ---
 ## Problem
 
