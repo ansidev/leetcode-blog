@@ -8,7 +8,6 @@ const projectId = siteConfig?.plugins?.swetrix?.pid
 <script src="https://swetrix.org/swetrix.js" defer></script>
 <script define:vars={{ projectId }}>
   document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded')
     swetrix.init(projectId)
     swetrix.trackViews()
   })

@@ -18,9 +18,6 @@ export default {
     },
     swetrix: {
       pid: 'gSY5AkchhVrX',
-      initOptions: {
-        debug: true,
-      },
     },
   }
 }
