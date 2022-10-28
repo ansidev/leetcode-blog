@@ -1,0 +1,47 @@
+---
+import Icon from '@/components/Icon.astro'
+---
+<button id="theme-switcher-btn" type="button" class="w-8 h-8 p-1 ml-1 mr-1 rounded sm:ml-2">
+  <Icon id="theme-switcher-icon" clazz="text-default" name="bi:moon-fill" size={16} />
+</button>
+<script>
+  import bi from '@iconify-json/bi/icons.json'
+
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+      return 'light'
+  })()
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+
+  window.localStorage.setItem('theme', theme || 'dark')
+
+  const switchTheme = () => {
+    const element = document.documentElement
+    element.classList.toggle("dark")
+    const isDark = element.classList.contains("dark")
+    localStorage.setItem("theme", isDark ? "dark" : "light")
+
+    const themeSwitcherIcon = document.getElementById("theme-switcher-icon")
+    if (isDark) {
+      themeSwitcherIcon!.classList.remove('bi:sun-fill')
+      themeSwitcherIcon!.classList.add('bi:moon-fill')
+      themeSwitcherIcon!.innerHTML = bi.icons['moon-fill'].body
+    } else {
+      themeSwitcherIcon!.classList.add('bi:sun-fill')
+      themeSwitcherIcon!.classList.remove('bi:moon-fill')
+      themeSwitcherIcon!.innerHTML = bi.icons['sun-fill'].body
+    }
+  }
+
+  document.getElementById("theme-switcher-btn")!.addEventListener("click", switchTheme)
+</script>

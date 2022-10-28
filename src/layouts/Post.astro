@@ -14,20 +14,18 @@ const { frontmatter } = Astro.props
 ---
 
 <Default title={frontmatter.title}>
-  <article class="flex justify-center my-4">
-    <div class="astronomy prose dark:prose-dark">
-      <Breadcrumb items={[
-        { icon: '', title: frontmatter.title, url: '' }
-      ]} />
-      <PostHeader
-        title={frontmatter.title}
-        slug={frontmatter.slug}
-        author={frontmatter.author}
-        date={frontmatter.date}
-      />
-      <div class="p-4 border rounded">
-        <slot />
-      </div>
+  <article class="post my-4">
+    <Breadcrumb items={[
+      { icon: '', title: frontmatter.title, url: '' }
+    ]} />
+    <PostHeader
+      title={frontmatter.title}
+      slug={frontmatter.slug}
+      author={frontmatter.author}
+      date={frontmatter.date}
+    />
+    <div class="p-4 border rounded prose dark:prose-invert">
+      <slot />
     </div>
   </article>
 </Default>
