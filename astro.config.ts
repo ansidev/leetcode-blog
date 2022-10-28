@@ -1,9 +1,9 @@
-import { defineConfig } from 'astro/config'
-import { loadEnv } from 'vite'
+import { defineConfig } from "astro/config"
+import { loadEnv } from "vite"
 import tailwind from "@astrojs/tailwind"
-import { remarkReadingTime } from './src/plugins/remark-reading-time'
-import { getWikiLinks } from './src/plugins/link'
-import wikiLinkPlugin from 'remark-wiki-link-plus'
+import { remarkReadingTime } from "./src/plugins/remark-reading-time"
+import { getWikiLinks } from "./src/plugins/link"
+import wikiLinkPlugin from "remark-wiki-link-plus"
 import sitemap from "@astrojs/sitemap"
 
 const env = loadEnv(import.meta.env.MODE, process.cwd())
@@ -21,7 +21,7 @@ export default defineConfig({
         applyBaseStyles: false
       }
     }),
-    sitemap()
+    sitemap(),
   ],
   markdown: {
     remarkPlugins: [
