@@ -8,7 +8,7 @@ export interface Props {
 
 const { href, title, body } = Astro.props
 ---
-<a href={href}>
+<a class="no-hover" href={href}>
   <div class="w-full inline-flex items-center justify-between mx-3, my-2 p-3 border-2 border-solid border-orange-500 rounded hover:bg-orange-500 hover:text-white">
     <div>
       <h2>{title}</h2>
