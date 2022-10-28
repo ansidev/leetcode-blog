@@ -29,7 +29,7 @@ export default defineConfig({
         wikiLinkPlugin,
         {
           permalinks: getWikiLinks(),
-          hrefTemplate: (permalink: string) => permalink === '/' ? '/' : `/${permalink}`
+          hrefTemplate: (permalink: string) => `/${permalink}`
         }
       ],
       remarkReadingTime,

@@ -12,5 +12,5 @@ export const getWikiLinks = () => {
       const { data } = matter(src)
       return { slug: data.slug }
     })
-  return posts.flatMap((post: { slug: any }) => `/${post.slug}`)
+  return posts.flatMap((post: { slug: any }) => `${post.slug}`)
 }
