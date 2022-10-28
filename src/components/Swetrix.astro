@@ -1,0 +1,22 @@
+---
+import siteConfig from '@/site.config'
+
+const projectId = siteConfig?.plugins?.swetrix?.pid
+---
+<!-- Swetrix -->
+<!-- Put this at the end of the <body> tag -->
+<script src="https://swetrix.org/swetrix.js" defer></script>
+<script define:vars={{ projectId }}>
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded')
+    swetrix.init(projectId)
+    swetrix.trackViews()
+  })
+</script>
+<noscript define:vars={{ projectId }}>
+  <img
+    src={`https://api.swetrix.com/log/noscript?pid=${projectId}`}
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>

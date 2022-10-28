@@ -1,8 +1,11 @@
 ---
 import siteConfig from '@/site.config'
+import { isPluginEnabled } from '@/utils/plugin'
 import Icon from '@/components/Icon.astro'
+import GoogleAnalytics from '@/components/GoogleAnalytics.astro'
+import Swetrix from '@/components/Swetrix.astro'
 
-const { author } = siteConfig
+const { author, plugins } = siteConfig
 const { name, nickname, email, homepage, github, twitter, telegram, reddit } = author
 const socialNetworks = { github, twitter, telegram, reddit }
 ---
@@ -21,3 +24,5 @@ const socialNetworks = { github, twitter, telegram, reddit }
     Built with <span class="px-2"><Icon name="bi:suit-heart-fill" /></span> by <span class="px-2"><a href={homepage}>{nickname} ({name})</a>.</span>
   </div>
 </footer>
+{ isPluginEnabled('googleAnalytics') ? <GoogleAnalytics /> : '' }
+{ isPluginEnabled('swetrix') ? <Swetrix /> : '' }

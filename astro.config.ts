@@ -4,6 +4,7 @@ import tailwind from "@astrojs/tailwind"
 import { remarkReadingTime } from "./src/plugins/remark-reading-time"
 import { getWikiLinks } from "./src/plugins/link"
 import wikiLinkPlugin from "remark-wiki-link-plus"
+import partytown from "@astrojs/partytown"
 import sitemap from "@astrojs/sitemap"
 
 const env = loadEnv(import.meta.env.MODE, process.cwd())
@@ -20,6 +21,11 @@ export default defineConfig({
       config: {
         applyBaseStyles: false
       }
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
     }),
     sitemap(),
   ],
