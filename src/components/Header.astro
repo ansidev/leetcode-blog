@@ -1,11 +1,24 @@
 ---
 import siteConfig from '@/site.config'
-const { title, description } = siteConfig
+import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
+
+const { title, description, author } = siteConfig
 ---
-<header class="my-4">
-  <h1 class="text-xl text-center uppercase font-semibold">
-    <a href="/">{title}</a>
-  </h1>
-  <h2 class="text-center italic">{description}</h2>
-  <hr class="my-4"/>
+<header class="flex justify-between items-center my-4">
+  <div />
+  <div class="header-meta flex mx-3">
+    <div class="header-logo mr-3">
+      <img src={author.avatar} alt="Author's avatar" class="rounded-full" style="margin-bottom: 0 !important;" width="56" height="56">
+    </div>
+    <div class="flex flex-col">
+      <h1 class="text-xl uppercase font-semibold">
+        <a href="/">{title}</a>
+      </h1>
+      <h2 class="text-default italic">{description}</h2>
+    </div>
+  </div>
+  <div class="header-button">
+    <ThemeSwitcher />
+  </div>
 </header>
+<hr class="my-4"/>

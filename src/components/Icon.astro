@@ -3,12 +3,13 @@ import bi from '@iconify-json/bi/icons.json'
 import _get from 'lodash.get'
 
 export interface Props {
+  id?: string
   name: string
   size?: number
   clazz?: string
 }
 
-const { name, size = 16, clazz = '' } = Astro.props
+const { id = '', name, size = 16, clazz = '' } = Astro.props
 
 const getIcon = (icon: string) => {
   if (typeof icon !== 'string' || icon.length === 0) {
@@ -33,4 +34,4 @@ const getIcon = (icon: string) => {
 
 const svg = getIcon(name)
 ---
-<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" class={`bi bi-${name} ${clazz}`} viewBox="0 0 16 16" set:html={svg} />
+<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" id={id} class:list={[`bi bi-${name}`, clazz]} viewBox="0 0 16 16" set:html={svg} />
