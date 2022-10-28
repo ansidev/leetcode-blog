@@ -3,7 +3,7 @@ layout: ../layouts/Post.astro
 title: "53. Maximum Subarray"
 slug: "0053-maximum-subarray"
 author: "ansidev"
-date: "26 Oct 2022"
+pubDate: "2022-10-26T13:11:00+07:00"
 ---
 ## Problem
 

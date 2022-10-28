@@ -7,7 +7,7 @@ export interface Props {
   title: string
   slug: string
   author: string
-  date: Date
+  pubDate: Date
 }
 
 const { frontmatter } = Astro.props
@@ -18,12 +18,7 @@ const { frontmatter } = Astro.props
     <Breadcrumb items={[
       { icon: '', title: frontmatter.title, url: '' }
     ]} />
-    <PostHeader
-      title={frontmatter.title}
-      slug={frontmatter.slug}
-      author={frontmatter.author}
-      date={frontmatter.date}
-    />
+    <PostHeader {...frontmatter} />
     <div class="p-4 border rounded prose dark:prose-invert">
       <slot />
     </div>

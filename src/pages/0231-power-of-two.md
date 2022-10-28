@@ -3,7 +3,7 @@ layout: ../layouts/Post.astro
 title: "231. Power of Two"
 slug: "0231-power-of-two"
 author: "ansidev"
-date: "2022-10-27 15:23:12"
+pubDate: "2022-10-27T15:23:12+07:00"
 ---
 ## Problem
 
