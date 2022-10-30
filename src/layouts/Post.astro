@@ -13,8 +13,8 @@ export interface Props {
 const { frontmatter } = Astro.props
 ---
 
-<Default title={frontmatter.title}>
-  <article class="post px-4 md:px-0 my-8">
+<Default title={frontmatter.title} headerCssClasses="max-w-5xl">
+  <article class="post px-4 xl:px-0 my-8">
     <Breadcrumb items={[
       { icon: '', title: frontmatter.title, url: '' }
     ]} />

@@ -3,10 +3,15 @@ import siteConfig from '@/site.config'
 import Icon from './Icon.astro'
 import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
 
+export interface Props {
+  cssClasses: string
+}
+
+const { cssClasses = '' } = Astro.props
 const { title, description, author } = siteConfig
 ---
-<header class="sticky top-0 z-10  w-full mx-auto px-4 md:px-7 py-4 bg-white dark:bg-zinc-900 border-b border-stale-300 dark:border-slate-600">
-  <div class="header flex justify-between items-center">
+<header class="sticky top-0 z-10 px-4 md:px-7 py-4 bg-white dark:bg-zinc-900 border-b border-stale-300 dark:border-slate-600">
+  <div class:list={["header mx-auto flex justify-between items-center", cssClasses]}>
     <div class="header-meta flex mr-3">
       <div class="header-logo mr-3">
         <a href="/">
