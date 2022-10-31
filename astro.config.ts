@@ -16,6 +16,17 @@ console.log(`\x1b[30m${new Date().toLocaleTimeString()}`, "\x1b[94m[env]\x1b[0m 
 // https://astro.build/config
 export default defineConfig({
   site: siteURL,
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: 'entry.[hash].js',
+          chunkFileNames: 'chunks/chunk.[hash].js',
+          assetFileNames: 'assets/asset.[hash][extname]',
+        },
+      },
+    },
+  },
   integrations: [
     tailwind({
       config: {
