@@ -1,12 +1,26 @@
-const colors = require('tailwindcss/colors')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: "class",
-  colors: {
-    primary: colors.blue,
-    gray: colors.neutral,
+  theme: {
+    extend: {
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            'code': {
+              color: theme('colors.pink.500'),
+              fontSize: '1rem',
+            },
+            'code::before': {
+              content: 'none',
+            },
+            'code::after': {
+              content: 'none',
+            },
+          }
+        },
+      }),
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),
