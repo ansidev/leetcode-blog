@@ -22,3 +22,6 @@ pnpm-debug.log*
 # IDE and Code Editor
 .vscode/*
 !.vscode/extensions.json
+
+# Temporary files
+.temp.*.tailwind.config.*
