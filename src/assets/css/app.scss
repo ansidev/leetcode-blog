@@ -26,22 +26,8 @@ a.no-hover {
 /* Prose CSS */
 .prose {
   @apply transition duration-150 ease-in w-full max-w-5xl text-default;
+  @apply prose-a:no-underline prose-a:text-orange-500 hover:prose-a:text-blue-500 prose-a:break-words;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  img {
-    @apply mt-0 mb-3;
-  }
-
-  a {
-    @extend %link;
-    @apply break-words;
-  }
 
   li:has(> a.new) {
     list-style-type: '\2610';
