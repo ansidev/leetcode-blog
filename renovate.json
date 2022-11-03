@@ -3,9 +3,6 @@
   "extends": [
     "config:base"
   ],
-  "schedule": [
-    "at 0:00 am"
-  ],
   "packageRules": [
     {
       "matchPackagePatterns": [
