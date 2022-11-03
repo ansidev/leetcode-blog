@@ -11,5 +11,5 @@ tasks:
     desc: Commit code for a specific LeetCode problem
     cmds:
       - >-
-        git commit -m "content: add solution for problem #{{.CLI_ARGS}}"
+        git commit -m "content: add solution for problem No.{{.CLI_ARGS}}"
     silent: true

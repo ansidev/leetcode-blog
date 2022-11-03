@@ -168,5 +168,5 @@ func myAtoi(s string) int {
 
 #### Complexity
 
-- Time complexity: `O(n)` because we just traverse once.
+- Time complexity: `O(n)` because we just traverse the string once.
 - Space complexity: We use three extra variable `l`, `isNegative`, `n`, no matter what value will, they will take a fixed bytes. So the space complexity is `O(1)`.
