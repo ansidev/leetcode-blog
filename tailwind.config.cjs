@@ -9,7 +9,6 @@ module.exports = {
           css: {
             'code': {
               color: theme('colors.pink.500'),
-              fontSize: '1rem',
             },
             'code::before': {
               content: 'none',
