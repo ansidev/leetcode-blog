@@ -3,9 +3,6 @@
   "extends": [
     "config:base"
   ],
-  "schedule": [
-    "every 24h"
-  ],
   "packageRules": [
     {
       "matchPackagePatterns": [
