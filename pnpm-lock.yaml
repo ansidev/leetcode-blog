@@ -4,7 +4,7 @@ specifiers:
   '@astrojs/partytown': ^1.0.1
   '@astrojs/rss': ^1.0.3
   '@astrojs/sitemap': ^1.0.0
-  '@astrojs/tailwind': ^2.1.1
+  '@astrojs/tailwind': ^2.1.2
   '@iconify-json/bi': ^1.1.10
   '@tailwindcss/typography': ^0.5.7
   '@types/lodash.get': ^4.4.7
@@ -23,7 +23,7 @@ dependencies:
   '@astrojs/partytown': 1.0.1
   '@astrojs/rss': 1.0.3
   '@astrojs/sitemap': 1.0.0
-  '@astrojs/tailwind': 2.1.1_tailwindcss@3.2.1
+  '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.1
   '@types/lodash.get': 4.4.7
   astro: 1.6.3_sass@1.56.0
   lodash.get: 4.4.2
@@ -148,8 +148,8 @@ packages:
       zod: 3.19.1
     dev: false
 
-  /@astrojs/tailwind/2.1.1_tailwindcss@3.2.1:
-    resolution: {integrity: sha512-Il6FODtu4AlwadleJS3VWmAOOmeCDKvAo3iof46p4iHtdeWLClyuH9kJXWrlzCS+QOfBSIfXxvwPJ3cbK5COlA==}
+  /@astrojs/tailwind/2.1.2_tailwindcss@3.2.1:
+    resolution: {integrity: sha512-nIrlT+WWp/Wv2VQ29Nvncq608E+j3qB9k1f7yiAjY2ijxizZo4OnQzdRPQcIjIZHL5YxPtzbcoSP2u3v+Domqw==}
     peerDependencies:
       tailwindcss: ^3.0.24
     dependencies:
