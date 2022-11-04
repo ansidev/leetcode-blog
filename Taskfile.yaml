@@ -1,8 +1,13 @@
 version: '3'
 
 tasks:
-  build_prod:
-    desc: Build production site
+  install:
+    desc: Install dependencies
+    cmds:
+      - pnpm install
+
+  build:
+    desc: Build
     cmds:
       - pnpm build
     silent: true
@@ -12,4 +17,15 @@ tasks:
     cmds:
       - >-
         git commit -m "content: add solution for problem No.{{.CLI_ARGS}}"
+    silent: true
+
+  test_update:
+    desc: Check whether the new version of the npm package broke the build.
+    cmds:
+      - git switch main
+      - git switch {{.CLI_ARGS}} 2>/dev/null || git switch -c {{.CLI_ARGS}}
+      - ncu -u -f {{.CLI_ARGS}}
+      - task: install
+      - task: build
+      - git add package.json pnpm-lock.yaml
     silent: true
