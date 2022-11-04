@@ -27,4 +27,5 @@ tasks:
       - ncu -u -f {{.CLI_ARGS}}
       - task: install
       - task: build
+      - git add package.json pnpm-lock.yaml
     silent: true
