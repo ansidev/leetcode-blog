@@ -5,7 +5,7 @@ import '@/assets/css/app.scss'
 
 export interface Props {
   title: string
-  headerCssClasses: string
+  headerCssClasses?: string
 }
 
 const { title, headerCssClasses = '' } = Astro.props
