@@ -5,7 +5,7 @@ specifiers:
   '@astrojs/rss': ^1.0.3
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^2.1.1
-  '@iconify-json/bi': ^1.1.8
+  '@iconify-json/bi': ^1.1.10
   '@tailwindcss/typography': ^0.5.7
   '@types/lodash.get': ^4.4.7
   astro: ^1.6.0
@@ -34,7 +34,7 @@ dependencies:
   vite: 3.2.2_sass@1.56.0
 
 devDependencies:
-  '@iconify-json/bi': 1.1.8
+  '@iconify-json/bi': 1.1.10
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
   gray-matter: 4.0.3
   sass: 1.56.0
@@ -466,8 +466,8 @@ packages:
     dev: false
     optional: true
 
-  /@iconify-json/bi/1.1.8:
-    resolution: {integrity: sha512-aUmRT4iKjpz9fRF2/6d2JcMd7Lz6Fwn4rQnMZy8rhAw3CCBKPRpcbSW3tf+O1K4+oVe/+gV2FqO50ZZiWsjaEw==}
+  /@iconify-json/bi/1.1.10:
+    resolution: {integrity: sha512-RRfto++s1L5IMgadRwDIRz9gI+y9Oh0ffyplbBSo/FRTsuY0acgykbsJyzyW9z+os7jXIdPReslHL2VC7YTFng==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
