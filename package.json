@@ -28,7 +28,7 @@
     "@iconify-json/bi": "^1.1.8",
     "@tailwindcss/typography": "^0.5.7",
     "gray-matter": "^4.0.3",
-    "sass": "^1.55.0",
+    "sass": "^1.56.0",
     "typescript": "^4.8.4"
   }
 }
