@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/Post.astro
+layout: "../layouts/Post.astro"
 title: "LeetCode Problems"
 slug: "leetcode-problems"
 author: "ansidev"
