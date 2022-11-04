@@ -6,11 +6,12 @@
     "paths": {
       "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
+      "@cmd/*": ["cmd/*"],
       "@components/*": ["src/components/*"],
       "@content/*": ["src/content/*"],
-      "@data/*": ["src/data/*"],
       "@layouts/*": ["src/layouts/*"],
       "@plugins/*": ["src/plugins/*"],
+      "@site/*": [".site/*"],
       "@utils/*": ["src/utils/*"]
     },
   },
