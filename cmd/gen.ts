@@ -8,7 +8,7 @@ import dayjs from 'dayjs'
 import lc from '@site/data/problem_set.json'
 import siteConfig from '@/site.config'
 import type { Difficulty, LeetCodePostFrontMatter } from '@/types'
-import type { LeetCodeQuestion, LeetCodeTag } from '@cmd/types'
+import type { LeetCodeQuestion } from '@cmd/types'
 
 const ERR_QUESTION_DOES_NOT_EXIST_OR_NOT_SUPPORTED = 1
 const ERR_QUESTION_WAS_NOT_FOUND = 2
@@ -107,7 +107,7 @@ const generateNewPost: () => void = async () => {
   const title: string = `${question.frontendQuestionId}. ${question.title}`
   const slug: string = `${question.frontendQuestionId.padStart(4, '0')}-${question.titleSlug}`
   const author: string = siteConfig.author.nickname
-  const tags: LeetCodeTag[] = question.topicTags
+  const tags: string[] = question.topicTags.map(tag => tag.name)
   const pubDate: string = dayjs().format()
   const difficulty: Difficulty = question.difficulty as Difficulty
 
