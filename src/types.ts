@@ -8,9 +8,9 @@ export declare interface PostFrontMatter {
 }
 
 export enum Difficulty {
-  Easy = "Easy",
-  Medium = "Medium",
-  Hard = "Hard",
+  Easy = "easy",
+  Medium = "medium",
+  Hard = "hard",
 }
 
 export declare interface LeetCodePostFrontMatter extends PostFrontMatter {
