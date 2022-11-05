@@ -1,0 +1,21 @@
+---
+import PostItem from "@components/PostItem.astro";
+import type { MarkdownInstance } from "astro";
+
+export interface Props {
+  posts: MarkdownInstance<Record<string, any>>[];
+}
+
+const { posts = [] } = Astro.props;
+---
+
+<div class="flex flex-col">
+  {
+    posts.map((p) => (
+      <PostItem
+        title={`${p.frontmatter.title}`}
+        href={`/${p.frontmatter.slug}`}
+      />
+    ))
+  }
+</div>

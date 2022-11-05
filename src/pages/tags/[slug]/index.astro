@@ -1,0 +1,41 @@
+---
+import kebabCase from "lodash.kebabcase";
+import Default from "@layouts/Default.astro";
+import siteConfig from "@/site.config";
+import PostList from "@/components/PostList.astro";
+
+export async function getStaticPaths() {
+  const allTags = new Set<string>();
+  const allPosts = await Astro.glob("../../*.md");
+  allPosts.forEach((post) =>
+    post.frontmatter.tags?.forEach((t: string) => allTags.add(t))
+  );
+
+  return Array.from(allTags).map((tag) => {
+    const slug = kebabCase(tag);
+    const filteredPosts = allPosts.filter((post) =>
+      post.frontmatter.tags?.includes(tag)
+    );
+    return {
+      params: { slug },
+      props: {
+        posts: filteredPosts,
+        tag,
+      },
+    };
+  });
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<Default title={siteConfig.title} headerCssClasses="max-w-xl px-8">
+  <main class="flex justify-center max-w-xl mx-auto my-8 px-4 md:px-0">
+    <div class="flex flex-col grow px-8">
+      <h1 class="text-black dark:text-white mb-4">
+        Posts by tag: <span class="mx-2 px-3 py-2 rounded-full bg-orange-500 text-white">{tag}</span>
+      </h1>
+      <PostList posts={posts} />
+    </div>
+  </main>
+</Default>
