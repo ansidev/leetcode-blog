@@ -4,6 +4,11 @@ title: "53. Maximum Subarray"
 slug: "0053-maximum-subarray"
 author: "ansidev"
 pubDate: "2022-10-26T13:11:00+07:00"
+difficulty: "Medium"
+tags:
+- "Array"
+- "Divide and Conquer"
+- "Dynamic Programming"
 ---
 ## Problem
 

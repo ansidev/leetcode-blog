@@ -4,6 +4,11 @@ title: "231. Power of Two"
 slug: "0231-power-of-two"
 author: "ansidev"
 pubDate: "2022-10-27T15:23:12+07:00"
+difficulty: "Easy"
+tags:
+- "Math"
+- "Bit Manipulation"
+- "Recursion"
 ---
 ## Problem
 
