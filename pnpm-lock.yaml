@@ -8,12 +8,14 @@ specifiers:
   '@iconify-json/bi': ^1.1.10
   '@tailwindcss/typography': ^0.5.7
   '@types/lodash.get': ^4.4.7
+  '@types/lodash.kebabcase': ^4.1.7
   '@types/mustache': ^4.2.1
   astro: ^1.6.3
   commander: ^9.4.1
   dayjs: ^1.11.6
   gray-matter: ^4.0.3
   lodash.get: ^4.4.2
+  lodash.kebabcase: ^4.1.1
   mdast-util-to-string: ^3.1.0
   mustache: ^4.2.0
   reading-time: ^1.5.0
@@ -32,6 +34,7 @@ dependencies:
   '@types/lodash.get': 4.4.7
   astro: 1.6.3_sass@1.56.0
   lodash.get: 4.4.2
+  lodash.kebabcase: 4.1.1
   mdast-util-to-string: 3.1.0
   reading-time: 1.5.0
   remark-wiki-link-plus: 1.1.0
@@ -41,6 +44,7 @@ dependencies:
 devDependencies:
   '@iconify-json/bi': 1.1.10
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
+  '@types/lodash.kebabcase': 4.1.7
   '@types/mustache': 4.2.1
   commander: 9.4.1
   dayjs: 1.11.6
@@ -686,9 +690,14 @@ packages:
       '@types/lodash': 4.14.186
     dev: false
 
+  /@types/lodash.kebabcase/4.1.7:
+    resolution: {integrity: sha512-qzrcpK5uiADZ9OyZaegalM0b9Y3WetoBQ04RAtP3xZFGC5ul1UxmbjZ3j6suCh0BDkvgQmoMh8t5e9cVrdJYMw==}
+    dependencies:
+      '@types/lodash': 4.14.186
+    dev: true
+
   /@types/lodash/4.14.186:
     resolution: {integrity: sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==}
-    dev: false
 
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
@@ -2286,6 +2295,10 @@ packages:
   /lodash.isplainobject/4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
     dev: true
+
+  /lodash.kebabcase/4.1.1:
+    resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
+    dev: false
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
