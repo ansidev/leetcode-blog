@@ -5,10 +5,29 @@ import siteConfig from "@/site.config";
 
 const contents = await Astro.glob("./*.md");
 const posts = contents.filter((p) => /^\/\d{4}\-/i.test(p.url as string));
+const difficulties: Record<string, string> = {
+  easy: "Easy",
+  medium: "Medium",
+  hard: "Hard",
+};
 ---
 
 <Default title={siteConfig.title} headerCssClasses="max-w-xl px-8">
   <main class="flex justify-center max-w-xl mx-auto my-8 px-4 md:px-0">
-    <PostList posts={posts} />
+    <div class="flex flex-col grow px-8">
+      <h1 class="text-black dark:text-white mb-4">
+        Posts by difficulty:
+        {
+          Object.keys(difficulties).map((slug) => (
+            <a href={`/difficulties/${slug}`} class="mx-1 my-3">
+              <span class="px-3 py-2 rounded-full border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white">
+                {difficulties[slug]}
+              </span>
+            </a>
+          ))
+        }
+      </h1>
+      <PostList posts={posts} />
+    </div>
   </main>
 </Default>
