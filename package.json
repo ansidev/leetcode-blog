@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "type-check": "astro check && tsc --noEmit",
+    "build": "pnpm run type-check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
