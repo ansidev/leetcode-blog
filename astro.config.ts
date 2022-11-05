@@ -10,8 +10,14 @@ import sitemap from "@astrojs/sitemap"
 const env = loadEnv(import.meta.env.MODE, process.cwd())
 const siteURL = env.VITE_BASE_URL || "http://localhost:3000"
 
-console.log(`\x1b[30m${new Date().toLocaleTimeString()}`, "\x1b[94m[env]\x1b[0m   Environment mode:", import.meta.env.MODE)
-console.log(`\x1b[30m${new Date().toLocaleTimeString()}`, "\x1b[94m[env]\x1b[0m   Site URL:", siteURL)
+const timeFormatOptions: Intl.DateTimeFormatOptions = {
+  hour12: true,
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+}
+console.log(`\x1b[30m${new Date().toLocaleTimeString('en-US', timeFormatOptions)}`, "\x1b[94m[env]\x1b[0m   Environment mode:", import.meta.env.MODE)
+console.log(`\x1b[30m${new Date().toLocaleTimeString('en-US', timeFormatOptions)}`, "\x1b[94m[env]\x1b[0m   Site URL:", siteURL)
 
 // https://astro.build/config
 export default defineConfig({
