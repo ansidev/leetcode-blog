@@ -4,6 +4,11 @@ title: "2400. Number of Ways to Reach a Position After Exactly k Steps"
 slug: "2400-number-of-ways-to-reach-a-position-after-exactly-k-steps"
 author: "ansidev"
 pubDate: "2022-10-24T23:49:00+07:00"
+difficulty: "Medium"
+tags:
+- "Math"
+- "Dynamic Programming"
+- "Combinatorics"
 ---
 ## Problem
 

@@ -4,6 +4,11 @@ title: "3. Longest Substring Without Repeating Characters"
 slug: "0003-longest-substring-without-repeating-characters"
 author: "ansidev"
 pubDate: "2022-10-31T19:46:49+07:00"
+difficulty: "Medium"
+tags:
+- "Hash Table"
+- "String"
+- "Sliding Window"
 ---
 ## Problem
 
