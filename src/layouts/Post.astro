@@ -1,23 +1,17 @@
 ---
-import Default from './Default.astro'
-import PostHeader from "@components/PostHeader.astro"
-import Breadcrumb from "@components/Breadcrumb.astro"
+import Default from "./Default.astro";
+import PostHeader from "@components/PostHeader.astro";
+import Breadcrumb from "@components/Breadcrumb.astro";
+import type { UnionPostFrontMatter } from "@/types";
 
-export interface Props {
-  title: string
-  slug: string
-  author: string
-  pubDate: Date
-}
+export interface Props extends UnionPostFrontMatter {}
 
-const { frontmatter } = Astro.props
+const { frontmatter } = Astro.props;
 ---
 
 <Default title={frontmatter.title} headerCssClasses="max-w-5xl">
   <article class="post px-4 xl:px-0 my-8">
-    <Breadcrumb items={[
-      { icon: '', title: frontmatter.title, url: '' }
-    ]} />
+    <Breadcrumb items={[{ icon: "", title: frontmatter.title, url: "" }]} />
     <PostHeader {...frontmatter} />
     <div class="p-4 border rounded prose dark:prose-invert">
       <slot />

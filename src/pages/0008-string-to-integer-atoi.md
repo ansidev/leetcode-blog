@@ -1,9 +1,12 @@
 ---
-layout: ../layouts/Post.astro
+layout: "../layouts/Post.astro"
 title: "8. String to Integer (atoi)"
 slug: "0008-string-to-integer-atoi"
 author: "ansidev"
 pubDate: "2022-10-26T13:11:00+07:00"
+difficulty: "Medium"
+tags:
+- "String"
 ---
 ## Problem
 

@@ -1,11 +1,15 @@
 ---
-layout: ../layouts/Post.astro
+layout: "../layouts/Post.astro"
 title: "3. Longest Substring Without Repeating Characters"
 slug: "0003-longest-substring-without-repeating-characters"
 author: "ansidev"
-pubDate: "2022-10-31 19:46:49"
+pubDate: "2022-10-31T19:46:49+07:00"
+difficulty: "Medium"
+tags:
+- "Hash Table"
+- "String"
+- "Sliding Window"
 ---
-
 ## Problem
 
 Given a string `s`, find the length of the **longest substring** without repeating characters.

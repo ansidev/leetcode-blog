@@ -7,7 +7,7 @@ import Swetrix from '@/components/Swetrix.astro'
 
 const { author } = siteConfig
 const { name, nickname, email, homepage, github, twitter, telegram, reddit } = author
-const socialNetworks = { github, twitter, telegram, reddit }
+const socialNetworks: Record<string, string> = { github, twitter, telegram, reddit }
 ---
 <footer class="my-9">
   <div class="flex justify-center items-center mb-3">

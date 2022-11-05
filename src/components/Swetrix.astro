@@ -12,10 +12,3 @@ const projectId = siteConfig?.plugins?.swetrix?.pid
     swetrix.trackViews()
   })
 </script>
-<noscript define:vars={{ projectId }}>
-  <img
-    src={`https://api.swetrix.com/log/noscript?pid=${projectId}`}
-    alt=""
-    referrerpolicy="no-referrer-when-downgrade"
-  />
-</noscript>
