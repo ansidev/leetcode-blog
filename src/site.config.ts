@@ -1,6 +1,7 @@
 export default {
-  title: 'LeetCode Blog',
-  description: 'Solutions for LeetCode problems',
+  title: 'LeetCode Blog by ansidev',
+  description: 'Solutions for LeetCode problems - Written by ansidev',
+  keyword: 'ansidev, leetcode, leetcode problem, leetcode question, leetcode solution, blog, astro',
   author: {
     name: 'Le Minh Tri',
     nickname: 'ansidev',

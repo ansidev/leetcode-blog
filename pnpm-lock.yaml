@@ -6,11 +6,12 @@ specifiers:
   '@astrojs/sitemap': ^1.0.0
   '@astrojs/tailwind': ^2.1.2
   '@iconify-json/bi': ^1.1.10
-  '@tailwindcss/typography': ^0.5.7
+  '@tailwindcss/typography': ^0.5.8
   '@types/lodash.get': ^4.4.7
   '@types/lodash.kebabcase': ^4.1.7
   '@types/mustache': ^4.2.1
-  astro: ^1.6.3
+  astro: ^1.6.4
+  astro-seo: ^0.6.0
   commander: ^9.4.1
   dayjs: ^1.11.6
   gray-matter: ^4.0.3
@@ -21,29 +22,30 @@ specifiers:
   reading-time: ^1.5.0
   remark-wiki-link-plus: ^1.1.0
   sass: ^1.56.0
-  tailwindcss: ^3.2.1
+  tailwindcss: ^3.2.2
   tsx: ^3.11.0
   typescript: ^4.8.4
-  vite: ^3.2.2
+  vite: ^3.2.3
 
 dependencies:
   '@astrojs/partytown': 1.0.1
   '@astrojs/rss': 1.0.3
   '@astrojs/sitemap': 1.0.0
-  '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.1
+  '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.2
   '@types/lodash.get': 4.4.7
-  astro: 1.6.3_sass@1.56.0
+  astro: 1.6.4_sass@1.56.0
+  astro-seo: 0.6.0
   lodash.get: 4.4.2
   lodash.kebabcase: 4.1.1
   mdast-util-to-string: 3.1.0
   reading-time: 1.5.0
   remark-wiki-link-plus: 1.1.0
-  tailwindcss: 3.2.1
-  vite: 3.2.2_sass@1.56.0
+  tailwindcss: 3.2.2
+  vite: 3.2.3_sass@1.56.0
 
 devDependencies:
   '@iconify-json/bi': 1.1.10
-  '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
+  '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.2
   '@types/lodash.kebabcase': 4.1.7
   '@types/mustache': 4.2.1
   commander: 9.4.1
@@ -162,7 +164,7 @@ packages:
       zod: 3.19.1
     dev: false
 
-  /@astrojs/tailwind/2.1.2_tailwindcss@3.2.1:
+  /@astrojs/tailwind/2.1.2_tailwindcss@3.2.2:
     resolution: {integrity: sha512-nIrlT+WWp/Wv2VQ29Nvncq608E+j3qB9k1f7yiAjY2ijxizZo4OnQzdRPQcIjIZHL5YxPtzbcoSP2u3v+Domqw==}
     peerDependencies:
       tailwindcss: ^3.0.24
@@ -170,7 +172,7 @@ packages:
       '@proload/core': 0.3.3
       autoprefixer: 10.4.12_postcss@8.4.18
       postcss: 8.4.18
-      tailwindcss: 3.2.1
+      tailwindcss: 3.2.2
     dev: false
 
   /@astrojs/telemetry/1.0.1:
@@ -601,8 +603,8 @@ packages:
       tsm: 2.2.2
     dev: false
 
-  /@tailwindcss/typography/0.5.7_tailwindcss@3.2.1:
-    resolution: {integrity: sha512-JTTSTrgZfp6Ki4svhPA4mkd9nmQ/j9EfE7SbHJ1cLtthKkpW2OxsFXzSmxbhYbEkfNIyAyhle5p4SYyKRbz/jg==}
+  /@tailwindcss/typography/0.5.8_tailwindcss@3.2.2:
+    resolution: {integrity: sha512-xGQEp8KXN8Sd8m6R4xYmwxghmswrd0cPnNI2Lc6fmrC3OojysTBJJGSIVwPV56q4t6THFUK3HJ0EaWwpglSxWw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
@@ -610,7 +612,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.2.1
+      tailwindcss: 3.2.2
     dev: true
 
   /@types/acorn/4.0.6:
@@ -847,8 +849,12 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /astro/1.6.3_sass@1.56.0:
-    resolution: {integrity: sha512-Om84PLuuF497q1LVMzcr0jI3r0kNoYgdX7W0IVUgVnrNd7ubK11h9zhg/2MHRSui+0vCH3+0hnCnCG6QEd2a2Q==}
+  /astro-seo/0.6.0:
+    resolution: {integrity: sha512-nR+dJlAyQhX6s0oAmbBqPq3KCZax/zVAerFsclGiJQ2znOkS/7L+RGjziS4M9Q3OQxm3FMfqIKHp9Ns73Q81ww==}
+    dev: false
+
+  /astro/1.6.4_sass@1.56.0:
+    resolution: {integrity: sha512-4Yi6fonZK/t8I1BdZ2YaTtSKUSeB8RoikDDssqkiO6j2BAfK4HOhRk70PrrkKyY5gK6VCe/Nao8ABq3GZfxm9g==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -910,11 +916,12 @@ packages:
       typescript: 4.8.4
       unist-util-visit: 4.1.1
       vfile: 5.3.5
-      vite: 3.2.2_sass@1.56.0
-      vitefu: 0.1.0_vite@3.2.2
+      vite: 3.2.3_sass@1.56.0
+      vitefu: 0.1.0_vite@3.2.3
       yargs-parser: 21.1.1
       zod: 3.19.1
     transitivePeerDependencies:
+      - '@types/node'
       - less
       - sass
       - stylus
@@ -3659,8 +3666,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /tailwindcss/3.2.1:
-    resolution: {integrity: sha512-Uw+GVSxp5CM48krnjHObqoOwlCt5Qo6nw1jlCRwfGy68dSYb/LwS9ZFidYGRiM+w6rMawkZiu1mEMAsHYAfoLg==}
+  /tailwindcss/3.2.2:
+    resolution: {integrity: sha512-c2GtSdqg+harR4QeoTmex0Ngfg8IIHNeLQH5yr2B9uZbZR1Xt1rYbjWOWTcj3YLTZhrmZnPowoQDbSRFyZHQ5Q==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:
@@ -3904,17 +3911,20 @@ packages:
       vfile-message: 3.1.2
     dev: false
 
-  /vite/3.2.2_sass@1.56.0:
-    resolution: {integrity: sha512-pLrhatFFOWO9kS19bQ658CnRYzv0WLbsPih6R+iFeEEhDOuYgYCX2rztUViMz/uy/V8cLCJvLFeiOK7RJEzHcw==}
+  /vite/3.2.3_sass@1.56.0:
+    resolution: {integrity: sha512-h8jl1TZ76eGs3o2dIBSsvXDLb1m/Ec1iej8ZMdz+PsaFUsftZeWe2CZOI3qogEsMNaywc17gu0q6cQDzh/weCQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
+      '@types/node': '>= 14'
       less: '*'
       sass: '*'
       stylus: '*'
       sugarss: '*'
       terser: ^5.4.0
     peerDependenciesMeta:
+      '@types/node':
+        optional: true
       less:
         optional: true
       sass:
@@ -3935,7 +3945,7 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /vitefu/0.1.0_vite@3.2.2:
+  /vitefu/0.1.0_vite@3.2.3:
     resolution: {integrity: sha512-5MQSHP9yr0HIve8q4XNb7QXfO1P4tzZDZP99qH0FM5ClcwYddeGXRDQ4TQYRUeXLjZ+vLecirHtGNpwFFUF7sw==}
     peerDependencies:
       vite: ^3.0.0
@@ -3944,7 +3954,7 @@ packages:
         optional: true
     dependencies:
       import-meta-resolve: 2.1.0
-      vite: 3.2.2_sass@1.56.0
+      vite: 3.2.3_sass@1.56.0
     dev: false
 
   /vscode-css-languageservice/6.1.1:

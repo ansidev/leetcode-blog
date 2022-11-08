@@ -2,6 +2,12 @@
 layout: "{{{layout}}}"
 title: "{{{title}}}"
 slug: "{{{slug}}}"
+{{#keywords.length}}
+keywords:
+{{#keywords}}
+- "{{{.}}}"
+{{/keywords}}
+{{/keywords.length}}
 author: "{{{author}}}"
 pubDate: "{{{pubDate}}}"
 difficulty: "{{{difficulty}}}"
