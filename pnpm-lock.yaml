@@ -11,6 +11,7 @@ specifiers:
   '@types/lodash.kebabcase': ^4.1.7
   '@types/mustache': ^4.2.1
   astro: ^1.6.4
+  astro-seo: ^0.6.0
   commander: ^9.4.1
   dayjs: ^1.11.6
   gray-matter: ^4.0.3
@@ -33,6 +34,7 @@ dependencies:
   '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.2
   '@types/lodash.get': 4.4.7
   astro: 1.6.4_sass@1.56.0
+  astro-seo: 0.6.0
   lodash.get: 4.4.2
   lodash.kebabcase: 4.1.1
   mdast-util-to-string: 3.1.0
@@ -845,6 +847,10 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       tslib: 2.4.0
+    dev: false
+
+  /astro-seo/0.6.0:
+    resolution: {integrity: sha512-nR+dJlAyQhX6s0oAmbBqPq3KCZax/zVAerFsclGiJQ2znOkS/7L+RGjziS4M9Q3OQxm3FMfqIKHp9Ns73Q81ww==}
     dev: false
 
   /astro/1.6.4_sass@1.56.0:

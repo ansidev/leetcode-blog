@@ -2,6 +2,8 @@
 layout: "../layouts/Post.astro"
 title: "231. Power of Two"
 slug: "0231-power-of-two"
+keywords:
+- "power of two"
 author: "ansidev"
 pubDate: "2022-10-27T15:23:12+07:00"
 difficulty: "Easy"

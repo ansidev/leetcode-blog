@@ -1,24 +1,55 @@
 ---
-import Header from '@/components/Header.astro'
-import Footer from '@/components/Footer.astro'
-import '@/assets/css/app.scss'
+import { SEO } from "astro-seo";
+import siteConfig from "@/site.config";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import "@/assets/css/app.scss";
 
 export interface Props {
-  title: string
-  headerCssClasses?: string
+  headerCssClasses?: string;
+  title: string;
+  description?: string;
+  keywords?: string[];
 }
 
-const { title, headerCssClasses = '' } = Astro.props
+const { headerCssClasses = "", title, description = "", keywords = [] } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO
+      title={title}
+      description={description.length > 0 ? description : `${title} - ${siteConfig.description}`}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "viewport",
+            content: "width=device-width,initial-scale=1",
+          },
+          {
+            name: "keywords",
+            content: `${siteConfig.keyword}, ${keywords.join(", ")}`,
+          },
+          {
+            name: "generator",
+            content: Astro.generator,
+          },
+          {
+            name: "twitter:title",
+            content: title,
+          },
+          {
+            name: "twitter:description",
+            content: description,
+          },
+        ],
+      }}
+    />
   </head>
   <body class="max-w-8xl mx-auto bg-white dark:bg-zinc-900">
     <Header cssClasses={headerCssClasses} />
