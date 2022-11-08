@@ -106,12 +106,13 @@ const generateNewPost: () => void = async () => {
   const layout: string = '../layouts/Post.astro'
   const title: string = `${question.frontendQuestionId}. ${question.title}`
   const slug: string = `${question.frontendQuestionId.padStart(4, '0')}-${question.titleSlug}`
+  const keywords: string[] = question.titleSlug.split('-')
   const author: string = siteConfig.author.nickname
   const tags: string[] = question.topicTags.map(tag => tag.name)
   const pubDate: string = dayjs().format()
   const difficulty: Difficulty = question.difficulty as Difficulty
 
-  const templateData: LeetCodePostFrontMatter = { layout, title, slug, author, pubDate, difficulty, tags }
+  const templateData: LeetCodePostFrontMatter = { layout, title, slug, keywords, author, pubDate, difficulty, tags }
 
   const output = await render("leetcode.md", templateData)
 
