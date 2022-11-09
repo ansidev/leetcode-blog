@@ -2,7 +2,7 @@ export declare interface PostFrontMatter {
   layout?: string
   title: string
   slug: string
-  keywords?: string
+  keywords?: string[]
   author: string
   pubDate: string
   tags?: string[]
