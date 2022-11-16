@@ -79,10 +79,10 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
   - Start traversing the array from index `1`. For each step:
     - Check whether the current character is repeating: `lastIndex` has the key `s[right]`.
       - If yes, update `left = lastIndex[s[right]] + 1` if `left < lastIndex[s[right]] + 1`.
-    - Update last index of s[right] to the current index.
+    - Update the last index of s[right] to the current index.
     - Calculate the new length of the CSWRC. (`right - left + 1`).
-    - Update result if it less than the new length of the CSWRC.
-  - Finally return `result`. It is the LSWRC.
+    - Update `result` if it is less than the new length of the CSWRC.
+  - Finally, return `result`. It is the LSWRC.
 
 #### Solutions
 
@@ -116,6 +116,6 @@ func lengthOfLongestSubstring(s string) int {
 
 - Time complexity: `O(n)` because we just traverse the string once.
 - Space complexity:
-  - We use four extra variable `l`, `result`, `left`, `right`, no matter what value will, they will take a fixed bytes. So the space complexity is `O(1)`.
+  - We use four extra variables `l`, `result`, `left`, `right`, no matter what value will, they will take fixed bytes. So the space complexity is `O(1)`.
   - The space complexity of the map `lastIndex` is `O(n)`.
   - So the final space complexity is `O(n)`.
