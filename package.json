@@ -28,7 +28,7 @@
     "vite": "^3.2.4"
   },
   "devDependencies": {
-    "@iconify-json/bi": "^1.1.10",
+    "@iconify-json/bi": "^1.1.12",
     "@tailwindcss/typography": "^0.5.8",
     "@types/lodash.kebabcase": "^4.1.7",
     "@types/mustache": "^4.2.1",
