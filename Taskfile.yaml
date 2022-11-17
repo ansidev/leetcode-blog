@@ -35,3 +35,9 @@ tasks:
       - task: build
       - git add package.json pnpm-lock.yaml
     silent: true
+
+  push:
+    desc: Push the current branch
+    cmds:
+      - git push --set-upstream origin $(git branch --show)
+    silent: true
