@@ -23,7 +23,7 @@ specifiers:
   remark-wiki-link-plus: ^1.1.1
   sass: ^1.56.1
   tailwindcss: ^3.2.4
-  tsx: ^3.11.0
+  tsx: ^3.12.1
   typescript: ^4.8.4
   vite: ^3.2.4
 
@@ -53,7 +53,7 @@ devDependencies:
   gray-matter: 4.0.3
   mustache: 4.2.0
   sass: 1.56.1
-  tsx: 3.11.0
+  tsx: 3.12.1
   typescript: 4.8.4
 
 packages:
@@ -3751,8 +3751,8 @@ packages:
       esbuild: 0.14.54
     dev: false
 
-  /tsx/3.11.0:
-    resolution: {integrity: sha512-q+q4xxu41+AafVwvAGqtNJ1ekPFd33ZhTMXvgIpHMqv/W89efwDRE9IyjhEAZm5iTHsshKaf1BYWSk789BrNCA==}
+  /tsx/3.12.1:
+    resolution: {integrity: sha512-Rcg1x+rNe7qwlP8j7kx4VjP/pJo/V57k+17hlrn6a7FuQLNwkaw5W4JF75tYornNVCxkXdSUnqlIT8JY/ttvIw==}
     hasBin: true
     dependencies:
       '@esbuild-kit/cjs-loader': 2.4.0
