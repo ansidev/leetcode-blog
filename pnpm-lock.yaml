@@ -20,7 +20,7 @@ specifiers:
   mdast-util-to-string: ^3.1.0
   mustache: ^4.2.0
   reading-time: ^1.5.0
-  remark-wiki-link-plus: ^1.1.0
+  remark-wiki-link-plus: ^1.1.1
   sass: ^1.56.1
   tailwindcss: ^3.2.4
   tsx: ^3.11.0
@@ -39,7 +39,7 @@ dependencies:
   lodash.kebabcase: 4.1.1
   mdast-util-to-string: 3.1.0
   reading-time: 1.5.0
-  remark-wiki-link-plus: 1.1.0
+  remark-wiki-link-plus: 1.1.1
   tailwindcss: 3.2.4
   vite: 3.2.4_sass@1.56.1
 
@@ -3308,8 +3308,8 @@ packages:
       unist-util-visit: 4.1.1
     dev: false
 
-  /remark-wiki-link-plus/1.1.0:
-    resolution: {integrity: sha512-nQ10RpO9yevF9dBn4zBcZI2zQN2s+e/7Nu9vpDuQ5ZObf7AsUJHS3ZrTEJosJyVlMvkvZLz4kGCgiDk4xDZV3w==}
+  /remark-wiki-link-plus/1.1.1:
+    resolution: {integrity: sha512-zSnIF3MrGQN+Bckl0+83pScJkhQe02OCAmbkgKqbhLkjnJSOJZk/UuyCRA6FNLkcAK9fhERUvwtsQKxEI/M76w==}
     dependencies:
       '@babel/runtime': 7.19.4
       mdast-util-wiki-link: 0.0.2
