@@ -28,7 +28,7 @@ tasks:
   test_update:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
-      - git switch main
+      - git switch develop
       - git switch deps/{{.CLI_ARGS}} 2>/dev/null || git switch -c deps/{{.CLI_ARGS}}
       - ncu -u -f {{.CLI_ARGS}}
       - task: install
