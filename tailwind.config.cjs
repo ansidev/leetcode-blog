@@ -8,7 +8,13 @@ module.exports = {
         DEFAULT: {
           css: {
             'code': {
-              color: theme('colors.pink.500'),
+              backgroundColor: theme('colors.orange.500'),
+              color: theme('colors.gray.100'),
+              paddingTop: '2px',
+              paddingBottom: '5px',
+              paddingLeft: '5px',
+              paddingRight: '5px',
+              borderRadius: '3px',
             },
             'code::before': {
               content: 'none',
