@@ -1,0 +1,48 @@
+.dark-theme {
+  // base colors
+  --color-secondary: var(--tw-color-zinc-100);
+  --color-tertiary: var(--tw-color-zinc-900);
+
+  // LeetCode difficulty colors
+  --lc-color-difficulty-easy: 0 175 155;
+  --lc-color-difficulty-medium: 255 184 0;
+  --lc-color-difficulty-hard: 255 45 85;
+
+  // theme colors
+  --theme-color-fill: var(--color-primary);
+  --theme-color-text: var(--color-secondary);
+  --theme-color-text-inverted: var(--color-tertiary);
+  --theme-color-link: var(--tw-color-blue-500);
+  --theme-color-link-hover: var(--tw-color-pink-500);
+
+  --theme-color-site-bg: 26 26 26;
+  --theme-color-site-header-bg: 40 40 40;
+  --theme-color-site-header-border: var(--tw-color-zinc-600);
+  --theme-color-site-title: var(--theme-color-text);
+  --theme-color-site-header-text: var(--theme-color-text);
+  --theme-color-site-header-text-hover: var(--theme-color-fill);
+  --theme-color-theme-menu-bg: var(--tw-color-zinc-800);
+  --theme-color-theme-menu-bg-hover: var(--color-tertiary);
+  --theme-color-theme-menu-text-hover: var(--theme-color-fill);
+
+  --theme-color-bg-difficulty-easy: var(--lc-color-difficulty-easy);
+  --theme-color-bg-difficulty-easy-hover: var(--theme-color-text);
+  --theme-color-text-difficulty-easy: var(--theme-color-text);
+  --theme-color-text-difficulty-easy-hover: var(--lc-color-difficulty-easy);
+
+  --theme-color-bg-difficulty-medium: var(--lc-color-difficulty-medium);
+  --theme-color-bg-difficulty-medium-hover: var(--theme-color-text);
+  --theme-color-text-difficulty-medium: var(--theme-color-text-inverted);
+  --theme-color-text-difficulty-medium-hover: var(--lc-color-difficulty-medium);
+
+  --theme-color-bg-difficulty-hard: var(--lc-color-difficulty-hard);
+  --theme-color-bg-difficulty-hard-hover: var(--theme-color-text);
+  --theme-color-text-difficulty-hard: var(--theme-color-text);
+  --theme-color-text-difficulty-hard-hover: var(--lc-color-difficulty-hard);
+
+  --tw-prose-headings: var(--theme-color-text-inverted);
+  --tw-prose-links: var(--theme-color-text-inverted);
+  --tw-prose-bold: var(--theme-color-text-inverted);
+  --tw-prose-quotes: var(--theme-color-text-inverted);
+  --tw-prose-code: var(--theme-color-text-inverted);
+}

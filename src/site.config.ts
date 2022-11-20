@@ -13,6 +13,32 @@ export default {
     telegram: 'https://t.me/ansidev',
     reddit: 'https://reddit.com/u/ansidev',
   },
+  themes: {
+    "leetcode-light": {
+      name: "LeetCode Light",
+      icon: "bi:sun-fill",
+    },
+    "leetcode-dark": {
+      name: "LeetCode Dark",
+      icon: "bi:moon-fill",
+    },
+    google: {
+      name: "Google",
+      icon: "bi:sun-fill",
+    },
+    microsoft: {
+      name: "Microsoft",
+      icon: "bi:sun-fill",
+    },
+    twitter: {
+      name: "Twitter",
+      icon: "bi:sun-fill",
+    },
+    "tailwind-green": {
+      name: "Tailwind Green",
+      icon: "bi:sun-fill",
+    },
+  },
   plugins: {
     googleAnalytics: {
       id: 'G-TB4840HQCP',
