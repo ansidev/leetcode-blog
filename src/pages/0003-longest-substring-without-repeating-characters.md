@@ -68,7 +68,7 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 - If the length of string `s` is greater than 1, because we need to determine the LSWRC, while iterating over the string, we have to check whether the character at a specific index is repeating or not. We can consider using a hashmap.
 
-  - Assume the LSWRC (`LSWRC`) is `s[0]`.
+  - Assume the `LSWRC` is `s[0]`.
 
     | Initial value         | Note                                                                   |
     | --------------------- | ---------------------------------------------------------------------- |
@@ -79,10 +79,10 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
   - Start traversing the array from index `1`. For each step:
     - Check whether the current character is repeating: `lastIndex` has the key `s[right]`.
       - If yes, update `left = lastIndex[s[right]] + 1` if `left < lastIndex[s[right]] + 1`.
-    - Update the last index of s[right] to the current index.
-    - Calculate the new length of the CSWRC. (`right - left + 1`).
-    - Update `result` if it is less than the new length of the CSWRC.
-  - Finally, return `result`. It is the LSWRC.
+    - Update the last index of `s[right]` to the current index.
+    - Calculate the new length of the `CSWRC`. (`right - left + 1`).
+    - Update `result` if it is less than the new length of the `CSWRC`.
+  - Finally, return `result`. It is the `LSWRC`.
 
 #### Solutions
 
