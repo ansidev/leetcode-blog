@@ -13,9 +13,7 @@ const { title, author, pubDate, tags = [], difficulty } = Astro.props;
 const formattedDate = formatDate(pubDate);
 ---
 
-<div
-  class="p-3 mb-3 rounded bg-zinc-900 dark:bg-zinc-700 text-center text-white"
->
+<div class="post-header">
   <h1 class="text-2xl mb-3">{title}</h1>
   <div class="flex justify-center items-center mb-3">
     <LcDifficulty difficulty={difficulty} />
@@ -24,7 +22,7 @@ const formattedDate = formatDate(pubDate);
     {
       tags.map((tag) => (
         <a href={`/tags/${kebabCase(tag)}`} class="mx-1 my-3">
-          <span class="rounded-lg p-2 bg-blue-500 hover:bg-rose-500 text-white">
+          <span class="rounded-lg p-2 bg-style-secondary text-style-primary-inverted hover:bg-style-secondary-inverted hover:text-style-primary">
             {tag}
           </span>
         </a>
@@ -46,3 +44,9 @@ const formattedDate = formatDate(pubDate);
     </div>
   </div>
 </div>
+
+<style lang="scss">
+  .post-header {
+    @apply p-3 mb-3 rounded bg-style-primary text-center text-style-primary-inverted;
+  }
+</style>

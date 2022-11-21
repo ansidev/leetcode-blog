@@ -1,0 +1,11 @@
+@mixin color($propName, $variableName, $darken: 1) {
+  #{$propName}: rgb(var($variableName));
+
+  @if (type-of($darken) == 'string') {
+    filter: brightness(var($darken));
+  }
+
+  @if (type-of($darken) == 'number' and $darken < 1) {
+    filter: brightness($darken);
+  }
+}

@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
   <article class="post px-4 xl:px-0 my-8">
     <Breadcrumb items={[{ icon: "", title: frontmatter.title, url: "" }]} />
     <PostHeader {...frontmatter} />
-    <div class="p-4 border rounded prose dark:prose-invert">
+    <div class="p-4 border rounded prose">
       <slot />
     </div>
   </article>

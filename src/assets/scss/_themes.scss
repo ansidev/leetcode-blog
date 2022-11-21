@@ -1,0 +1,8 @@
+@layer base {
+  @include site-theme('leetcode-dark', 255 161 22, true);
+  @include site-theme('leetcode-light', 255 161 22, false);
+  @include site-theme('google', 219 32 40, false);
+  @include site-theme('microsoft', 0 103 184, false);
+  @include site-theme('twitter', 29 155 240, false);
+  @include site-theme('tailwind-green', var(--tw-color-green-500), false);
+}

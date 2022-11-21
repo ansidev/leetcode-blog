@@ -1,0 +1,13 @@
+@import '../themes/dark-theme';
+@import '../themes/light-theme';
+
+@mixin site-theme($name, $primaryColor, $isDark: false) {
+ .#{$name} {
+  --color-primary: #{$primaryColor};
+  @if ($isDark == true) {
+    @extend .dark-theme;
+  } @else {
+    @extend .light-theme;
+  }
+ }
+}

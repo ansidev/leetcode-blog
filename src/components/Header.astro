@@ -1,35 +1,73 @@
 ---
-import siteConfig from '@/site.config'
-import Icon from './Icon.astro'
-import ThemeSwitcher from '@/components/ThemeSwitcher.astro'
+import siteConfig from "@/site.config";
+import Icon from "./Icon.astro";
+import ThemeSelector from "@/components/ThemeSelector.astro";
 
 export interface Props {
-  cssClasses: string
+  cssClasses: string;
 }
 
-const { cssClasses = '' } = Astro.props
-const { title, description, author } = siteConfig
+const { cssClasses = "" } = Astro.props;
+const { title, description, author, themes } = siteConfig;
 ---
-<header class="sticky top-0 z-10 px-4 md:px-7 py-4 bg-white dark:bg-zinc-900 border-b border-stale-300 dark:border-slate-600">
-  <div class:list={["header mx-auto flex justify-between items-center", cssClasses]}>
+
+<div class="header-container">
+  <div
+    class:list={[
+      "header mx-auto flex justify-between items-center",
+      cssClasses,
+    ]}
+  >
     <div class="header-meta flex mr-3">
       <div class="header-logo mr-3">
         <a href="/">
-          <img src={author.avatar} alt="Author's avatar" class="rounded-full" style="margin-bottom: 0 !important;" width="56" height="56">
+          <img
+            src={author.avatar}
+            alt="Author's avatar"
+            class="rounded-full"
+            style="margin-bottom: 0 !important;"
+            width="56"
+            height="56"
+          />
         </a>
       </div>
       <div class="flex flex-col">
         <h1 class="text-xl uppercase font-semibold">
-          <a href="/">{title}</a>
+          <a href="/" class="site-title">{title}</a>
         </h1>
-        <h2 class="text-default text-sm md:text-base italic">{description}</h2>
+        <h2 class="site-description">{description}</h2>
       </div>
     </div>
     <div class="header-button flex items-center">
-      <a href="/rss.xml" class="hover:text-black dark:hover:text-white">
-        <Icon name="bi:rss-fill" size={20} clazz="ml-2"/>
+      <a href="/rss.xml" class="header-icon">
+        <Icon name="bi:rss-fill" size={20} clazz="ml-2" />
       </a>
-      <ThemeSwitcher />
+      <ThemeSelector
+        themes={themes}
+        fallbackLightTheme="leetcode-light"
+        fallbackDarkTheme="leetcode-dark"
+        iconClass="header-icon"
+      />
     </div>
   </div>
-</header>
+</div>
+
+<style lang="scss">
+  @import "../assets/scss/functions/color";
+
+  .header-container {
+    @apply sticky top-0 z-50 px-4 md:px-7 py-4 border-b;
+    @include color("background-color", --theme-color-site-header-bg);
+    @include color("border-bottom-color", --theme-color-site-header-border);
+  }
+  .site-title {
+    @include color("color", --theme-color-site-title);
+    &:hover {
+      @include color("color", --theme-color-site-header-text-hover);
+    }
+  }
+  .site-description {
+    @apply text-sm md:text-base italic;
+    @include color("color", --theme-color-site-header-text);
+  }
+</style>

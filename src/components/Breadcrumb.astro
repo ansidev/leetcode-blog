@@ -26,8 +26,8 @@ const hasIcon = (item: BreadcrumbItem) => item.icon.length > 0
   </li>
   {items.map((item) =>
     <>
-      <li class="text-default">/</li>
-      <li class="text-default">
+      <li>/</li>
+      <li>
         {
           item.url.length === 0
             ?
@@ -53,5 +53,9 @@ const hasIcon = (item: BreadcrumbItem) => item.icon.length > 0
 
 .breadcrumb .breadcrumb-item {
   @apply inline-flex items-center my-0 font-semibold;
+}
+
+.breadcrumb li:not(:first-child) {
+  @apply text-style-primary;
 }
 </style>
