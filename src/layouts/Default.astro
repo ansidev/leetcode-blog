@@ -3,7 +3,7 @@ import { SEO } from "astro-seo";
 import siteConfig from "@/site.config";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import "@/assets/css/app.scss";
+import "@/assets/scss/app.scss";
 
 export interface Props {
   headerCssClasses?: string;
@@ -51,9 +51,16 @@ const { headerCssClasses = "", title, description = "", keywords = [] } = Astro.
       }}
     />
   </head>
-  <body class="max-w-8xl mx-auto bg-white dark:bg-zinc-900">
+  <body class="max-w-8xl mx-auto site-background">
     <Header cssClasses={headerCssClasses} />
     <slot />
     <Footer />
   </body>
 </html>
+<style lang="scss">
+  @import "../assets/scss/functions/color";
+
+  .site-background {
+    @include color("background-color", --theme-color-site-bg);
+  }
+</style>
