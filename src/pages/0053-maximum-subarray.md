@@ -104,4 +104,4 @@ func maxSubArray(nums []int) int {
 
 ## References
 
-- https://en.wikipedia.org/wiki/Maximum_subarray_problem
+- [https://en.wikipedia.org/wiki/Maximum_subarray_problem](https://en.wikipedia.org/wiki/Maximum_subarray_problem)

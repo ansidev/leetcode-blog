@@ -66,7 +66,8 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 #### Approach
 
-- If the length of string `s` is greater than 1, because we need to determine the LSWRC, while iterating over the string, we have to check whether the character at a specific index is repeating or not. We can consider using a hashmap.
+- If the length of string `s` is greater than 1, because we need to determine the LSWRC, while iterating over the string,
+  we have to check whether the character at a specific index is repeating or not. We can consider using a hashmap.
 
   - Assume the `LSWRC` is `s[0]`.
 

@@ -24,9 +24,12 @@ tags:
 ---
 ## Problem
 
-You are given two **positive** integers `startPos` and `endPos`. Initially, you are standing at position startPos on an **infinite** number line. With one step, you can move either one position to the left, or one position to the right.
+You are given two **positive** integers `startPos` and `endPos`.
+Initially, you are standing at position startPos on an **infinite** number line.
+With one step, you can move either one position to the left, or one position to the right.
 
-Given a positive integer `k`, return the number of **different** ways to reach the position `endPos` starting from `startPos`, such that you perform **exactly** `k` steps. Since the answer may be very large, return it **modulo** <code>10<sup>9</sup> + 7</code>.
+Given a positive integer `k`, return the number of **different** ways to reach the position `endPos` starting from `startPos`, such that you perform **exactly** `k` steps.
+Since the answer may be very large, return it **modulo** <code>10<sup>9</sup> + 7</code>.
 
 Two ways are considered different if the order of the steps made is not exactly the same.
 
@@ -43,6 +46,7 @@ Explanation: We can reach position 2 from 1 in exactly 3 steps in three ways:
 - 1 -> 0 -> 1 -> 2.
 It can be proven that no other way is possible, so we return 3.
 ```
+
 **Example 2:**
 
 ```
@@ -67,15 +71,17 @@ Assuming `d` is the **distance** between `startPos` and `endPos` => `d = abs(sta
 => `0 <= d = abs(startPos - endPos) <= 999`
 
 For `k` is the **numbers of steps** and `d` is the **distance** between `startPos` and `endPos`, the number of ways is:
+
 - `dfs(k, d) = dfs(k-1, abs(d-1)) + dfs(k-1, d+1)`.
 
 For k steps, the maximum distance is k.
+
 - **d > k**: `dfs(k, d) = 0`.
 - **d = k**: `dfs(k, d) = dfs(k, k) = 1`.
 - **d = 0**: `dfs(k, 0) = dfs(k-1, 1) + dfs(k-1, 1) = 2 x dfs(k-1, 1)`.
 
-
 Example values:
+
 - `dfs(0,0) = 1`.
 - `dfs(1, 0) = 2 x dfs(0, 1) = 0`.
 - `dfs(1, 1) = 1`.
@@ -117,4 +123,5 @@ func abs(x int) int {
 ```
 
 ## References
+
 - dfs: [[deep-first-search|Deep First Search]]

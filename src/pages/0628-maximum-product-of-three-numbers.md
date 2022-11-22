@@ -59,6 +59,7 @@ Notes:
 - l: length of nums.
 - nums[i:j]: sub array of nums from index i to j (includes nums[i], nums[j]).
 ```
+
 #### Approach
 
 - If length of `nums` is 3, maximum product is `nums[0] x nums[1] x nums[2]`.
@@ -72,7 +73,8 @@ Notes:
       - Product of three random elements will be a negative number.
       - If `n1 > 0`, `n2 < n3 < 0`: `n1 x n2 < n1 x n3 < 0`.
       - If `m1 < 0`, `0 < m2 < n3`: `m1 x m3 < m1 x m2 < 0`.
-      - So to find the maximum product of three numbers in this case, we need to find two negative numbers `a`, `b` that `a x b` has max value (note that `a x b > 0`), then find the third number which is the maximum value of remaining ones.
+      - So to find the maximum product of three numbers in this case, we need to find two negative numbers `a`, `b` that `a x b` has max value (note that `a x b > 0`),
+        then find the third number which is the maximum value of remaining ones.
       - `nums[0]` & `nums[1]` are two smallest negative numbers. So their product will be the maximum product of two numbers. `nums[l-1]` is the maximum one of [`nums[2]`, `nums[3]`,..., `nums[l-1]`].
       - Finally, the maximum product of three numbers in this case is 👉 `nums[0] x nums[1] x nums[l-1]`.
     - Other cases.
@@ -81,7 +83,8 @@ Notes:
         - If `nums[0] = 0`, all remaining elements are positive numbers (similar to case 1)
           - 👉 `maxProduct = nums[l-3] x nums[l-2] x nums[l-1]`.
         - If `nums[l-1] = 0`, all remaining elements are negative numbers (similar to case 2)
-          - `maxProduct` of three numbers of sub array `nums[0:l-2]` is a negative number, it less than product of `nums[l-1]` (`= 0`) and two random numbers of sub array `nums[0:l-2]`. So in this case, we can pick three numbers `nums[l-3]`, `nums[l-2]`, `nums[l-1]`.
+          - `maxProduct` of three numbers of sub array `nums[0:l-2]` is a negative number, it less than product of `nums[l-1]` (`= 0`) and two random numbers of sub array `nums[0:l-2]`.
+            So in this case, we can pick three numbers `nums[l-3]`, `nums[l-2]`, `nums[l-1]`.
           - 👉 `maxProduct = nums[l-3] x nums[l-2] x nums[l-1] = 0`.
         - If `nums[i] = 0` (`0 < i < l-1`), because `nums` has at least 4 elements, so there are possible cases:
           - `nums` has at least there positive numbers, similar to case 1.
