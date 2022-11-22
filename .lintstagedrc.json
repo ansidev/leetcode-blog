@@ -1,0 +1,7 @@
+{
+  "*.astro": "prettier -w",
+  "*.cjs": "prettier -w",
+  "*.ts": "prettier -w",
+  "*.css": "prettier -w",
+  "*.scss": "prettier -w"
+}

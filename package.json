@@ -9,7 +9,10 @@
     "type-check": "astro check && tsc --noEmit",
     "build": "pnpm run type-check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@astrojs/partytown": "^1.0.1",
@@ -30,14 +33,23 @@
     "vite": "^3.2.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@iconify-json/bi": "^1.1.12",
     "@tailwindcss/typography": "^0.5.8",
+    "@trivago/prettier-plugin-sort-imports": "^3.4.0",
     "@types/lodash.kebabcase": "^4.1.7",
     "@types/mustache": "^4.2.1",
     "commander": "^9.4.1",
     "dayjs": "^1.11.6",
     "gray-matter": "^4.0.3",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
     "mustache": "^4.2.0",
+    "postcss": "^8.4.19",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.7.0",
+    "prettier-plugin-tailwindcss": "0.2.0-beta.2",
     "sass": "^1.56.1",
     "tsx": "^3.12.1",
     "typescript": "^4.8.4"
