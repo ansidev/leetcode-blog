@@ -1,7 +1,7 @@
 {
+  "*.{md,markdown}": "markdownlint-cli2",
   "*.astro": "prettier -w",
   "*.cjs": "prettier -w",
   "*.ts": "prettier -w",
-  "*.css": "prettier -w",
-  "*.scss": "prettier -w"
+  "*.{css,scss}": "prettier -w"
 }
