@@ -1,14 +1,14 @@
 ---
-import Default from "./Default.astro";
-import PostHeader from "@components/PostHeader.astro";
-import Breadcrumb from "@components/Breadcrumb.astro";
-import type { UnionPostFrontMatter } from "@/types";
+import Default from './Default.astro'
+import type { UnionPostFrontMatter } from '@/types'
+import Breadcrumb from '@components/Breadcrumb.astro'
+import PostHeader from '@components/PostHeader.astro'
 
 export interface Props {
   frontmatter: UnionPostFrontMatter
 }
 
-const { frontmatter } = Astro.props;
+const { frontmatter } = Astro.props
 ---
 
 <Default
@@ -17,10 +17,10 @@ const { frontmatter } = Astro.props;
   description={frontmatter.title}
   keywords={[...(frontmatter.keywords || []), ...(frontmatter.tags || [])]}
 >
-  <article class="post px-4 xl:px-0 my-8">
-    <Breadcrumb items={[{ icon: "", title: frontmatter.title, url: "" }]} />
+  <article class="post my-8 px-4 xl:px-0">
+    <Breadcrumb items={[{ icon: '', title: frontmatter.title, url: '' }]} />
     <PostHeader {...frontmatter} />
-    <div class="p-4 border rounded prose">
+    <div class="prose rounded border p-4">
       <slot />
     </div>
   </article>

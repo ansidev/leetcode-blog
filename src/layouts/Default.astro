@@ -1,18 +1,23 @@
 ---
-import { SEO } from "astro-seo";
-import siteConfig from "@/site.config";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import "@/assets/scss/app.scss";
+import '@/assets/scss/app.scss'
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
+import siteConfig from '@/site.config'
+import { SEO } from 'astro-seo'
 
 export interface Props {
-  headerCssClasses?: string;
-  title: string;
-  description?: string;
-  keywords?: string[];
+  headerCssClasses?: string
+  title: string
+  description?: string
+  keywords?: string[]
 }
 
-const { headerCssClasses = "", title, description = "", keywords = [] } = Astro.props;
+const {
+  headerCssClasses = '',
+  title,
+  description = '',
+  keywords = [],
+} = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -21,46 +26,48 @@ const { headerCssClasses = "", title, description = "", keywords = [] } = Astro.
     <meta charset="UTF-8" />
     <SEO
       title={title}
-      description={description.length > 0 ? description : `${title} - ${siteConfig.description}`}
+      description={description.length > 0
+        ? description
+        : `${title} - ${siteConfig.description}`}
       extend={{
         // extending the default link tags
-        link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
         // extending the default meta tags
         meta: [
           {
-            name: "viewport",
-            content: "width=device-width,initial-scale=1",
+            name: 'viewport',
+            content: 'width=device-width,initial-scale=1',
           },
           {
-            name: "keywords",
-            content: `${siteConfig.keyword}, ${keywords.join(", ")}`,
+            name: 'keywords',
+            content: `${siteConfig.keyword}, ${keywords.join(', ')}`,
           },
           {
-            name: "generator",
+            name: 'generator',
             content: Astro.generator,
           },
           {
-            name: "twitter:title",
+            name: 'twitter:title',
             content: title,
           },
           {
-            name: "twitter:description",
+            name: 'twitter:description',
             content: description,
           },
         ],
       }}
     />
   </head>
-  <body class="max-w-8xl mx-auto site-background">
+  <body class="max-w-8xl site-background mx-auto">
     <Header cssClasses={headerCssClasses} />
     <slot />
     <Footer />
+    <style lang="scss">
+      @import '../assets/scss/functions/color';
+
+      .site-background {
+        @include color('background-color', --theme-color-site-bg);
+      }
+    </style>
   </body>
 </html>
-<style lang="scss">
-  @import "../assets/scss/functions/color";
-
-  .site-background {
-    @include color("background-color", --theme-color-site-bg);
-  }
-</style>

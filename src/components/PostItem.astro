@@ -1,18 +1,16 @@
 ---
-import Icon from "@/components/Icon.astro";
+import Icon from '@/components/Icon.astro'
 
 export interface Props {
-  title: string;
-  href: string;
+  title: string
+  href: string
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body } = Astro.props
 ---
 
 <a href={href}>
-  <div
-    class="post-item w-full inline-flex items-center justify-between"
-  >
+  <div class="post-item inline-flex w-full items-center justify-between">
     <div>
       <h2>{title}</h2>
       <p>{body}</p>
@@ -22,7 +20,7 @@ const { href, title, body } = Astro.props;
 </a>
 
 <style lang="scss">
-.post-item {
-  @apply mx-3 my-2 p-3 rounded border-2 border-solid border-style-primary hover:bg-style-primary text-style-secondary hover:text-style-primary-inverted;
-}
+  .post-item {
+    @apply mx-3 my-2 rounded border-2 border-solid border-style-primary p-3 text-style-secondary hover:bg-style-primary hover:text-style-primary-inverted;
+  }
 </style>

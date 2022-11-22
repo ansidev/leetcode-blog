@@ -1,25 +1,24 @@
 ---
-import bi from "@iconify-json/bi/icons.json";
-import Icon from "@/components/Icon.astro";
+import Icon from '@/components/Icon.astro'
+import bi from '@iconify-json/bi/icons.json'
 
 interface ThemeMeta {
-  name: string;
-  icon: string;
+  name: string
+  icon: string
 }
 
 export interface Props {
-  themes: Record<string, ThemeMeta>;
-  fallbackLightTheme: string;
-  fallbackDarkTheme: string;
-  iconClass: string;
+  themes: Record<string, ThemeMeta>
+  fallbackLightTheme: string
+  fallbackDarkTheme: string
+  iconClass: string
 }
 
-const STORAGE_KEY_THEME: string = "theme";
+const STORAGE_KEY_THEME: string = 'theme'
 
-const { themes, fallbackLightTheme, fallbackDarkTheme, iconClass } =
-  Astro.props;
-const defaultTheme = fallbackDarkTheme;
-const icons = bi.icons;
+const { themes, fallbackLightTheme, fallbackDarkTheme, iconClass } = Astro.props
+const defaultTheme = fallbackDarkTheme
+const icons = bi.icons
 ---
 
 <div class="group relative inline-block text-left">
@@ -38,7 +37,7 @@ const icons = bi.icons;
   </button>
   <div
     id="theme-select"
-    class="hidden group-hover:block absolute right-0 z-10 w-40 origin-top-right focus:outline-none"
+    class="absolute right-0 z-10 hidden w-40 origin-top-right focus:outline-none group-hover:block"
     role="menu"
     aria-orientation="vertical"
     aria-labelledby="menu-button"
@@ -73,95 +72,95 @@ const icons = bi.icons;
     fallbackDarkTheme,
   }}
 >
-  const themeIds = Object.keys(themes);
-  const themeIcons = themeIds.map((themeId) => themes[themeId].icon);
+  const themeIds = Object.keys(themes)
+  const themeIcons = themeIds.map((themeId) => themes[themeId].icon)
 
   const storedTheme = (() => {
     if (
-      typeof localStorage !== "undefined" &&
+      typeof localStorage !== 'undefined' &&
       localStorage.getItem(STORAGE_KEY_THEME)
     ) {
-      const storedTheme = localStorage.getItem(STORAGE_KEY_THEME);
-      return themeIds.includes(storedTheme) ? storedTheme : fallbackDarkTheme;
+      const storedTheme = localStorage.getItem(STORAGE_KEY_THEME)
+      return themeIds.includes(storedTheme) ? storedTheme : fallbackDarkTheme
     }
 
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return fallbackDarkTheme;
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return fallbackDarkTheme
     }
 
-    return fallbackLightTheme;
-  })();
+    return fallbackLightTheme
+  })()
 
   themeIds.forEach((themeId) => {
     if (storedTheme === themeId) {
-      document.documentElement.classList.add(themeId);
+      document.documentElement.classList.add(themeId)
     } else {
-      document.documentElement.classList.remove(themeId);
+      document.documentElement.classList.remove(themeId)
     }
-  });
+  })
 
-  window.localStorage.setItem(STORAGE_KEY_THEME, storedTheme || defaultTheme);
+  window.localStorage.setItem(STORAGE_KEY_THEME, storedTheme || defaultTheme)
 
-  const themeSelectEl = document.getElementById("theme-select");
-  const toggleThemeMenu = () => themeSelectEl.classList.toggle("hidden");
-  const hideThemeMenu = () => themeSelectEl.classList.add("hidden");
+  const themeSelectEl = document.getElementById('theme-select')
+  const toggleThemeMenu = () => themeSelectEl.classList.toggle('hidden')
+  const hideThemeMenu = () => themeSelectEl.classList.add('hidden')
 
   const switchTheme = (evt) => {
-    let themeToSwitch = evt.target.getAttribute("data-theme");
-    const isSupportedTheme = themeIds.includes(themeToSwitch);
+    let themeToSwitch = evt.target.getAttribute('data-theme')
+    const isSupportedTheme = themeIds.includes(themeToSwitch)
 
     if (isSupportedTheme) {
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      themeToSwitch = fallbackDarkTheme;
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      themeToSwitch = fallbackDarkTheme
     } else {
-      themeToSwitch = fallbackLightTheme;
+      themeToSwitch = fallbackLightTheme
     }
-    localStorage.setItem(STORAGE_KEY_THEME, themeToSwitch);
+    localStorage.setItem(STORAGE_KEY_THEME, themeToSwitch)
 
     themeIds.forEach((themeId) => {
       if (themeToSwitch === themeId) {
-        document.documentElement.classList.add(themeId);
+        document.documentElement.classList.add(themeId)
       } else {
-        document.documentElement.classList.remove(themeId);
+        document.documentElement.classList.remove(themeId)
       }
-    });
+    })
 
-    const themeSwitcherIcon = document.getElementById("theme-switcher-icon");
-    const themeIcon = themes[themeToSwitch].icon;
+    const themeSwitcherIcon = document.getElementById('theme-switcher-icon')
+    const themeIcon = themes[themeToSwitch].icon
     themeIcons.forEach((icon) => {
       if (icon === themeIcon) {
-        themeSwitcherIcon.classList.add(icon);
+        themeSwitcherIcon.classList.add(icon)
       } else {
-        themeSwitcherIcon.classList.remove(icon);
+        themeSwitcherIcon.classList.remove(icon)
       }
-    });
+    })
 
-    const iconId = typeof themeIcon === "string" ? themeIcon.split(":")[1] : "";
+    const iconId = typeof themeIcon === 'string' ? themeIcon.split(':')[1] : ''
     if (iconId.length > 0) {
-      themeSwitcherIcon.innerHTML = icons[iconId].body;
+      themeSwitcherIcon.innerHTML = icons[iconId].body
     }
-    hideThemeMenu();
-  };
+    hideThemeMenu()
+  }
 
   document
-    .getElementById("theme-switcher-btn")
-    ?.addEventListener("click", toggleThemeMenu);
+    .getElementById('theme-switcher-btn')
+    ?.addEventListener('click', toggleThemeMenu)
   document
-    .querySelectorAll(".theme-option a")
-    .forEach((item) => item.addEventListener("click", switchTheme));
+    .querySelectorAll('.theme-option a')
+    .forEach((item) => item.addEventListener('click', switchTheme))
 </script>
 
 <style lang="scss">
-  @import "../assets/scss/functions/color";
+  @import '../assets/scss/functions/color';
 
   .theme-option {
-    @include color("background-color", --theme-color-theme-menu-bg);
+    @include color('background-color', --theme-color-theme-menu-bg);
     @apply rounded;
     & a {
-      @apply bg-transparent text-style-primary block px-4 py-2 text-sm;
+      @apply block bg-transparent px-4 py-2 text-sm text-style-primary;
       &:hover {
-        @include color("background-color", --theme-color-theme-menu-bg-hover);
-        @include color("color", --theme-color-theme-menu-text-hover);
+        @include color('background-color', --theme-color-theme-menu-bg-hover);
+        @include color('color', --theme-color-theme-menu-text-hover);
       }
     }
 

@@ -3,11 +3,11 @@ import siteConfig from '@/site.config'
 
 const projectId = siteConfig?.plugins?.swetrix?.pid
 ---
-<!-- Swetrix -->
-<!-- Put this at the end of the <body> tag -->
+
+<!-- Swetrix --><!-- Put this at the end of the <body> tag -->
 <script src="https://swetrix.org/swetrix.js" defer></script>
 <script define:vars={{ projectId }}>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     swetrix.init(projectId)
     swetrix.trackViews()
   })

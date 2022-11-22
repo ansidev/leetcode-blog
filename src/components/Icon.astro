@@ -34,4 +34,14 @@ const getIcon = (icon: string) => {
 
 const svg = getIcon(name)
 ---
-<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="currentColor" id={id} class:list={[`bi bi-${name}`, clazz]} viewBox="0 0 16 16" set:html={svg} />
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  fill="currentColor"
+  id={id}
+  class:list={[`bi bi-${name}`, clazz]}
+  viewBox="0 0 16 16"
+  set:html={svg}
+/>

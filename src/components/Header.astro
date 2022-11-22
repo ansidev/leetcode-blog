@@ -1,24 +1,24 @@
 ---
-import siteConfig from "@/site.config";
-import Icon from "./Icon.astro";
-import ThemeSelector from "@/components/ThemeSelector.astro";
+import Icon from './Icon.astro'
+import ThemeSelector from '@/components/ThemeSelector.astro'
+import siteConfig from '@/site.config'
 
 export interface Props {
-  cssClasses: string;
+  cssClasses: string
 }
 
-const { cssClasses = "" } = Astro.props;
-const { title, description, author, themes } = siteConfig;
+const { cssClasses = '' } = Astro.props
+const { title, description, author, themes } = siteConfig
 ---
 
 <div class="header-container">
   <div
     class:list={[
-      "header mx-auto flex justify-between items-center",
+      'header mx-auto flex justify-between items-center',
       cssClasses,
     ]}
   >
-    <div class="header-meta flex mr-3">
+    <div class="header-meta mr-3 flex">
       <div class="header-logo mr-3">
         <a href="/">
           <img
@@ -32,7 +32,7 @@ const { title, description, author, themes } = siteConfig;
         </a>
       </div>
       <div class="flex flex-col">
-        <h1 class="text-xl uppercase font-semibold">
+        <h1 class="text-xl font-semibold uppercase">
           <a href="/" class="site-title">{title}</a>
         </h1>
         <h2 class="site-description">{description}</h2>
@@ -53,21 +53,21 @@ const { title, description, author, themes } = siteConfig;
 </div>
 
 <style lang="scss">
-  @import "../assets/scss/functions/color";
+  @import '../assets/scss/functions/color';
 
   .header-container {
-    @apply sticky top-0 z-50 px-4 md:px-7 py-4 border-b;
-    @include color("background-color", --theme-color-site-header-bg);
-    @include color("border-bottom-color", --theme-color-site-header-border);
+    @apply sticky top-0 z-50 border-b px-4 py-4 md:px-7;
+    @include color('background-color', --theme-color-site-header-bg);
+    @include color('border-bottom-color', --theme-color-site-header-border);
   }
   .site-title {
-    @include color("color", --theme-color-site-title);
+    @include color('color', --theme-color-site-title);
     &:hover {
-      @include color("color", --theme-color-site-header-text-hover);
+      @include color('color', --theme-color-site-header-text-hover);
     }
   }
   .site-description {
-    @apply text-sm md:text-base italic;
-    @include color("color", --theme-color-site-header-text);
+    @apply text-sm italic md:text-base;
+    @include color('color', --theme-color-site-header-text);
   }
 </style>

@@ -1,28 +1,28 @@
 ---
-import kebabCase from "lodash.kebabcase";
+import kebabCase from 'lodash.kebabcase'
 
 export interface Props {
-  difficulty: string;
+  difficulty: string
 }
 
-const { difficulty } = Astro.props;
+const { difficulty } = Astro.props
 const difficultyStyleMap: Record<string, string> = {
-  Easy: "difficulty-easy",
-  Medium: "difficulty-medium",
-  Hard: "difficulty-hard",
-};
+  Easy: 'difficulty-easy',
+  Medium: 'difficulty-medium',
+  Hard: 'difficulty-hard',
+}
 
 const getDifficultyCssClass: (difficulty: string) => string = (
-  difficulty: string
+  difficulty: string,
 ) => {
   return Object.keys(difficultyStyleMap).includes(difficulty)
     ? difficultyStyleMap[difficulty]
-    : "";
-};
+    : ''
+}
 ---
 
 <a href={`/difficulties/${kebabCase(difficulty)}`} class="mx-1 my-3">
-  <span class:list={["px-2 py-1 m-1", getDifficultyCssClass(difficulty)]}>
+  <span class:list={['px-2 py-1 m-1', getDifficultyCssClass(difficulty)]}>
     {difficulty}
   </span>
 </a>
@@ -30,18 +30,30 @@ const getDifficultyCssClass: (difficulty: string) => string = (
 <style lang="scss">
   @import '../assets/scss/functions';
 
-  $difficulties: "easy", "medium", "hard";
+  $difficulties: 'easy', 'medium', 'hard';
 
   @each $difficulty in $difficulties {
     .difficulty-#{$difficulty} {
-      @apply border rounded;
-      @include color('background-color', --theme-color-bg-difficulty- + #{$difficulty});
+      @apply rounded border;
+      @include color(
+        'background-color',
+        --theme-color-bg-difficulty- + #{$difficulty}
+      );
       @include color('color', --theme-color-text-difficulty- + #{$difficulty});
-      @include color('border-color', --theme-color-text-difficulty- + #{$difficulty});
+      @include color(
+        'border-color',
+        --theme-color-text-difficulty- + #{$difficulty}
+      );
       &:hover {
         @apply border-none;
-        @include color('background-color', --theme-color-bg-difficulty- + #{$difficulty} + -hover);
-        @include color('color', --theme-color-text-difficulty- + #{$difficulty} + -hover);
+        @include color(
+          'background-color',
+          --theme-color-bg-difficulty- + #{$difficulty} + -hover
+        );
+        @include color(
+          'color',
+          --theme-color-text-difficulty- + #{$difficulty} + -hover
+        );
       }
     }
   }
