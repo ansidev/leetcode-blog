@@ -11,9 +11,9 @@ a {
 }
 
 .header-icon {
-  @include color("color", --theme-color-site-header-text);
+  @include color('color', --theme-color-site-header-text);
   &:hover {
-    @include color("color", --theme-color-site-header-text-hover);
+    @include color('color', --theme-color-site-header-text-hover);
   }
 }
 
@@ -28,7 +28,7 @@ a {
 
 /* Badge CSS */
 %badge {
-  @apply px-3 py-2 border rounded-full border-style-primary;
+  @apply rounded-full border border-style-primary px-3 py-2;
 }
 
 .badge-default {
@@ -43,14 +43,14 @@ a {
 
 /* Post CSS */
 .post {
-  @apply flex flex-col max-w-5xl mx-auto;
+  @apply mx-auto flex max-w-5xl flex-col;
 }
 
 /* Prose CSS */
 .prose {
-  @apply transition duration-150 ease-in w-full max-w-5xl;
-  @apply prose-a:no-underline prose-a:break-words;
-  & :is(:where(a):not(:where([class~="not-prose"] *))) {
+  @apply w-full max-w-5xl transition duration-150 ease-in;
+  @apply prose-a:break-words prose-a:no-underline;
+  & :is(:where(a):not(:where([class~='not-prose'] *))) {
     @extend %link;
   }
 
@@ -59,7 +59,7 @@ a {
     padding-inline-start: 1ch;
 
     &::marker {
-      @apply pt-1 text-gray-500 ;
+      @apply pt-1 text-gray-500;
     }
   }
 
