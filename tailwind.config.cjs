@@ -6,7 +6,7 @@ const withOpacity = (variableName) => {
       return `rgba(var(${variableName}) / ${opacityValue})`
     }
     return `rgb(var(${variableName}))`
-  };
+  }
 }
 
 /** @type {import('tailwindcss').Config} */
@@ -20,23 +20,23 @@ module.exports = {
           primary: withOpacity('--theme-color-text'),
           'primary-inverted': withOpacity('--theme-color-text-inverted'),
           secondary: withOpacity('--theme-color-fill'),
-        }
+        },
       },
       backgroundColor: {
         style: {
           primary: withOpacity('--theme-color-fill'),
           secondary: withOpacity('--theme-color-text'),
           'secondary-inverted': withOpacity('--theme-color-text-inverted'),
-        }
+        },
       },
       borderColor: {
         style: {
           primary: withOpacity('--theme-color-fill'),
           secondary: withOpacity('--theme-color-text'),
           'secondary-inverted': withOpacity('--theme-color-text-inverted'),
-        }
+        },
       },
-      typography: theme => ({
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             color: theme('textColor.style.primary'),
@@ -59,10 +59,10 @@ module.exports = {
             'code::after': {
               content: 'none',
             },
-          }
+          },
         },
       }),
-    }
+    },
   },
   plugins: [
     tailwindColorVariables({
@@ -72,7 +72,7 @@ module.exports = {
         // '-pink',
         // '-slate',
         // '-zinc',
-      ]
+      ],
     }),
     require('@tailwindcss/typography'),
   ],

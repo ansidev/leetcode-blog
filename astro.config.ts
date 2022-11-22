@@ -1,23 +1,31 @@
-import { defineConfig } from "astro/config"
-import { loadEnv } from "vite"
-import tailwind from "@astrojs/tailwind"
-import { remarkReadingTime } from "./src/plugins/remark-reading-time"
-import { getWikiLinks } from "./src/plugins/link"
-import wikiLinkPlugin from "remark-wiki-link-plus"
-import partytown from "@astrojs/partytown"
-import sitemap from "@astrojs/sitemap"
+import { getWikiLinks } from './src/plugins/link'
+import { remarkReadingTime } from './src/plugins/remark-reading-time'
+import partytown from '@astrojs/partytown'
+import sitemap from '@astrojs/sitemap'
+import tailwind from '@astrojs/tailwind'
+import { defineConfig } from 'astro/config'
+import wikiLinkPlugin from 'remark-wiki-link-plus'
+import { loadEnv } from 'vite'
 
 const env = loadEnv(import.meta.env.MODE, process.cwd())
-const siteURL = env.VITE_BASE_URL || "http://localhost:3000"
+const siteURL = env.VITE_BASE_URL || 'http://localhost:3000'
 
 const timeFormatOptions: Intl.DateTimeFormatOptions = {
   hour12: true,
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
 }
-console.log(`\x1b[30m${new Date().toLocaleTimeString('en-US', timeFormatOptions)}`, "\x1b[94m[env]\x1b[0m   Environment mode:", import.meta.env.MODE)
-console.log(`\x1b[30m${new Date().toLocaleTimeString('en-US', timeFormatOptions)}`, "\x1b[94m[env]\x1b[0m   Site URL:", siteURL)
+console.log(
+  `\x1b[30m${new Date().toLocaleTimeString('en-US', timeFormatOptions)}`,
+  '\x1b[94m[env]\x1b[0m   Environment mode:',
+  import.meta.env.MODE,
+)
+console.log(
+  `\x1b[30m${new Date().toLocaleTimeString('en-US', timeFormatOptions)}`,
+  '\x1b[94m[env]\x1b[0m   Site URL:',
+  siteURL,
+)
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,12 +44,12 @@ export default defineConfig({
   integrations: [
     tailwind({
       config: {
-        applyBaseStyles: false
-      }
+        applyBaseStyles: false,
+      },
     }),
     partytown({
       config: {
-        forward: ["dataLayer.push"],
+        forward: ['dataLayer.push'],
       },
     }),
     sitemap(),
@@ -56,11 +64,11 @@ export default defineConfig({
         wikiLinkPlugin,
         {
           permalinks: getWikiLinks(),
-          hrefTemplate: (permalink: string) => `/${permalink}`
-        }
+          hrefTemplate: (permalink: string) => `/${permalink}`,
+        },
       ],
       remarkReadingTime,
     ],
     extendDefaultPlugins: true,
-  }
-});
+  },
+})
