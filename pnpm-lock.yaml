@@ -13,6 +13,7 @@ specifiers:
   '@types/lodash.get': ^4.4.7
   '@types/lodash.kebabcase': ^4.1.7
   '@types/mustache': ^4.2.1
+  '@types/node': ^18.11.9
   astro: ^1.6.10
   astro-seo: ^0.6.0
   autoprefixer: ^10.4.13
@@ -46,7 +47,7 @@ dependencies:
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.2_tailwindcss@3.2.4
   '@types/lodash.get': 4.4.7
-  astro: 1.6.10_sass@1.56.1
+  astro: 1.6.10_ajklay5k626t46b6fyghkbup3i
   astro-seo: 0.6.0
   autoprefixer: 10.4.13_postcss@8.4.19
   cssnano: 5.1.14_postcss@8.4.19
@@ -56,7 +57,7 @@ dependencies:
   reading-time: 1.5.0
   remark-wiki-link-plus: 1.1.1
   tailwindcss: 3.2.4_postcss@8.4.19
-  vite: 3.2.4_sass@1.56.1
+  vite: 3.2.4_ajklay5k626t46b6fyghkbup3i
 
 devDependencies:
   '@commitlint/cli': 17.3.0
@@ -66,6 +67,7 @@ devDependencies:
   '@trivago/prettier-plugin-sort-imports': 3.4.0_prettier@2.7.1
   '@types/lodash.kebabcase': 4.1.7
   '@types/mustache': 4.2.1
+  '@types/node': 18.11.9
   commander: 9.4.1
   dayjs: 1.11.6
   gray-matter: 4.0.3
@@ -1027,6 +1029,9 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
+  /@types/node/18.11.9:
+    resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
+
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -1046,7 +1051,7 @@ packages:
   /@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 18.11.9
     dev: false
 
   /@types/unist/2.0.6:
@@ -1268,7 +1273,7 @@ packages:
     resolution: {integrity: sha512-nR+dJlAyQhX6s0oAmbBqPq3KCZax/zVAerFsclGiJQ2znOkS/7L+RGjziS4M9Q3OQxm3FMfqIKHp9Ns73Q81ww==}
     dev: false
 
-  /astro/1.6.10_sass@1.56.1:
+  /astro/1.6.10_ajklay5k626t46b6fyghkbup3i:
     resolution: {integrity: sha512-W/ZGROkCKsDicpiXB82n8EkY6I0/12wdXS80NGaBdIUR1jZZxdN+0YMmdz+C2kYbjlo45KUsXpC/Tej+5KQYSQ==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
@@ -1330,7 +1335,7 @@ packages:
       typescript: 4.8.4
       unist-util-visit: 4.1.1
       vfile: 5.3.5
-      vite: 3.2.4_sass@1.56.1
+      vite: 3.2.4_ajklay5k626t46b6fyghkbup3i
       vitefu: 0.2.1_vite@3.2.4
       yargs-parser: 21.1.1
       zod: 3.19.1
@@ -5603,7 +5608,7 @@ packages:
       vfile-message: 3.1.2
     dev: false
 
-  /vite/3.2.4_sass@1.56.1:
+  /vite/3.2.4_ajklay5k626t46b6fyghkbup3i:
     resolution: {integrity: sha512-Z2X6SRAffOUYTa+sLy3NQ7nlHFU100xwanq1WDwqaiFiCe+25zdxP1TfCS5ojPV2oDDcXudHIoPnI1Z/66B7Yw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5628,6 +5633,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.11.9
       esbuild: 0.15.12
       postcss: 8.4.19
       resolve: 1.22.1
@@ -5645,7 +5651,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 3.2.4_sass@1.56.1
+      vite: 3.2.4_ajklay5k626t46b6fyghkbup3i
     dev: false
 
   /vscode-css-languageservice/6.1.1:
