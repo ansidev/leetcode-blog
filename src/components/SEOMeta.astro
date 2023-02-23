@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string
+  description: string | undefined
+  favicon: string | undefined
+  faviconMimeType: string | undefined
+  keywords: string | undefined
+  author: string | undefined
+  robots: string | undefined
+}
+
+const {
+  title,
+  description,
+  favicon,
+  faviconMimeType,
+  keywords,
+  author,
+  robots,
+} = Astro.props
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type={faviconMimeType} href={favicon} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+{description && <meta name="description" content={description} />}
+
+<!-- Dynamic Meta Tags -->
+{keywords && <meta name="keywords" content={keywords} />}
+<meta name="author" content={author} />
+{robots && <meta name="robots" content={robots} />}
+<meta name="generator" content={Astro.generator} />
