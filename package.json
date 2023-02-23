@@ -1,0 +1,36 @@
+{
+  "name": "leetcode-blog",
+  "description": "Solutions for LeetCode problems - Written by ansidev",
+  "type": "module",
+  "version": "1.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare": "astro telemetry disable && husky install",
+    "type-check": "astro check && tsc --noEmit",
+    "lint": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "astro": "^2.0.14",
+    "astro-compress": "^1.1.33",
+    "astro-purgecss": "^2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "commitizen": "^4.3.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.34.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "typescript": "^4.9.5"
+  }
+}
