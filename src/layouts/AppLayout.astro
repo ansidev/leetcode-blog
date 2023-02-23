@@ -1,0 +1,28 @@
+---
+import SEOMeta from '@/components/SEOMeta.astro'
+import siteConfig from '@/configs/site'
+
+export interface Props {
+  title: string
+  description: string
+  author: string
+}
+
+const { title, author } = Astro.props
+const { favicon, faviconMimeType } = siteConfig
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <SEOMeta
+      title={title}
+      favicon={favicon}
+      faviconMimeType={faviconMimeType}
+      author={author}
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
