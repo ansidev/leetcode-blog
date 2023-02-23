@@ -1,3 +1,4 @@
+import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 import compress from 'astro-compress'
 import purgecss from 'astro-purgecss'
@@ -17,6 +18,7 @@ if (baseURL.length === 0) {
 export default defineConfig({
   site: baseURL,
   integrations: [
+    tailwind(),
     purgecss(),
     compress(),
   ]

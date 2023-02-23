@@ -15,9 +15,11 @@
     "lint": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@astrojs/tailwind": "^3.0.1",
     "astro": "^2.0.14",
     "astro-compress": "^1.1.33",
-    "astro-purgecss": "^2.0.0"
+    "astro-purgecss": "^2.0.0",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
