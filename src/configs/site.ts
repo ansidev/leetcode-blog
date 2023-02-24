@@ -5,19 +5,27 @@ export default {
   description: 'Solutions for LeetCode problems - Written by ansidev',
   author: {
     name: 'Le Minh Tri',
+    nickname: 'ansidev',
+    email: 'ansidev@gmail.com',
     avatar: '/ansidev.png',
+    homepage: 'https://ansidev.xyz',
+    github: 'https://github.com/ansidev',
+    twitter: 'https://twitter.com/ansidev',
+    telegram: 'https://t.me/ansidev',
+    reddit: 'https://reddit.com/u/ansidev',
   },
   favicon: '/favicon.ico',
   faviconMimeType: 'image/x-icon',
   plugins: {
     counterAnalytics: {
-      pid: env.COUNTER_ANALYTICS_ID,
+      projectId: env.COUNTER_ANALYTICS_ID,
+      utcOffset: 7,
     },
     googleAnalytics: {
-      id: env.GA_ID,
+      projectId: env.GA_ID,
     },
     swetrix: {
-      pid: env.SWETRIX_ID,
+      projectId: env.SWETRIX_ID,
     },
   }
 }
