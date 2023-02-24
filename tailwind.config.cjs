@@ -1,3 +1,5 @@
+const tailwindCssTheme = require('tailwindcss-themer')
+const themeConfig = require('./theme.config.cjs')
 const typography = require('@tailwindcss/typography')
 
 /** @type {import('tailwindcss').Config} */
@@ -7,6 +9,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    tailwindCssTheme(themeConfig),
     typography(),
   ],
 }
