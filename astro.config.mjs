@@ -20,7 +20,11 @@ export default defineConfig({
   site: baseURL,
   integrations: [
     tailwind(),
-    partytown(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
     purgecss(),
     compress(),
   ]
