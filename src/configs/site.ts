@@ -11,5 +11,8 @@ export default {
     googleAnalytics: {
       id: env.GA_ID,
     },
+    swetrix: {
+      pid: env.SWETRIX_ID,
+    },
   }
 }
