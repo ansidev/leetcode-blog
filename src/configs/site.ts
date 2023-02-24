@@ -8,6 +8,9 @@ export default {
   favicon: '/favicon.ico',
   faviconMimeType: 'image/x-icon',
   plugins: {
+    counterAnalytics: {
+      pid: env.COUNTER_ANALYTICS_ID,
+    },
     googleAnalytics: {
       id: env.GA_ID,
     },
