@@ -3,8 +3,10 @@ const env = process.env
 export default {
   title: 'LeetCode Blog',
   description: 'Solutions for LeetCode problems - Written by ansidev',
-  author: 'ansidev',
-  authorAvatar: '/ansidev.png',
+  author: {
+    name: 'Le Minh Tri',
+    avatar: '/ansidev.png',
+  },
   favicon: '/favicon.ico',
   faviconMimeType: 'image/x-icon',
   plugins: {
