@@ -37,6 +37,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "lodash.get": "^4.4.2",
+    "sass": "^1.58.3",
     "tailwindcss-themer": "^3.0.1",
     "typescript": "^4.9.5"
   }
