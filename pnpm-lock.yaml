@@ -4,6 +4,7 @@ specifiers:
   '@astrojs/tailwind': ^3.0.1
   '@commitlint/cli': ^17.4.4
   '@commitlint/config-conventional': ^17.4.4
+  '@iconify-json/bi': ^1.1.15
   '@tailwindcss/typography': ^0.5.9
   '@types/lodash.get': ^4.4.7
   '@types/node': ^18.14.0
@@ -32,6 +33,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
+  '@iconify-json/bi': 1.1.15
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@types/lodash.get': 4.4.7
   '@types/node': 18.14.0
@@ -800,6 +802,16 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@iconify-json/bi/1.1.15:
+    resolution: {integrity: sha512-NsbDeTVIYwgPLyAT0UgzuaCl79V65Z+M319BjbdEwdnbDGuaYgmAMBJUIWrnBEVoEg7rtouAuvaZRb3nIYIRcA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
