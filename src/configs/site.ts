@@ -3,5 +3,5 @@ export default {
   description: 'Solutions for LeetCode problems - Written by ansidev',
   author: 'ansidev',
   favicon: '/favicon.ico',
-  faviconMimeType: 'image/ico',
+  faviconMimeType: 'image/x-icon',
 }
