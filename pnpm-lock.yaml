@@ -4,7 +4,9 @@ specifiers:
   '@astrojs/tailwind': ^3.0.1
   '@commitlint/cli': ^17.4.4
   '@commitlint/config-conventional': ^17.4.4
+  '@iconify-json/bi': ^1.1.15
   '@tailwindcss/typography': ^0.5.9
+  '@types/lodash.get': ^4.4.7
   '@types/node': ^18.14.0
   '@typescript-eslint/eslint-plugin': ^5.53.0
   '@typescript-eslint/parser': ^5.53.0
@@ -17,6 +19,7 @@ specifiers:
   eslint-plugin-astro: ^0.23.0
   eslint-plugin-simple-import-sort: ^10.0.0
   husky: ^8.0.3
+  lodash.get: ^4.4.2
   tailwindcss: ^3.0.24
   typescript: ^4.9.5
 
@@ -30,7 +33,9 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
+  '@iconify-json/bi': 1.1.15
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
+  '@types/lodash.get': 4.4.7
   '@types/node': 18.14.0
   '@typescript-eslint/eslint-plugin': 5.53.0_ny4s7qc6yg74faf3d6xty2ofzy
   '@typescript-eslint/parser': 5.53.0_7kw3g6rralp5ps6mg3uyzz6azm
@@ -40,6 +45,7 @@ devDependencies:
   eslint-plugin-astro: 0.23.0_eslint@8.34.0
   eslint-plugin-simple-import-sort: 10.0.0_eslint@8.34.0
   husky: 8.0.3
+  lodash.get: 4.4.2
   typescript: 4.9.5
 
 packages:
@@ -798,6 +804,16 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/bi/1.1.15:
+    resolution: {integrity: sha512-NsbDeTVIYwgPLyAT0UgzuaCl79V65Z+M319BjbdEwdnbDGuaYgmAMBJUIWrnBEVoEg7rtouAuvaZRb3nIYIRcA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
+
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
     engines: {node: '>=6.0.0'}
@@ -983,6 +999,16 @@ packages:
   /@types/json5/0.0.30:
     resolution: {integrity: sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==}
     dev: false
+
+  /@types/lodash.get/4.4.7:
+    resolution: {integrity: sha512-af34Mj+KdDeuzsJBxc/XeTtOx0SZHZNLd+hdrn+PcKGQs0EG2TJTzQAOTCZTgDJCArahlCzLWSy8c2w59JRz7Q==}
+    dependencies:
+      '@types/lodash': 4.14.191
+    dev: true
+
+  /@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: true
 
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
@@ -3259,6 +3285,10 @@ packages:
 
   /lodash.castarray/4.4.0:
     resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+    dev: true
+
+  /lodash.get/4.4.2:
+    resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
     dev: true
 
   /lodash.isfunction/3.0.9:
