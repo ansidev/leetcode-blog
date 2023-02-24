@@ -1,0 +1,64 @@
+---
+import CounterAnalytics from '@/components/analytics/CounterAnalytics.astro'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics.astro'
+import Swetrix from '@/components/analytics/Swetrix.astro'
+import Icon from '@/components/Icon.astro'
+import siteConfig from '@/configs/site'
+import { getPluginConfig, isPluginEnabled } from '@/utils/plugin'
+
+const { author } = siteConfig
+const { name, nickname, email, homepage, github, twitter, telegram, reddit } =
+  author
+const socialNetworks: Record<string, string> = {
+  github,
+  twitter,
+  telegram,
+  reddit,
+}
+---
+
+<footer class="my-9 text-primary">
+  <div class="flex justify-center items-center mb-3">
+    <a href={`mailto:${email}`} class="footer-icon">
+      <Icon name={'bi:envelope-fill'} size={32} />
+    </a>
+    {
+      Object.keys(socialNetworks).map((network: string) => (
+        <a href={socialNetworks[network]} class="footer-icon">
+          <Icon name={`bi:${network}`} size={32} />
+        </a>
+      ))
+    }
+  </div>
+  <div class="flex justify-center items-center">
+    Built with
+    <span class="px-2">
+      <Icon name="bi:suit-heart-fill" />
+    </span>
+    by
+    <span class="px-2">
+      <a href={homepage}>{nickname} ({name})</a>.
+    </span>
+  </div>
+</footer>
+{
+  isPluginEnabled('googleAnalytics') ? (
+    <GoogleAnalytics {...getPluginConfig('googleAnalytics')} />
+  ) : (
+    ''
+  )
+}
+{isPluginEnabled('swetrix') ? <Swetrix {...getPluginConfig('swetrix')} /> : ''}
+{
+  isPluginEnabled('counterAnalytics') ? (
+    <CounterAnalytics {...getPluginConfig('counterAnalytics')} />
+  ) : (
+    ''
+  )
+}
+
+<style>
+  a.footer-icon {
+    @apply text-primary hover:text-secondary mx-1;
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import AppFooter from '@/components/AppFooter.astro'
 import AppHeader from '@/components/AppHeader.astro'
 import SEOMeta from '@/components/SEOMeta.astro'
 import siteConfig from '@/configs/site'
@@ -30,5 +31,6 @@ const pageDescription =
   <body class="max-w-8xl mx-auto bg-site-bg">
     <AppHeader class={headerCssClasses} />
     <slot />
+    <AppFooter />
   </body>
 </html>
