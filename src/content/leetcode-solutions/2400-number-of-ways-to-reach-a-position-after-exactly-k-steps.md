@@ -1,5 +1,4 @@
 ---
-layout: "../layouts/Post.astro"
 title: "2400. Number of Ways to Reach a Position After Exactly k Steps"
 slug: "2400-number-of-ways-to-reach-a-position-after-exactly-k-steps"
 keywords:

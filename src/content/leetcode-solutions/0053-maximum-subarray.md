@@ -1,5 +1,4 @@
 ---
-layout: "../layouts/Post.astro"
 title: "53. Maximum Subarray"
 slug: "0053-maximum-subarray"
 keywords:

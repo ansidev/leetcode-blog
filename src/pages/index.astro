@@ -1,9 +1,13 @@
 ---
-import Card from '@/components/Card.astro'
+import { getCollection } from 'astro:content'
+
+import PostItem from '@/components/post/PostItem.astro'
 import siteConfig from '@/configs/site'
 import AppLayout from '@/layouts/AppLayout.astro'
 
 const { title, description, author } = siteConfig
+
+const allPosts = await getCollection('leetcode-solutions')
 ---
 
 <AppLayout
@@ -12,28 +16,13 @@ const { title, description, author } = siteConfig
   author={author.name}
   headerCssClasses="max-w-xl px-8"
 >
-  <main class="mx-auto my-4 p-4 max-w-2xl text-site-header-text">
-    <ul role="list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <Card
-        href="https://docs.astro.build/"
-        title="Documentation"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://astro.build/integrations/"
-        title="Integrations"
-        body="Supercharge your project with new frameworks and libraries."
-      />
-      <Card
-        href="https://astro.build/themes/"
-        title="Themes"
-        body="Explore a galaxy of community-built starter themes."
-      />
-      <Card
-        href="https://astro.build/chat/"
-        title="Community"
-        body="Come say hi to our amazing Discord community. ❤️"
-      />
-    </ul>
+  <main class="mx-auto my-4 p-4 max-w-xl text-site-header-text">
+    <div role="list" class="grid grid-cols-1 gap-4">
+      {
+        allPosts.map((p) => (
+          <PostItem href={`/${p.slug}`} title={p.data.title} />
+        ))
+      }
+    </div>
   </main>
 </AppLayout>

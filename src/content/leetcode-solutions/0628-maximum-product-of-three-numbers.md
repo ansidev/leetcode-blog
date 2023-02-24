@@ -1,5 +1,4 @@
 ---
-layout: "../layouts/Post.astro"
 title: "628. Maximum Product of Three Numbers"
 slug: "0628-maximum-product-of-three-numbers"
 keywords:
