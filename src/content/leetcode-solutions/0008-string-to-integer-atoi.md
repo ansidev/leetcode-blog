@@ -1,5 +1,4 @@
 ---
-layout: "../layouts/Post.astro"
 title: "8. String to Integer (atoi)"
 slug: "0008-string-to-integer-atoi"
 keywords:

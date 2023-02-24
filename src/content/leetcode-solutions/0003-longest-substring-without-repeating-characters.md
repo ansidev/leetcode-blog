@@ -1,5 +1,4 @@
 ---
-layout: "../layouts/Post.astro"
 title: "3. Longest Substring Without Repeating Characters"
 slug: "0003-longest-substring-without-repeating-characters"
 keywords:
