@@ -1,11 +1,21 @@
 ---
+import type { HTMLAttributes } from 'astro/types'
 import kebabCase from 'lodash.kebabcase'
 
-export interface Props {
+export interface Props extends HTMLAttributes<'a' | 'span'> {
+  tag?: string
   difficulty: string
 }
 
-const { difficulty } = Astro.props
+const { difficulty, tag = 'a', ...props } = Astro.props
+
+const Tag = tag
+
+const tagProps: Record<string, string> = {}
+if (tag === 'a') {
+  tagProps.href = `/difficulties/${kebabCase(difficulty)}`
+}
+
 const difficultyStyleMap: Record<string, string> = {
   Easy: 'difficulty-easy',
   Medium: 'difficulty-medium',
@@ -21,12 +31,17 @@ const getDifficultyCssClass: (difficulty: string) => string = (
 }
 ---
 
-<a
-  href={`/difficulties/${kebabCase(difficulty)}`}
-  class:list={['px-2 py-1', getDifficultyCssClass(difficulty)]}
+<Tag
+  {...tagProps}
+  class:list={[
+    'px-2 py-1',
+    getDifficultyCssClass(difficulty),
+    tag === 'a' ? 'link' : '',
+    props.class,
+  ]}
 >
   {difficulty}
-</a>
+</Tag>
 
 <style lang="scss">
   $difficulties: 'easy', 'medium', 'hard';
@@ -37,9 +52,11 @@ const getDifficultyCssClass: (difficulty: string) => string = (
       @apply border-2;
       @apply border-difficulty-#{$difficulty};
       @apply text-difficulty-#{$difficulty};
-      @apply hover:bg-site-bg;
-      @apply hover:border-difficulty-#{$difficulty}-hover;
-      @apply hover:text-difficulty-#{$difficulty}-hover;
+      &.link {
+        @apply hover:bg-site-bg;
+        @apply hover:border-difficulty-#{$difficulty}-hover;
+        @apply hover:text-difficulty-#{$difficulty}-hover;
+      }
     }
   }
 </style>
