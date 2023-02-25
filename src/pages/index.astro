@@ -1,13 +1,13 @@
 ---
 import { getCollection } from 'astro:content'
 
-import PostItem from '@/components/post/PostItem.astro'
+import PostList from '@/components/post/PostList.astro'
 import siteConfig from '@/configs/site'
 import AppLayout from '@/layouts/AppLayout.astro'
 
 const { title, description, author } = siteConfig
 
-const allPosts = await getCollection('leetcode-solutions')
+const posts = await getCollection('leetcode-solutions')
 ---
 
 <AppLayout
@@ -17,12 +17,6 @@ const allPosts = await getCollection('leetcode-solutions')
   headerCssClasses="max-w-xl px-8"
 >
   <main class="mx-auto my-4 p-4 max-w-xl text-site-header-text">
-    <div role="list" class="grid grid-cols-1 gap-4">
-      {
-        allPosts.map((p) => (
-          <PostItem href={`/${p.slug}`} title={p.data.title} />
-        ))
-      }
-    </div>
+    <PostList posts={posts} />
   </main>
 </AppLayout>
