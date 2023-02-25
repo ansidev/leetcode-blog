@@ -1,0 +1,26 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content'
+
+import PostLayout from '@/layouts/PostLayout.astro'
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('leetcode-solutions')
+  return allPosts.map((entry) => ({
+    params: {
+      slug: entry.slug,
+    },
+    props: {
+      entry,
+    },
+  }))
+}
+
+type Props = CollectionEntry<'leetcode-solutions'>
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<PostLayout frontmatter={entry.data}>
+  <Content />
+</PostLayout>
