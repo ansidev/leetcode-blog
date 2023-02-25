@@ -7,8 +7,8 @@ const themeColors = {
     hard: '#ff2d55',
   },
   light: {
-    secondary: colors.zinc['900'],
-    tertiary: colors.zinc['50'],
+    secondary: colors.gray['900'],
+    tertiary: colors.gray['50'],
   },
   dark: {
     secondary: colors.zinc['100'],
@@ -111,7 +111,7 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
 const siteTheme = ({ primary, secondary, tertiary }, isDark = true) =>
   isDark
     ? darkTheme({ primary, secondary, tertiary })
-    : lightTheme(darkTheme({ primary, secondary, tertiary }))
+    : lightTheme({ primary, secondary, tertiary })
 
 module.exports = {
   defaultTheme: {
