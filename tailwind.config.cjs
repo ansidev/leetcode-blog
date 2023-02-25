@@ -6,7 +6,11 @@ const typography = require('@tailwindcss/typography')
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        transparent: 'transparent',
+      }
+    },
   },
   plugins: [
     tailwindCssTheme(themeConfig),

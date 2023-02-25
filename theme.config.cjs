@@ -25,6 +25,15 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
     'link-hover': colors.pink['500'],
   }
 
+  const textDifficultyColors = {
+    easy: baseColors['text-inverted'],
+    medium: baseColors['text-inverted'],
+    hard: baseColors['text-inverted'],
+    'easy-hover': themeColors.leetcode.easy,
+    'medium-hover': themeColors.leetcode.medium,
+    'hard-hover': themeColors.leetcode.hard,
+  }
+
   return {
     textColor: {
       style: {
@@ -36,7 +45,10 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
         'title': baseColors.text,
         'header-text': baseColors.text,
         'header-text-hover': baseColors.fill,
-      }
+      },
+      difficulty: {
+        ...textDifficultyColors,
+      },
     },
     backgroundColor: {
       style: {
@@ -48,6 +60,14 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
         'bg': '#1a1a1a',
         'header-bg': '#282828',
       },
+      difficulty: {
+        easy: themeColors.leetcode.easy,
+        'easy-hover': baseColors.text,
+        medium: themeColors.leetcode.medium,
+        'medium-hover': baseColors.text,
+        hard: themeColors.leetcode.hard,
+        'hard-hover': baseColors.text,
+      },
     },
     borderColor: {
       style: {
@@ -57,7 +77,13 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
       },
       site: {
         'header-border': colors.zinc['600'],
-      }
+      },
+      difficulty: {
+        ...themeColors.leetcode,
+        'easy-hover': themeColors.leetcode.easy,
+        'medium-hover': themeColors.leetcode.medium,
+        'hard-hover': themeColors.leetcode.hard,
+      },
     },
   }
 }
@@ -71,6 +97,15 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
     'link-hover': colors.pink['500'],
   }
 
+  const textDifficultyColors = {
+    easy: baseColors.text,
+    medium: baseColors.text,
+    hard: baseColors.text,
+    'easy-hover': themeColors.leetcode.easy,
+    'medium-hover': themeColors.leetcode.medium,
+    'hard-hover': themeColors.leetcode.hard,
+  }
+
   return {
     textColor: {
       style: {
@@ -82,7 +117,10 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
         'title': baseColors['text-inverted'],
         'header-text': baseColors['text-inverted'],
         'header-text-hover': colors.gray['300'],
-      }
+      },
+      difficulty: {
+        ...textDifficultyColors,
+      },
     },
     backgroundColor: {
       style: {
@@ -94,6 +132,14 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
         'bg': colors.white,
         'header-bg': primary,
       },
+      difficulty: {
+        easy: themeColors.leetcode.easy,
+        'easy-hover': baseColors.text,
+        medium: themeColors.leetcode.medium,
+        'medium-hover': baseColors.text,
+        hard: themeColors.leetcode.hard,
+        'hard-hover': baseColors.text,
+      },
     },
     borderColor: {
       style: {
@@ -104,6 +150,12 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
       site: {
         'header-border': primary,
       }
+    },
+    difficulty: {
+      ...themeColors.leetcode,
+      'easy-hover': themeColors.leetcode.easy,
+      'medium-hover': themeColors.leetcode.medium,
+      'hard-hover': themeColors.leetcode.hard,
     },
   }
 }
@@ -129,6 +181,6 @@ module.exports = {
         secondary: themeColors.light['secondary'],
         tertiary: themeColors.light['tertiary'],
       }, false)
-    }
+    },
   ]
 }
