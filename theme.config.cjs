@@ -21,8 +21,6 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
     fill: primary,
     text: secondary,
     'text-inverted': tertiary,
-    link: colors.blue['500'],
-    'link-hover': colors.pink['500'],
   }
 
   const textDifficultyColors = {
@@ -40,6 +38,8 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
         primary: baseColors.text,
         'primary-inverted': baseColors['text-inverted'],
         secondary: baseColors.fill,
+        link: colors.blue['500'],
+        'link-hover': colors.pink['500'],
       },
       site: {
         'title': baseColors.text,
@@ -93,8 +93,6 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
     fill: primary,
     text: secondary,
     'text-inverted': tertiary,
-    link: colors.blue['500'],
-    'link-hover': colors.pink['500'],
   }
 
   const textDifficultyColors = {
@@ -112,6 +110,8 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
         primary: baseColors.text,
         'primary-inverted': baseColors['text-inverted'],
         secondary: baseColors.fill,
+        link: colors.blue['500'],
+        'link-hover': colors.pink['500'],
       },
       site: {
         'title': baseColors['text-inverted'],
