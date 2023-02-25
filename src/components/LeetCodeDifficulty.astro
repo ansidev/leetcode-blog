@@ -1,0 +1,45 @@
+---
+import kebabCase from 'lodash.kebabcase'
+
+export interface Props {
+  difficulty: string
+}
+
+const { difficulty } = Astro.props
+const difficultyStyleMap: Record<string, string> = {
+  Easy: 'difficulty-easy',
+  Medium: 'difficulty-medium',
+  Hard: 'difficulty-hard',
+}
+
+const getDifficultyCssClass: (difficulty: string) => string = (
+  difficulty: string
+) => {
+  return Object.keys(difficultyStyleMap).includes(difficulty)
+    ? difficultyStyleMap[difficulty] || ''
+    : ''
+}
+---
+
+<a
+  href={`/difficulties/${kebabCase(difficulty)}`}
+  class:list={['px-2 py-1', getDifficultyCssClass(difficulty)]}
+>
+  {difficulty}
+</a>
+
+<style lang="scss">
+  $difficulties: 'easy', 'medium', 'hard';
+
+  @each $difficulty in $difficulties {
+    .difficulty-#{$difficulty} {
+      @apply bg-difficulty-#{$difficulty};
+      @apply border-2;
+      @apply border-difficulty-#{$difficulty};
+      @apply text-difficulty-#{$difficulty};
+      @apply hover:bg-transparent;
+      @apply hover:border-difficulty-#{$difficulty}-hover;
+      @apply hover:text-difficulty-#{$difficulty}-hover;
+    }
+  }
+</style>
