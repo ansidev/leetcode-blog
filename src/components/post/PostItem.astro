@@ -9,8 +9,8 @@ export interface Props {
 const { title, href } = Astro.props
 ---
 
-<a href={href}>
-  <div class="post-item flex items-center justify-between">
+<a href={href} class="post-item">
+  <div class="flex items-center justify-between">
     <div>
       <h2>{title}</h2>
     </div>
@@ -20,8 +20,17 @@ const { title, href } = Astro.props
 
 <style lang="scss">
   .post-item {
-    @apply mx-3 my-2 p-3;
-    @apply border-2 border-solid border-style-primary;
-    @apply hover:bg-style-primary text-style-secondary hover:text-style-primary-inverted;
+    &:first-child {
+      @apply mt-4;
+    }
+    &:last-child {
+      @apply mb-4;
+    }
+
+    & > div {
+      @apply mx-4 p-4;
+      @apply border-2 border-solid border-style-primary;
+      @apply hover:bg-style-primary text-style-secondary hover:text-style-primary-inverted;
+    }
   }
 </style>
