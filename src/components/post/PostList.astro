@@ -4,19 +4,12 @@ import type { CollectionEntry } from 'astro:content'
 import PostItem from '@/components/post/PostItem.astro'
 
 export interface Props {
-  posts: CollectionEntry<any>[];
+  posts: CollectionEntry<any>[]
 }
 
 const { posts = [] } = Astro.props
 ---
 
 <div role="list" class="grid grid-cols-1 gap-4">
-  {
-    posts.map((p) => (
-      <PostItem
-        title={`${p.data.title}`}
-        href={`/${p.slug}`}
-      />
-    ))
-  }
+  {posts.map((p) => <PostItem title={`${p.data.title}`} href={`/${p.slug}`} />)}
 </div>

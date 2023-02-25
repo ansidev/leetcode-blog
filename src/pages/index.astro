@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 
+import LeetCodeDifficulty from '@/components/LeetCodeDifficulty.astro'
 import PostList from '@/components/post/PostList.astro'
 import siteConfig from '@/configs/site'
 import AppLayout from '@/layouts/AppLayout.astro'
@@ -17,6 +18,11 @@ const posts = await getCollection('leetcode-solutions')
   headerCssClasses="max-w-xl px-8"
 >
   <main class="mx-auto my-4 p-4 max-w-xl text-site-header-text">
+    <div class="grid grid-flow-col auto-cols-max gap-2 m-4 justify-center">
+      <LeetCodeDifficulty difficulty="Easy" />
+      <LeetCodeDifficulty difficulty="Medium" />
+      <LeetCodeDifficulty difficulty="Hard" />
+    </div>
     <PostList posts={posts} />
   </main>
 </AppLayout>
