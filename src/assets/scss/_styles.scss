@@ -13,8 +13,7 @@ a {
 }
 
 .badge-default {
-  @extend %badge;
-  @apply bg-style-primary text-style-primary-inverted;
+  @apply text-style-secondary border-b-2 border-dotted border-b-style-primary;
 }
 
 .badge-outline {
