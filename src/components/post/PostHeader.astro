@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import kebabCase from 'lodash.kebabcase'
+
+import LeetCodeDifficulty from '@/components/LeetCodeDifficulty.astro'
+import siteConfig from '@/configs/site'
+import { formatDate } from '@/utils/date'
+
+type Props = CollectionEntry<'leetcode-solutions'>['data']
+
+const { author: siteAuthor } = siteConfig
+const { title, author, pubDate, tags = [], difficulty } = Astro.props
+
+const formattedDate = formatDate(pubDate)
+---
+
+<div class="post-header">
+  <h1 class="text-2xl mb-3">{title}</h1>
+  <div class="flex justify-center items-center mb-3">
+    <LeetCodeDifficulty difficulty={difficulty} />
+  </div>
+  <div class="flex flex-row flex-wrap justify-center items-center mb-3">
+    {
+      tags.map((tag) => (
+        <a href={`/tags/${kebabCase(tag)}`} class="mx-1 my-3">
+          <span class="p-2 bg-style-secondary text-style-primary-inverted hover:bg-style-secondary-inverted hover:text-style-primary">
+            {tag}
+          </span>
+        </a>
+      ))
+    }
+  </div>
+  <div class="flex justify-center m-3 text-start">
+    <img
+      src={siteAuthor.avatar}
+      alt="Author's avatar"
+      style="margin-bottom: 0 !important;"
+      width="64"
+      height="64"
+    />
+    <div class="flex flex-col justify-center ml-3">
+      <span class="mb-1">{author}</span>
+      <span class="mb-1">Posted on {formattedDate}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .post-header {
+    @apply p-3 mb-3 bg-style-primary text-center text-style-primary-inverted;
+  }
+</style>
