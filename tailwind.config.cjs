@@ -9,7 +9,33 @@ module.exports = {
     extend: {
       colors: {
         transparent: 'transparent',
-      }
+      },
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            color: theme('textColor.style.primary'),
+            '--tw-prose-headings': theme('textColor.style.primary'),
+            '--tw-prose-bold': theme('textColor.style.primary'),
+            '--tw-prose-quotes': theme('textColor.style.primary'),
+            '--tw-prose-code': theme('textColor.style.primary-inverted'),
+            '--tw-prose-pre-bg': theme('textColor.style.primary'),
+            code: {
+              backgroundColor: theme('backgroundColor.style.primary'),
+              paddingTop: '2px',
+              paddingBottom: '5px',
+              paddingLeft: '5px',
+              paddingRight: '5px',
+              borderRadius: '3px',
+            },
+            'code::before': {
+              content: 'none',
+            },
+            'code::after': {
+              content: 'none',
+            },
+          }
+        },
+      }),
     },
   },
   plugins: [

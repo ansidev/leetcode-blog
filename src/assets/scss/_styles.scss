@@ -1,0 +1,62 @@
+%link {
+  @apply no-underline;
+  @apply text-style-link hover:text-style-link-hover;
+}
+
+a {
+  @extend %link;
+}
+
+/* Badge CSS */
+%badge {
+  @apply px-3 py-2 border rounded-full border-style-primary;
+}
+
+.badge-default {
+  @extend %badge;
+  @apply bg-style-primary text-style-primary-inverted;
+}
+
+.badge-outline {
+  @extend %badge;
+  @apply bg-transparent text-style-secondary hover:bg-style-primary hover:text-style-primary-inverted;
+}
+
+/* Prose CSS */
+.prose {
+  @apply transition duration-150 ease-in w-full max-w-5xl;
+  @apply prose-a:no-underline prose-a:break-words;
+  & :is(:where(a):not(:where([class~='not-prose'] *))) {
+    @extend %link;
+  }
+
+  li:has(> a.new) {
+    list-style-type: '\2610';
+    padding-inline-start: 1ch;
+
+    &::marker {
+      @apply pt-1 text-gray-500;
+    }
+  }
+
+  li:has(> a.internal:not(.new)) {
+    list-style-type: '\2611';
+    padding-inline-start: 1ch;
+
+    &::marker {
+      @apply pt-1 text-green-500;
+    }
+  }
+
+  a.new {
+    @apply text-gray-500;
+  }
+
+  a.internal:not(.new) {
+    @apply text-green-500 hover:text-style-secondary;
+
+    &::after {
+      content: ' \2192';
+    }
+  }
+}
