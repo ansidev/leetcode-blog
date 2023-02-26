@@ -35,6 +35,7 @@
     "@types/node": "^18.14.1",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
+    "commander": "^10.0.0",
     "commitizen": "^4.3.0",
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
