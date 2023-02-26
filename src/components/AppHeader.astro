@@ -1,14 +1,14 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
 
+import Icon from '@/components/Icon.astro'
+import ThemeSelector from '@/components/ThemeSelector.astro'
 import siteConfig from '@/configs/site'
-
-import Icon from './Icon.astro'
 
 export interface Props extends HTMLAttributes<'svg'> {}
 
 const { ...props } = Astro.props
-const { title, description, author } = siteConfig
+const { title, description, author, themes } = siteConfig
 ---
 
 <div class="header-container">
@@ -42,6 +42,12 @@ const { title, description, author } = siteConfig
       <a href="/rss.xml" class="header-icon">
         <Icon name="bi:rss-fill" size={20} class="ml-2" />
       </a>
+      <ThemeSelector
+        themes={themes}
+        fallbackLightTheme="leetcode-light"
+        fallbackDarkTheme="leetcode-dark"
+        iconClass="header-icon"
+      />
     </div>
   </div>
 </div>
