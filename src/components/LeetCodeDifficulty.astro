@@ -1,9 +1,9 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
-import kebabCase from 'lodash.kebabcase'
 
 export interface Props extends HTMLAttributes<'a' | 'span'> {
   tag?: string
+  href?: string
   difficulty: string
 }
 
@@ -13,7 +13,7 @@ const Tag = tag
 
 const tagProps: Record<string, string> = {}
 if (tag === 'a') {
-  tagProps.href = `/difficulties/${kebabCase(difficulty)}`
+  tagProps.href = props.href!
 }
 
 const difficultyStyleMap: Record<string, string> = {
@@ -40,7 +40,7 @@ const getDifficultyCssClass: (difficulty: string) => string = (
     props.class,
   ]}
 >
-  {difficulty}
+  <slot />
 </Tag>
 
 <style lang="scss">

@@ -44,7 +44,9 @@ const { title, description, author } = siteConfig
     <div class="grid grid-flow-col auto-cols-max gap-2 m-4 justify-center">
       <h1 class="text-style-primary">
         Posts by difficulty:
-        <LeetCodeDifficulty tag="span" difficulty={difficulty} class="mx-2" />
+        <LeetCodeDifficulty tag="span" difficulty={difficulty} class="mx-2">
+          {difficulty}
+        </LeetCodeDifficulty>
       </h1>
     </div>
     <PostList posts={posts} />
