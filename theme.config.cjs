@@ -212,5 +212,13 @@ module.exports = {
         tertiary: themeColors.light['tertiary'],
       }, false)
     },
+    {
+      name: 'twitter',
+      extend: siteTheme({
+        primary: '#1d9bf0',
+        secondary: themeColors.light['secondary'],
+        tertiary: themeColors.light['tertiary'],
+      }, false)
+    },
   ]
 }

@@ -33,6 +33,10 @@ export default {
       name: 'Microsoft',
       icon: 'bi:sun-fill',
     },
+    twitter: {
+      name: 'Twitter',
+      icon: 'bi:sun-fill',
+    },
   },
   plugins: {
     counterAnalytics: {
