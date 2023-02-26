@@ -196,5 +196,29 @@ module.exports = {
         tertiary: themeColors.light['tertiary'],
       }, false)
     },
+    {
+      name: 'google',
+      extend: siteTheme({
+        primary: '#db2028',
+        secondary: themeColors.light['secondary'],
+        tertiary: themeColors.light['tertiary'],
+      }, false)
+    },
+    {
+      name: 'microsoft',
+      extend: siteTheme({
+        primary: '#0067b8',
+        secondary: themeColors.light['secondary'],
+        tertiary: themeColors.light['tertiary'],
+      }, false)
+    },
+    {
+      name: 'twitter',
+      extend: siteTheme({
+        primary: '#1d9bf0',
+        secondary: themeColors.light['secondary'],
+        tertiary: themeColors.light['tertiary'],
+      }, false)
+    },
   ]
 }
