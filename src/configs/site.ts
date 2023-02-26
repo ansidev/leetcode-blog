@@ -29,6 +29,10 @@ export default {
       name: 'Google',
       icon: 'bi:sun-fill',
     },
+    microsoft: {
+      name: 'Microsoft',
+      icon: 'bi:sun-fill',
+    },
   },
   plugins: {
     counterAnalytics: {

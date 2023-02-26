@@ -204,5 +204,13 @@ module.exports = {
         tertiary: themeColors.light['tertiary'],
       }, false)
     },
+    {
+      name: 'microsoft',
+      extend: siteTheme({
+        primary: '#0067b8',
+        secondary: themeColors.light['secondary'],
+        tertiary: themeColors.light['tertiary'],
+      }, false)
+    },
   ]
 }
