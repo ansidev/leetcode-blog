@@ -1,3 +1,6 @@
+import partytown from '@astrojs/partytown'
+import sitemap from '@astrojs/sitemap'
+import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 import compress from 'astro-compress'
 import purgecss from 'astro-purgecss'
@@ -17,6 +20,13 @@ if (baseURL.length === 0) {
 export default defineConfig({
   site: baseURL,
   integrations: [
+    tailwind(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+    sitemap(),
     purgecss(),
     compress(),
   ]

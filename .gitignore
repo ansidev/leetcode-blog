@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # VSCode Workspace
 astro-basic-template.code-workspace
+
+# Astro directories
+.astro

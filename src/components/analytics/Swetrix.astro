@@ -1,0 +1,15 @@
+---
+interface Props {
+  projectId: string
+}
+
+const { projectId } = Astro.props
+---
+
+<script src="https://swetrix.org/swetrix.js" defer></script>
+<script define:vars={{ projectId }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    swetrix.init(projectId)
+    swetrix.trackViews()
+  })
+</script>

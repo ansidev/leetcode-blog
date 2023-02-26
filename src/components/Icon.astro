@@ -1,0 +1,45 @@
+---
+import bi from '@iconify-json/bi/icons.json'
+import type { HTMLAttributes } from 'astro/types'
+import _get from 'lodash.get'
+
+export interface Props extends HTMLAttributes<'svg'> {
+  size?: number
+}
+
+const { size = 16, ...props } = Astro.props
+
+const getIcon = (icon: string) => {
+  if (typeof icon !== 'string' || icon.length === 0) {
+    return ''
+  }
+
+  const s = icon.split(':')
+
+  if (s.length < 2) {
+    return ''
+  }
+
+  const preset = s[0]
+  const iconName = s[1]
+
+  if (preset !== 'bi') {
+    return ''
+  }
+
+  return _get(bi.icons, `${iconName}.body`)
+}
+
+const svg = getIcon(props.name || '')
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  fill="currentColor"
+  id={props.id}
+  class:list={[`bi bi-${props.name}`, props.class]}
+  viewBox="0 0 16 16"
+  set:html={svg}
+/>

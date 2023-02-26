@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import Breadcrumb from '@/components/Breadcrumb.astro'
+import PostHeader from '@/components/post/PostHeader.astro'
+import siteConfig from '@/configs/site'
+import AppLayout from '@/layouts/AppLayout.astro'
+
+interface Props {
+  frontmatter: CollectionEntry<'leetcode-solutions'>['data']
+}
+
+const { frontmatter } = Astro.props
+const { author } = siteConfig
+---
+
+<AppLayout
+  headerCssClasses="max-w-5xl"
+  title={frontmatter.title}
+  description={frontmatter.title}
+  keywords={[
+    ...((frontmatter.keywords as string[]) || []),
+    ...((frontmatter.tags as string[]) || []),
+  ]}
+  author={author.name}
+>
+  <article class="post">
+    <Breadcrumb items={[{ icon: '', title: frontmatter.title, url: '' }]} />
+    <PostHeader {...frontmatter} />
+    <div class="prose p-4 border max-w-5xl">
+      <slot />
+    </div>
+  </article>
+</AppLayout>
+
+<style lang="css">
+  .post {
+    @apply grid grid-cols-1 mx-auto my-8 p-4 xl:px-0 max-w-5xl;
+  }
+</style>

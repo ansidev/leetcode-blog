@@ -1,0 +1,69 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+import Icon from '@/components/Icon.astro'
+import ThemeSelector from '@/components/ThemeSelector.astro'
+import siteConfig from '@/configs/site'
+
+export interface Props extends HTMLAttributes<'svg'> {}
+
+const { ...props } = Astro.props
+const { title, description, author, themes } = siteConfig
+---
+
+<div class="header-container">
+  <div
+    class:list={[
+      'header mx-auto flex justify-between items-center',
+      props.class,
+    ]}
+  >
+    <div class="header-meta flex mr-3">
+      <div class="header-logo mr-3">
+        <a href="/">
+          <img
+            src={author.avatar}
+            alt="Author's avatar"
+            class="rounded-full"
+            style="margin-bottom: 0 !important;"
+            width="56"
+            height="56"
+          />
+        </a>
+      </div>
+      <div class="flex flex-col">
+        <h1 class="text-xl uppercase font-semibold">
+          <a href="/" class="site-title">{title}</a>
+        </h1>
+        <h2 class="site-description">{description}</h2>
+      </div>
+    </div>
+    <div class="header-button flex items-center">
+      <a href="/rss.xml" class="header-icon">
+        <Icon name="bi:rss-fill" size={20} class="ml-2" />
+      </a>
+      <ThemeSelector
+        themes={themes}
+        fallbackLightTheme="leetcode-light"
+        fallbackDarkTheme="leetcode-dark"
+        iconClass="header-icon"
+      />
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .header-container {
+    @apply sticky top-0 z-50 px-4 md:px-7 py-4 border-b;
+    @apply bg-site-header-bg border-b-site-header-border;
+  }
+
+  .site-title {
+    @apply text-site-title hover:text-site-header-text-hover;
+  }
+
+  .site-description {
+    @apply text-sm md:text-base italic;
+    @apply text-site-header-text;
+  }
+</style>

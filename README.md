@@ -1,6 +1,7 @@
 # LeetCode Blog
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/278e1add-72b0-4ffe-b932-03b27a72c8b5/deploy-status)](https://app.netlify.com/sites/leetcode-blog/deploys)
 
 Solutions for LeetCode problems - Written by [ansidev](https://github.com/ansidev).
 

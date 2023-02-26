@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content'
+import kebabCase from 'lodash.kebabcase'
+
+import LeetCodeDifficulty from '@/components/LeetCodeDifficulty.astro'
+import PostList from '@/components/post/PostList.astro'
+import siteConfig from '@/configs/site'
+import AppLayout from '@/layouts/AppLayout.astro'
+
+export async function getStaticPaths() {
+  const allDifficulties = new Set<string>()
+  const allPosts = await getCollection(
+    'leetcode-solutions',
+    ({ data }) => data.difficulty?.length > 0
+  )
+  allPosts.forEach((post) => allDifficulties.add(post.data.difficulty))
+
+  return Array.from(allDifficulties).map((difficulty) => {
+    const slug = kebabCase(difficulty)
+    const filteredPosts = allPosts.filter(
+      (post) => post.data.difficulty === difficulty
+    )
+    return {
+      params: { slug },
+      props: {
+        posts: filteredPosts,
+        difficulty,
+      },
+    }
+  })
+}
+
+const { difficulty, posts } = Astro.props
+const { title, description, author } = siteConfig
+---
+
+<AppLayout
+  title={`${difficulty} - ${title}`}
+  description={description}
+  author={author.name}
+  headerCssClasses="max-w-xl px-8"
+>
+  <main class="mx-auto my-4 p-4 max-w-xl text-site-header-text">
+    <div class="grid grid-flow-col auto-cols-max gap-2 m-4 justify-center">
+      <h1 class="text-style-primary">
+        Posts by difficulty:
+        <LeetCodeDifficulty tag="span" difficulty={difficulty} class="mx-2">
+          {difficulty}
+        </LeetCodeDifficulty>
+      </h1>
+    </div>
+    <PostList posts={posts} />
+  </main>
+</AppLayout>
