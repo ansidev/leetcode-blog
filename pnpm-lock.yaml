@@ -11,6 +11,7 @@ specifiers:
   '@tailwindcss/typography': ^0.5.9
   '@types/lodash.get': ^4.4.7
   '@types/lodash.kebabcase': ^4.1.7
+  '@types/mustache': ^4.2.2
   '@types/node': ^18.14.1
   '@typescript-eslint/eslint-plugin': ^5.53.0
   '@typescript-eslint/parser': ^5.53.0
@@ -26,6 +27,7 @@ specifiers:
   husky: ^8.0.3
   lodash.get: ^4.4.2
   lodash.kebabcase: ^4.1.1
+  mustache: ^4.2.0
   sass: ^1.58.3
   tailwindcss: ^3.2.7
   tailwindcss-themer: ^3.0.1
@@ -48,6 +50,7 @@ devDependencies:
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@types/lodash.get': 4.4.7
   '@types/lodash.kebabcase': 4.1.7
+  '@types/mustache': 4.2.2
   '@types/node': 18.14.1
   '@typescript-eslint/eslint-plugin': 5.53.0_ny4s7qc6yg74faf3d6xty2ofzy
   '@typescript-eslint/parser': 5.53.0_7kw3g6rralp5ps6mg3uyzz6azm
@@ -60,6 +63,7 @@ devDependencies:
   husky: 8.0.3
   lodash.get: 4.4.2
   lodash.kebabcase: 4.1.1
+  mustache: 4.2.0
   sass: 1.58.3
   tailwindcss-themer: 3.0.1_tailwindcss@3.2.7
   typescript: 4.9.5
@@ -1071,6 +1075,10 @@ packages:
   /@types/ms/0.7.31:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: false
+
+  /@types/mustache/4.2.2:
+    resolution: {integrity: sha512-MUSpfpW0yZbTgjekDbH0shMYBUD+X/uJJJMm9LXN1d5yjl5lCY1vN/eWKD6D1tOtjA6206K0zcIPnUaFMurdNA==}
+    dev: true
 
   /@types/nlcst/1.0.0:
     resolution: {integrity: sha512-3TGCfOcy8R8mMQ4CNSNOe3PG66HttvjcLzCoOpvXvDtfWOTi+uT/rxeOKm/qEwbM4SNe1O/PjdiBK2YcTjU4OQ==}
@@ -3960,6 +3968,11 @@ packages:
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+
+  /mustache/4.2.0:
+    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
+    hasBin: true
+    dev: true
 
   /mute-stream/0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
