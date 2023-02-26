@@ -19,9 +19,15 @@ const posts = await getCollection('leetcode-solutions')
 >
   <main class="mx-auto my-4 p-4 max-w-xl text-site-header-text">
     <div class="grid grid-flow-col auto-cols-max gap-2 m-4 justify-center">
-      <LeetCodeDifficulty difficulty="Easy" />
-      <LeetCodeDifficulty difficulty="Medium" />
-      <LeetCodeDifficulty difficulty="Hard" />
+      <LeetCodeDifficulty difficulty="Easy" href="/difficulties/easy">
+        Easy
+      </LeetCodeDifficulty>
+      <LeetCodeDifficulty difficulty="Medium" href="/difficulties/medium">
+        Medium
+      </LeetCodeDifficulty>
+      <LeetCodeDifficulty difficulty="Hard" href="/difficulties/hard">
+        Hard
+      </LeetCodeDifficulty>
     </div>
     <PostList posts={posts} />
   </main>

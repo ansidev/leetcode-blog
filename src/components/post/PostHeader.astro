@@ -17,7 +17,9 @@ const formattedDate = formatDate(pubDate)
 <div class="post-header">
   <h1 class="text-2xl mb-3">{title}</h1>
   <div class="flex justify-center items-center mb-3">
-    <LeetCodeDifficulty difficulty={difficulty} />
+    <LeetCodeDifficulty difficulty={difficulty} href={`/difficulties/${kebabCase(difficulty)}`}>
+      {difficulty}
+    </LeetCodeDifficulty>
   </div>
   <div class="flex flex-row flex-wrap justify-center items-center mb-3">
     {
