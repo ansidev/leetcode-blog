@@ -196,5 +196,13 @@ module.exports = {
         tertiary: themeColors.light['tertiary'],
       }, false)
     },
+    {
+      name: 'google',
+      extend: siteTheme({
+        primary: '#db2028',
+        secondary: themeColors.light['secondary'],
+        tertiary: themeColors.light['tertiary'],
+      }, false)
+    },
   ]
 }

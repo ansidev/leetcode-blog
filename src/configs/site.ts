@@ -25,6 +25,10 @@ export default {
       name: 'LeetCode Dark',
       icon: 'bi:moon-fill',
     },
+    google: {
+      name: 'Google',
+      icon: 'bi:sun-fill',
+    },
   },
   plugins: {
     counterAnalytics: {
