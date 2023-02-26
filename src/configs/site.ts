@@ -16,6 +16,16 @@ export default {
   },
   favicon: '/favicon.ico',
   faviconMimeType: 'image/x-icon',
+  themes: {
+    'leetcode-light': {
+      name: 'LeetCode Light',
+      icon: 'bi:sun-fill',
+    },
+    'leetcode-dark': {
+      name: 'LeetCode Dark',
+      icon: 'bi:moon-fill',
+    },
+  },
   plugins: {
     counterAnalytics: {
       projectId: env.COUNTER_ANALYTICS_ID,

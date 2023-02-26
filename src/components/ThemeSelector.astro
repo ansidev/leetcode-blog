@@ -1,0 +1,162 @@
+---
+import bi from '@iconify-json/bi/icons.json'
+
+import Icon from '@/components/Icon.astro'
+
+interface ThemeMeta {
+  name: string
+  icon: string
+}
+
+export interface Props {
+  themes: Record<string, ThemeMeta>
+  fallbackLightTheme: string
+  fallbackDarkTheme: string
+  iconClass: string
+}
+
+const STORAGE_KEY_THEME: string = 'theme'
+
+const { themes, fallbackLightTheme, fallbackDarkTheme, iconClass } = Astro.props
+const defaultTheme = fallbackDarkTheme
+const icons = bi.icons
+---
+
+<div class="group relative inline-block text-left">
+  <button
+    id="theme-switcher-btn"
+    type="button"
+    class="ml-2"
+    style="margin-top: 3px;"
+  >
+    <Icon
+      id="theme-switcher-icon"
+      class={iconClass}
+      name="bi:palette-fill"
+      size={20}
+    />
+  </button>
+  <div
+    id="theme-select"
+    class="hidden group-hover:block absolute right-0 z-10 w-40 origin-top-right focus:outline-none"
+    role="menu"
+    aria-orientation="vertical"
+    aria-labelledby="menu-button"
+    tabindex="-1"
+  >
+    <div class="theme-option" role="none">
+      <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+      {
+        Object.keys(themes).map((themeId: string) => (
+          <a href="#" role="menuitem" tabindex="-1" data-theme={themeId}>
+            <Icon
+              id={`theme-icon-${themeId}`}
+              class="inline"
+              name={themes[themeId]?.icon}
+              size={16}
+            />
+            {themes[themeId]?.name}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script
+  define:vars={{
+    icons,
+    STORAGE_KEY_THEME,
+    themes,
+    defaultTheme,
+    fallbackLightTheme,
+    fallbackDarkTheme,
+  }}
+>
+  const themeIds = Object.keys(themes)
+  const themeIcons = themeIds.map((themeId) => themes[themeId].icon)
+
+  const storedTheme = (() => {
+    if (
+      typeof localStorage !== 'undefined' &&
+      localStorage.getItem(STORAGE_KEY_THEME)
+    ) {
+      const storedTheme = localStorage.getItem(STORAGE_KEY_THEME)
+      return themeIds.includes(storedTheme) ? storedTheme : fallbackDarkTheme
+    }
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return fallbackDarkTheme
+    }
+
+    return fallbackLightTheme
+  })()
+
+  themeIds.forEach((themeId) => {
+    if (storedTheme === themeId) {
+      document.documentElement.classList.add(themeId)
+    } else {
+      document.documentElement.classList.remove(themeId)
+    }
+  })
+
+  window.localStorage.setItem(STORAGE_KEY_THEME, storedTheme || defaultTheme)
+
+  const themeSelectEl = document.getElementById('theme-select')
+  const toggleThemeMenu = () => themeSelectEl.classList.toggle('hidden')
+  const hideThemeMenu = () => themeSelectEl.classList.add('hidden')
+
+  const switchTheme = (evt) => {
+    let themeToSwitch = evt.target.getAttribute('data-theme')
+    const isSupportedTheme = themeIds.includes(themeToSwitch)
+
+    if (isSupportedTheme) {
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      themeToSwitch = fallbackDarkTheme
+    } else {
+      themeToSwitch = fallbackLightTheme
+    }
+    localStorage.setItem(STORAGE_KEY_THEME, themeToSwitch)
+
+    themeIds.forEach((themeId) => {
+      if (themeToSwitch === themeId) {
+        document.documentElement.classList.add(themeId)
+      } else {
+        document.documentElement.classList.remove(themeId)
+      }
+    })
+
+    const themeSwitcherIcon = document.getElementById('theme-switcher-icon')
+    const themeIcon = themes[themeToSwitch].icon
+    themeIcons.forEach((icon) => {
+      if (icon === themeIcon) {
+        themeSwitcherIcon.classList.add(icon)
+      } else {
+        themeSwitcherIcon.classList.remove(icon)
+      }
+    })
+
+    const iconId = typeof themeIcon === 'string' ? themeIcon.split(':')[1] : ''
+    if (iconId.length > 0) {
+      themeSwitcherIcon.innerHTML = icons[iconId].body
+    }
+    hideThemeMenu()
+  }
+
+  document
+    .getElementById('theme-switcher-btn')
+    ?.addEventListener('click', toggleThemeMenu)
+  document
+    .querySelectorAll('.theme-option a')
+    .forEach((item) => item.addEventListener('click', switchTheme))
+</script>
+
+<style lang="scss">
+  .theme-option {
+    @apply bg-theme-menu-bg;
+    & a {
+      @apply bg-transparent text-style-primary block px-4 py-2 text-sm;
+      @apply hover:bg-theme-menu-bg-hover hover:text-theme-menu-text-hover;
+    }
+  }
+</style>
