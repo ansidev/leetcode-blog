@@ -46,6 +46,9 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
         'header-text': baseColors.text,
         'header-text-hover': baseColors.fill,
       },
+      'theme-menu': {
+        'text-hover': baseColors.fill,
+      },
       difficulty: {
         ...textDifficultyColors,
       },
@@ -59,6 +62,10 @@ const darkTheme = ({ primary, secondary, tertiary }) => {
       site: {
         'bg': '#1a1a1a',
         'header-bg': '#282828',
+      },
+      'theme-menu': {
+        'bg': colors.zinc['800'],
+        'bg-hover': tertiary,
       },
       difficulty: {
         easy: themeColors.leetcode.easy,
@@ -118,6 +125,9 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
         'header-text': baseColors['text-inverted'],
         'header-text-hover': colors.gray['300'],
       },
+      'theme-menu': {
+        'text-hover': baseColors.fill,
+      },
       difficulty: {
         ...textDifficultyColors,
       },
@@ -131,6 +141,10 @@ const lightTheme = ({ primary, secondary, tertiary }) => {
       site: {
         'bg': colors.white,
         'header-bg': primary,
+      },
+      'theme-menu': {
+        'bg': baseColors['text-inverted'],
+        'bg-hover': colors.gray['100'],
       },
       difficulty: {
         easy: themeColors.leetcode.easy,

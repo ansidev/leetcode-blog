@@ -7,6 +7,10 @@ a {
   @extend %link;
 }
 
+.header-icon {
+  @apply text-site-header-text hover:text-site-header-text-hover;
+}
+
 /* Badge CSS */
 %badge {
   @apply px-3 py-2 border rounded-full border-style-primary;
