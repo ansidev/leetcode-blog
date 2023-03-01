@@ -16,7 +16,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.53.0
   '@typescript-eslint/parser': ^5.53.0
   astro: ^2.0.16
-  astro-compress: ^1.1.34
+  astro-compress: ^1.1.35
   astro-purgecss: ^2.0.0
   commander: ^10.0.0
   commitizen: ^4.3.0
@@ -41,7 +41,7 @@ dependencies:
   '@astrojs/sitemap': 1.1.0
   '@astrojs/tailwind': 3.0.1_dcffs6vszochbmkyu5n7efg4ri
   astro: 2.0.16_435aevtanapkguv7m72cl6trbi
-  astro-compress: 1.1.34
+  astro-compress: 1.1.35
   astro-purgecss: 2.0.0_astro@2.0.16
   tailwindcss: 3.2.7
 
@@ -1642,14 +1642,14 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /astro-compress/1.1.34:
-    resolution: {integrity: sha512-To7O9z+vhllvP/qSWszJBjVYZgf8g3omkUq8IOroPjElqur1W+bPTq01RNO/aLp9bQ6YqBpwa2j+cSwa/j3FxQ==}
+  /astro-compress/1.1.35:
+    resolution: {integrity: sha512-K6BK+iMbejXeUS1eAjoQhRh4geEutFrGkgCkeTAthf1XeRzPrWvtNPA7RjJBXWR8aNJtjryxyW02z3pE+4RNow==}
     dependencies:
       '@types/csso': 5.0.0
       '@types/html-minifier-terser': 7.0.0
       '@types/sharp': 0.31.1
       csso: 5.0.5
-      files-pipeline: 0.0.4
+      files-pipe: 0.0.1
       html-minifier-terser: 7.1.0
       sharp: 0.31.3
       svgo: 3.0.2
@@ -2853,8 +2853,8 @@ packages:
       flat-cache: 3.0.4
     dev: true
 
-  /files-pipeline/0.0.4:
-    resolution: {integrity: sha512-eHbXa8YGUui/qGnxES+SwwQVpQpi4xz2VR1VrJz1HFflnRWo8+zCQCseRqDAzMinH1B6iI9ckVWpFgoWnTH9nA==}
+  /files-pipe/0.0.1:
+    resolution: {integrity: sha512-+U75QMGwmNi6S3cLJPCXtCWCUP3QTKCf6zwtW+7A+OS06PDbiX6MOPI3KE6XZZKLl0UYdiB3rimyFeqZDUdh1g==}
     dependencies:
       deepmerge-ts: 4.3.0
       fast-glob: 3.2.12
