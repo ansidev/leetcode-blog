@@ -1,7 +1,9 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content'
 
+import Disqus from '@/components/Disqus.astro'
 import PostLayout from '@/layouts/PostLayout.astro'
+import { getPluginConfig, isPluginEnabled } from '@/utils/plugin'
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('leetcode-solutions')
@@ -23,4 +25,14 @@ const { Content } = await entry.render()
 
 <PostLayout frontmatter={entry.data}>
   <Content />
+  {
+    isPluginEnabled('disqus') && (
+      <Disqus
+        slot="post-footer"
+        {...getPluginConfig('disqus')}
+        pageURL={Astro.url.href}
+        pageIdentifier={Astro.url.pathname}
+      />
+    )
+  }
 </PostLayout>
