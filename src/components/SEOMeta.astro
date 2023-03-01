@@ -4,6 +4,7 @@ interface Props {
   description?: string
   favicon?: string
   faviconMimeType?: string
+  canonicalURL?: string | undefined
   keywords?: string
   author?: string
   robots?: string
@@ -14,16 +15,20 @@ const {
   description,
   favicon,
   faviconMimeType,
+  canonicalURL,
   keywords,
   author,
   robots,
 } = Astro.props
+
+const _canonicalURL = canonicalURL || Astro.url.href
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type={faviconMimeType} href={favicon} />
+{_canonicalURL && <link rel="canonical" href={_canonicalURL} />}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
