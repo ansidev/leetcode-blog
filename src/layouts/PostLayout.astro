@@ -31,6 +31,9 @@ const { author } = siteConfig
     <div class="prose p-4 border max-w-5xl">
       <slot />
     </div>
+    <div class="py-8 max-w-5xl">
+      <slot name="post-footer" />
+    </div>
   </article>
 </AppLayout>
 
