@@ -8,6 +8,7 @@ const leetcodeSolutionCollection = defineCollection({
     pubDate: z.string(),
     difficulty: z.string(),
     tags: z.array(z.string()),
+    canonicalURL: z.string().optional(),
   }),
 })
 

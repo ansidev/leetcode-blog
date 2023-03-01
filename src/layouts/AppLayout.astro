@@ -9,12 +9,13 @@ import siteConfig from '@/configs/site'
 export interface Props {
   title: string
   description: string
+  canonicalURL?: string | undefined
   author: string
   headerCssClasses?: string
   keywords?: string[]
 }
 
-const { title, description = '', author, headerCssClasses = '' } = Astro.props
+const { title, description = '', canonicalURL, author, headerCssClasses = '' } = Astro.props
 const { favicon, faviconMimeType } = siteConfig
 const pageDescription =
   description.length > 0 ? description : `${title} - ${siteConfig.description}`
@@ -26,6 +27,7 @@ const pageDescription =
     <SEOMeta
       title={title}
       description={pageDescription}
+      canonicalURL={canonicalURL}
       favicon={favicon}
       faviconMimeType={faviconMimeType}
       author={author}

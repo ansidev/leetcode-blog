@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  new:
+    desc: Generate new post for LeetCode solution
+    cmds:
+      - pnpm lc:new {{.CLI_ARGS}}
+    silent: true
+
+  commit:
+    desc: Commit code for a specific LeetCode problem
+    cmds:
+      - |
+        git commit -m "chore(solution): add solution for LeetCode problem No.{{.CLI_ARGS}}"
+    silent: true

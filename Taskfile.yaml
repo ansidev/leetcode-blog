@@ -5,3 +5,4 @@ includes:
   git: ./.taskfiles/task_git.yaml
   release: ./.taskfiles/task_release.yaml
   dep: ./.taskfiles/task_dep.yaml
+  lc: ./.taskfiles/task_leetcode.yaml
