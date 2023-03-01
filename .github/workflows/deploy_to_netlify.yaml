@@ -120,6 +120,7 @@ jobs:
           SITE_GA_ID: ${{ vars.SITE_GA_ID }}
           SITE_SWETRIX_ID: ${{ vars.SITE_SWETRIX_ID }}
           SITE_COUNTER_ANALYTICS_ID: ${{ vars.SITE_COUNTER_ANALYTICS_ID }}
+          SITE_DISQUS_ID: ${{ vars.SITE_DISQUS_ID }}
         shell: bash
         run: |
           set -e
@@ -127,6 +128,7 @@ jobs:
             OUTPUT=$(GA_ID=$SITE_GA_ID \
               SWETRIX_ID=$SITE_SWETRIX_ID \
               COUNTER_ANALYTICS_ID=$SITE_COUNTER_ANALYTICS_ID \
+              DISQUS_ID=$SITE_DISQUS_ID \
               pnpm netlify deploy \
               --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
               --site ${{ env.NETLIFY_SITE_ID }} \

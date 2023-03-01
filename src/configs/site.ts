@@ -49,5 +49,8 @@ export default {
     swetrix: {
       projectId: env.SWETRIX_ID,
     },
+    disqus: {
+      siteId: env.DISQUS_ID,
+    },
   }
 }
