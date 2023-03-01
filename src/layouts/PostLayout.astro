@@ -18,6 +18,7 @@ const { author } = siteConfig
   headerCssClasses="max-w-5xl"
   title={frontmatter.title}
   description={frontmatter.title}
+  canonicalURL={frontmatter.canonicalURL}
   keywords={[
     ...((frontmatter.keywords as string[]) || []),
     ...((frontmatter.tags as string[]) || []),
