@@ -2,6 +2,7 @@
 interface Props {
   title: string
   description?: string
+  image?: string | undefined
   favicon?: string
   faviconMimeType?: string
   canonicalURL?: string | undefined
@@ -13,6 +14,7 @@ interface Props {
 const {
   title,
   description,
+  image = 'default-post-thumbnail.png',
   favicon,
   faviconMimeType,
   canonicalURL,
@@ -21,14 +23,14 @@ const {
   robots,
 } = Astro.props
 
-const _canonicalURL = canonicalURL || Astro.url.href
+const url = canonicalURL || Astro.url.href
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" type={faviconMimeType} href={favicon} />
-{_canonicalURL && <link rel="canonical" href={_canonicalURL} />}
+{url && <link rel="canonical" href={url} />}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -40,3 +42,17 @@ const _canonicalURL = canonicalURL || Astro.url.href
 <meta name="author" content={author} />
 {robots && <meta name="robots" content={robots} />}
 <meta name="generator" content={Astro.generator} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.site)} />
