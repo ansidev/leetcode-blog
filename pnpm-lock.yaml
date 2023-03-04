@@ -7,6 +7,7 @@ specifiers:
   '@astrojs/tailwind': ^3.0.1
   '@commitlint/cli': ^17.4.4
   '@commitlint/config-conventional': ^17.4.4
+  '@fontsource/ibm-plex-mono': ^4.5.13
   '@iconify-json/bi': ^1.1.15
   '@tailwindcss/typography': ^0.5.9
   '@types/lodash.get': ^4.4.7
@@ -48,6 +49,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.4.4
   '@commitlint/config-conventional': 17.4.4
+  '@fontsource/ibm-plex-mono': 4.5.13
   '@iconify-json/bi': 1.1.15
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@types/lodash.get': 4.4.7
@@ -1056,6 +1058,10 @@ packages:
   /@eslint/js/8.35.0:
     resolution: {integrity: sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@fontsource/ibm-plex-mono/4.5.13:
+    resolution: {integrity: sha512-KAE7X2LgCV4X6p7vj1h2phRnhPX4YUa8FBAB0Jj9xW7Q+p+k2ce4HEAMJJ2RFHI075ClgQx+KZuDBNuiKgp5yw==}
     dev: true
 
   /@humanwhocodes/config-array/0.11.8:

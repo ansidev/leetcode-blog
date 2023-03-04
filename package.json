@@ -28,6 +28,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@fontsource/ibm-plex-mono": "^4.5.13",
     "@iconify-json/bi": "^1.1.15",
     "@tailwindcss/typography": "^0.5.9",
     "@types/lodash.get": "^4.4.7",
