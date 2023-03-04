@@ -8,6 +8,7 @@ Solutions for LeetCode problems - Written by [ansidev](https://github.com/anside
 ## Features
 
 - [Astro](https://astro.build) v2, disabled Astro Telemetry.
+- Automate generating post thumbnail using [satori](https://github.com/vercel/satori) (since [v2.2.0](https://github.com/ansidev/leetcode-blog/releases/tag/v2.2.0)).
 - [Astro Compress](https://github.com/astro-community/astro-compress) - Compress output HTML, CSS, JS, image.
 - [Astro PurgeCSS](https://github.com/codiume/orbit/tree/main/packages/astro-purgecss) - Remove unused CSS from build output.
 - Automate releasing new versions using [GitHub Actions](https://github.com/features/actions) and following the [`git-flow`](https://nvie.com/posts/a-successful-git-branching-model/) branching model.
@@ -20,6 +21,7 @@ Solutions for LeetCode problems - Written by [ansidev](https://github.com/anside
 - [Conventional commit](https://conventionalcommits.org/).
 - [ESLint](https://eslint.org) - Static code analyzer.
 - [Prettier](https://prettier.io) - Code formatter.
+- [Husky](https://github.com/typicode/husky) - Modern native Git hooks made easy.
 - [Renovate](https://www.mend.io/free-developer-tools/renovate/) - Automate dependency updates.
 - [changie](https://changie.dev), [git-chglog](https://github.com/git-chglog/git-chglog) - Generate changelog from conventional commits.
 - [taskfile](https://github.com/ansidev/taskfile) - Task files for common tasks.
@@ -54,10 +56,10 @@ pnpm create astro@latest --template ansidev/astro-basic-template
      - https://docs.netlify.com/site-deploys/overview/#deploy-preview-controls
 3. Go to https://github.com/{user}/{repository}/settings/secrets/actions/new and add following repository secrets:
 
-   | Name                 | Description                                                                                                                                                                            |
-   | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | `GH_TOKEN`           | GitHub Personal Access Token which has the `repo` scope. Click [here](https://github.com/settings/tokens/new?scopes=repo) to create a new one.                                         |
-   | `NETLIFY_AUTH_TOKEN` | Netlify Authentication Token. Click [here](https://app.netlify.com/user/applications/personal) to create a new one.                                                                    |
+   | Name                 | Description                                                                                                                                                                                                                                                                  |
+   | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `GH_TOKEN`           | GitHub Personal Access Token which has the `repo` scope. Click [here](https://github.com/settings/tokens/new?scopes=repo) to create a new one.                                                                                                                               |
+   | `NETLIFY_AUTH_TOKEN` | Netlify Authentication Token. Click [here](https://app.netlify.com/user/applications/personal) to create a new one.                                                                                                                                                          |
    | `NETLIFY_SITE_ID`    | Netlify site ID. You can obtain it via UI or CLI.<br/><ul><li>UI: Go to https://app.netlify.com/sites/{netlify-site-name}/settings/general#site-details and click the copy button next to the site ID.</li><li>CLI: Run `netlify sites:list` and copy the site ID.</li></ul> |
 
 ## Project Structure
@@ -68,6 +70,9 @@ Inside of your Astro project, you'll see the following folders and files:
 
 ```
 /
+./
+├── .astro
+│   └── types.d.ts
 ├── .changes
 │   ├── unreleased
 │   │   └── .gitkeep
@@ -97,6 +102,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── task_dep.yaml
 │   ├── task_git.yaml
 │   ├── task_github.yaml
+│   ├── task_leetcode.yaml
 │   ├── task_release.yaml
 │   └── task_site.yaml
 ├── .vscode
@@ -107,7 +113,6 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── LICENSE
 ├── README.md
 ├── Taskfile.yaml
-├── astro-basic-template.code-workspace
 ├── astro.config.mjs
 ├── dotenv.config.ts
 ├── eslint.config.cjs
@@ -115,16 +120,66 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── package.json
 ├── pnpm-lock.yaml
 ├── public
-│   └── favicon.svg
+│   ├── default-post-thumbnail.png
+│   └── favicon.ico
 ├── renovate.json
 ├── src
+│   ├── assets
+│   │   └── scss
+│   │       ├── _base.scss
+│   │       ├── _styles.scss
+│   │       └── app.scss
+│   ├── cmd
+│   │   └── leetcode.ts
 │   ├── components
-│   │   └── Card.astro
+│   │   ├── AppFooter.astro
+│   │   ├── AppHeader.astro
+│   │   ├── Breadcrumb.astro
+│   │   ├── Disqus.astro
+│   │   ├── Icon.astro
+│   │   ├── LeetCodeDifficulty.astro
+│   │   ├── SEOMeta.astro
+│   │   ├── ThemeSelector.astro
+│   │   ├── analytics
+│   │   │   ├── CounterAnalytics.astro
+│   │   │   ├── GoogleAnalytics.astro
+│   │   │   └── Swetrix.astro
+│   │   └── post
+│   │       ├── PostHeader.astro
+│   │       ├── PostItem.astro
+│   │       └── PostList.astro
+│   ├── configs
+│   │   └── site.ts
+│   ├── content
+│   │   ├── config.ts
+│   │   └── leetcode-solutions
+│   │       ├── *.md
 │   ├── env.d.ts
 │   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   │   ├── AppLayout.astro
+│   │   └── PostLayout.astro
+│   ├── leetcode
+│   │   ├── data
+│   │   │   └── problem_set.json
+│   │   ├── templates
+│   │   │   └── leetcode.md.mustache
+│   │   └── types.ts
+│   ├── pages
+│   │   ├── 404.astro
+│   │   ├── [slug].astro
+│   │   ├── difficulties
+│   │   │   └── [slug].astro
+│   │   ├── images
+│   │   │   └── [slug].png.ts
+│   │   ├── index.astro
+│   │   ├── rss.xml.ts
+│   │   └── tags
+│   │       └── [slug].astro
+│   └── utils
+│       ├── date.ts
+│       └── plugin.ts
+├── tailwind.config.cjs
+├── theme.config.cjs
 └── tsconfig.json
 ```
 

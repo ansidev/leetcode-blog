@@ -2,7 +2,7 @@
   "name": "leetcode-blog",
   "description": "Solutions for LeetCode problems - Written by ansidev",
   "type": "module",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "license": "MIT",
   "scripts": {
     "lc:new": "tsx ./src/cmd/leetcode.ts",
