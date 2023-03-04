@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+
 import partytown from '@astrojs/partytown'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
@@ -29,5 +31,29 @@ export default defineConfig({
     sitemap(),
     purgecss(),
     compress(),
-  ]
+  ],
+  vite: {
+    plugins: [rawFonts(['.ttf', '.woff'])],
+    optimizeDeps: {
+      exclude: [
+        '@resvg/resvg-js',
+      ],
+    },
+  }
 })
+
+// vite plugin to import fonts
+function rawFonts(ext) {
+  return {
+    name: 'vite-plugin-raw-fonts',
+    transform(_, id) {
+      if (ext.some((e) => id.endsWith(e))) {
+        const buffer = fs.readFileSync(id)
+        return {
+          code: `export default ${JSON.stringify(buffer)}`,
+          map: null,
+        }
+      }
+    },
+  }
+}

@@ -7,7 +7,7 @@ export default {
     name: 'Le Minh Tri',
     nickname: 'ansidev',
     email: 'ansidev@gmail.com',
-    avatar: '/ansidev.png',
+    avatar: 'ansidev.png',
     homepage: 'https://ansidev.xyz',
     github: 'https://github.com/ansidev',
     twitter: 'https://twitter.com/ansidev',

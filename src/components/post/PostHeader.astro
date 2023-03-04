@@ -34,7 +34,7 @@ const formattedDate = formatDate(pubDate)
   </div>
   <div class="flex justify-center m-3 text-start">
     <img
-      src={siteAuthor.avatar}
+      src={`${Astro.site}${siteAuthor.avatar}`}
       alt="Author's avatar"
       style="margin-bottom: 0 !important;"
       width="64"

@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 const tailwindCssTheme = require('tailwindcss-themer')
 const themeConfig = require('./theme.config.cjs')
 const typography = require('@tailwindcss/typography')
@@ -7,6 +8,9 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['IBM Plex Mono', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         transparent: 'transparent',
       },
