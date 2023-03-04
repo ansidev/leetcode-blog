@@ -17,7 +17,7 @@ specifiers:
   '@types/node': ^18.14.2
   '@typescript-eslint/eslint-plugin': ^5.54.0
   '@typescript-eslint/parser': ^5.54.0
-  astro: ^2.0.16
+  astro: ^2.0.17
   astro-compress: ^1.1.35
   astro-purgecss: ^2.0.1
   commander: ^10.0.0
