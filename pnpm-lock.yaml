@@ -14,7 +14,7 @@ specifiers:
   '@types/lodash.get': ^4.4.7
   '@types/lodash.kebabcase': ^4.1.7
   '@types/mustache': ^4.2.2
-  '@types/node': ^18.14.2
+  '@types/node': ^18.14.6
   '@typescript-eslint/eslint-plugin': ^5.54.0
   '@typescript-eslint/parser': ^5.54.0
   astro: ^2.0.17
