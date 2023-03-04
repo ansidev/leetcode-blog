@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v2.2.0](https://github.com/ansidev/astro-basic-template/compare/v2.1.0...v2.2.0) (2023-03-04)
+## [v2.2.0](https://github.com/ansidev/leetcode-blog/compare/v2.1.0...v2.2.0) (2023-03-04)
 
 ### Features
 
@@ -12,9 +12,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 - Add meta fields for SEO.
 - Generate post thumbnail using [satori](https://github.com/vercel/satori).
 
-Full Changelog: [v2.1.0...v2.2.0](https://github.com/ansidev/astro-basic-template/compare/v2.1.0...v2.2.0)
+Full Changelog: [v2.1.0...v2.2.0](https://github.com/ansidev/leetcode-blog/compare/v2.1.0...v2.2.0)
 
-## [v2.1.0](https://github.com/ansidev/astro-basic-template/compare/v2.0.1...v2.1.0) (2023-03-01)
+## [v2.1.0](https://github.com/ansidev/leetcode-blog/compare/v2.0.1...v2.1.0) (2023-03-01)
 
 ### Bug Fixes
 
@@ -32,15 +32,15 @@ Full Changelog: [v2.1.0...v2.2.0](https://github.com/ansidev/astro-basic-templat
 
 - **seo:** add canonical URL meta field
 
-Full Changelog: [v2.0.1...v2.1.0](https://github.com/ansidev/astro-basic-template/compare/v2.0.1...v2.1.0)
+Full Changelog: [v2.0.1...v2.1.0](https://github.com/ansidev/leetcode-blog/compare/v2.0.1...v2.1.0)
 
-## [v2.0.1](https://github.com/ansidev/astro-basic-template/compare/v2.0.0...v2.0.1) (2023-02-26)
+## [v2.0.1](https://github.com/ansidev/leetcode-blog/compare/v2.0.0...v2.0.1) (2023-02-26)
 
 ### Bug Fixes
 
 - **deployment:** add missing environment variables
 
-Full Changelog: [v2.0.0...v2.0.1](https://github.com/ansidev/astro-basic-template/compare/v2.0.0...v2.0.1)
+Full Changelog: [v2.0.0...v2.0.1](https://github.com/ansidev/leetcode-blog/compare/v2.0.0...v2.0.1)
 
 ## v2.0.0 (2023-02-26)
 
@@ -54,4 +54,4 @@ Full Changelog: [v2.0.0...v2.0.1](https://github.com/ansidev/astro-basic-templat
 - RSS.
 - Posts by tags, difficulty.
 
-Full Changelog: [v2.0.0](https://github.com/ansidev/astro-basic-template/commits/v2.0.0)
+Full Changelog: [v2.0.0](https://github.com/ansidev/leetcode-blog/commits/v2.0.0)

@@ -35,15 +35,15 @@ Solutions for LeetCode problems - Written by [ansidev](https://github.com/anside
 Run one of these commands to init a new project from this template
 
 ```sh
-npm create astro@latest -- --template ansidev/astro-basic-template
+npm create astro@latest -- --template ansidev/leetcode-blog
 ```
 
 ```sh
-yarn create astro@latest --template ansidev/astro-basic-template
+yarn create astro@latest --template ansidev/leetcode-blog
 ```
 
 ```sh
-pnpm create astro@latest --template ansidev/astro-basic-template
+pnpm create astro@latest --template ansidev/leetcode-blog
 ```
 
 #### Setup GitHub repository
