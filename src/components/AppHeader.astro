@@ -22,7 +22,7 @@ const { title, description, author, themes } = siteConfig
       <div class="header-logo mr-3">
         <a href="/">
           <img
-            src={author.avatar}
+            src={`${Astro.site}${author.avatar}`}
             alt="Author's avatar"
             class="rounded-full"
             style="margin-bottom: 0 !important;"
