@@ -21,14 +21,10 @@ module.exports = {
             '--tw-prose-headings': theme('textColor.style.primary'),
             '--tw-prose-bold': theme('textColor.style.primary'),
             '--tw-prose-quotes': theme('textColor.style.primary'),
-            '--tw-prose-code': theme('textColor.style.primary-inverted'),
-            '--tw-prose-pre-bg': theme('textColor.style.primary'),
+            '--tw-prose-pre-bg': '#0d1117',
             code: {
               backgroundColor: theme('backgroundColor.style.primary'),
-              paddingTop: '2px',
-              paddingBottom: '5px',
-              paddingLeft: '5px',
-              paddingRight: '5px',
+              padding: '5px',
               borderRadius: '3px',
             },
             'code::before': {
