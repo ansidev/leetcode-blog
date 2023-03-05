@@ -39,7 +39,12 @@ export default defineConfig({
         '@resvg/resvg-js',
       ],
     },
-  }
+  },
+  markdown: {
+    shikiConfig: {
+      wrap: true,
+    },
+  },
 })
 
 // vite plugin to import fonts
