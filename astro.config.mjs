@@ -39,7 +39,7 @@ export default defineConfig({
         '@resvg/resvg-js',
       ],
     },
-  }
+  },
 })
 
 // vite plugin to import fonts
