@@ -40,11 +40,6 @@ export default defineConfig({
       ],
     },
   },
-  markdown: {
-    shikiConfig: {
-      wrap: true,
-    },
-  },
 })
 
 // vite plugin to import fonts
