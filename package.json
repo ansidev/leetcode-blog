@@ -16,7 +16,7 @@
     "lint": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@astrojs/partytown": "^1.0.3",
+    "@astrojs/partytown": "^1.2.2",
     "@astrojs/rss": "^2.1.1",
     "@astrojs/sitemap": "^1.1.0",
     "@astrojs/tailwind": "^3.0.1",
