@@ -50,7 +50,7 @@
     "lodash.kebabcase": "^4.1.1",
     "mustache": "^4.2.0",
     "sass": "^1.58.3",
-    "satori": "^0.4.1",
+    "satori": "^0.8.1",
     "satori-html": "^0.3.2",
     "tailwindcss-themer": "^3.0.1",
     "tsx": "^3.12.3",
