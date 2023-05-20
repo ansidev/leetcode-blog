@@ -29,7 +29,7 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@fontsource/ibm-plex-mono": "^4.5.13",
-    "@iconify-json/bi": "^1.1.15",
+    "@iconify-json/bi": "^1.1.16",
     "@resvg/resvg-js": "^2.4.1",
     "@tailwindcss/typography": "^0.5.9",
     "@types/lodash.get": "^4.4.7",
