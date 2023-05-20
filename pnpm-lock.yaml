@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@astrojs/partytown':
-    specifier: ^1.0.3
-    version: 1.0.3
+    specifier: ^1.2.2
+    version: 1.2.2
   '@astrojs/rss':
     specifier: ^2.1.1
     version: 2.1.1
@@ -177,8 +177,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/partytown@1.0.3:
-    resolution: {integrity: sha512-u2/pG9owRipICz/PksLUUqUat98sm0/YODvv3/IKKJ0JCwF7+0olbMvyyvoj7kJooIXh0XowcOjEs5vhCYFo5g==}
+  /@astrojs/partytown@1.2.2:
+    resolution: {integrity: sha512-Df28kE+xExg+mc2jaPWgN3EYT9uvFmvWCHAuT3MUIxNBark9iVidOHFWNE5dy8+RfxpK3ryhvO5M18lK8OGvig==}
     dependencies:
       '@builder.io/partytown': 0.7.5
       mrmime: 1.0.1
