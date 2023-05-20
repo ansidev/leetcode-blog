@@ -4,6 +4,42 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.2.3](https://github.com/ansidev/leetcode-blog/compare/v2.2.2...v2.2.3) (2023-05-21)
+
+### Dev features
+
+- **renovate**: update config.
+- **taskfile**: update task files.
+- **ci**: use pnpm v8 for workflow `deploy_to_netlify`.
+
+### Dependencies
+
+| Package                            | Version                   |
+| ---------------------------------- | ------------------------- |
+| `@astrojs/partytown`               | `^1.0.3` `->` `^1.2.2`    |
+| `@astrojs/rss`                     | `^2.1.1` `->` `^2.4.2`    |
+| `@astrojs/sitemap`                 | `^1.1.0` `->` `^1.3.1`    |
+| `@astrojs/tailwind`                | `^3.0.1` `->` `^3.1.3`    |
+| `astro`                            | `^2.0.17` `->` `2.4.5`    |
+| `astro-compress`                   | `^1.1.35` `->` `^1.1.44`  |
+| `tailwindcss`                      | `^3.2.7` `->` `^3.3.2`    |
+| `@commitlint/cli`                  | `^17.4.4` `->` `^17.6.3`  |
+| `@commitlint/config-conventional`  | `^17.4.4` `->` `^17.6.3`  |
+| `@iconify-json/bi`                 | `^1.1.15` `->` `^1.1.16`  |
+| `@types/node`                      | `^18.14.6` `->` `^20.2.1` |
+| `@typescript-eslint/eslint-plugin` | `^5.54.0` `->` `^5.59.6`  |
+| `@typescript-eslint/parser`        | `^5.54.0` `->` `^5.59.6`  |
+| `commander`                        | `^10.0.0` `->` `^10.0.1`  |
+| `eslint`                           | `^8.35.0` `->` `^8.41.0`  |
+| `eslint-plugin-astro`              | `^0.23.0` `->` `^0.27.0`  |
+| `sass`                             | `^1.58.3` `->` `^1.62.1`  |
+| `satori`                           | `^0.4.1` `->` `^0.8.1`    |
+| `tailwindcss-themer`               | `^3.0.1` `->` `^3.1.0`    |
+| `tsx`                              | `^3.12.3` `->` `^3.12.7`  |
+| `typescript`                       | `^4.9.5` `->` `^5.0.4`    |
+
+Full Changelog: [v2.2.2...v2.2.3](https://github.com/ansidev/leetcode-blog/compare/v2.2.2...v2.2.3)
+
 ## [v2.2.2](https://github.com/ansidev/leetcode-blog/compare/v2.2.1...v2.2.2) (2023-03-08)
 
 ### Bug Fixes

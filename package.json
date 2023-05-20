@@ -2,7 +2,7 @@
   "name": "leetcode-blog",
   "description": "Solutions for LeetCode problems - Written by ansidev",
   "type": "module",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "license": "MIT",
   "packageManager": "pnpm@8.5.1",
   "scripts": {
