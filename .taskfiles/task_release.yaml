@@ -16,16 +16,10 @@ tasks:
       - go install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
       - go install github.com/miniscruff/changie@latest
 
-  clean_changelog:
-    desc: Clean changelog for existing git tags
-    cmds:
-      - rm ${CHANGES_DIR}/${TAG_PREFIX}*.md || true
-    silent: true
-
   batch_changelog:
     desc: Generate changelog for existing git tags
     cmds:
-      - task: clean_changelog
+      - rm ${CHANGES_DIR}/${TAG_PREFIX}*.md || true
       - for VERSION_TAG in $(git -c 'versionsort.suffix=-' tag --list --sort=v:refname); do git-chglog --output ${CHANGES_DIR}/${VERSION_TAG}.md ${VERSION_TAG} ; done
     silent: true
 

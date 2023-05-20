@@ -19,17 +19,19 @@ includes:
     internal: true
 
 tasks:
-  init-dep-branch:
+  init_dep_branch:
     desc: Init git branch {{.BRANCH_DEP_PREFIX}}/*
     cmds:
       - git pull {{.GIT_REMOTE}} {{.BRANCH_BASE}}:{{.BRANCH_BASE}}
-      - git branch -D {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} 2>/dev/null || git switch -c {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} {{.BRANCH_BASE}}
+      - |
+        [[ -z $(git branch --list {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}}) ]] && git branch -D {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} 2>/dev/null || true
+      - git switch -c {{.BRANCH_DEP_PREFIX}}/{{.BRANCH_NAME}} {{.BRANCH_BASE}}
     silent: true
 
   update:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
-      - task: init-dep-branch
+      - task: init_dep_branch
         vars:
           BRANCH_NAME: "{{.CLI_ARGS}}"
       - ncu -u -f {{.CLI_ARGS}}
