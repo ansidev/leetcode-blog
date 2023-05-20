@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^1.2.2",
-    "@astrojs/rss": "^2.1.1",
+    "@astrojs/rss": "^2.4.2",
     "@astrojs/sitemap": "^1.1.0",
     "@astrojs/tailwind": "^3.0.1",
     "astro": "^2.0.17",
