@@ -74,7 +74,7 @@ len(M[a]) = len(message[j:j+k]) + len(<a/b>)
 - Because `message[j:j+k]` cannot be empty, `len(message[j:j+k]) >= 1`.
 - `len(b) >= len(a) >= 1`.
 
-=> `len(M[a]) = len(message[j:j+k]) + 3 + len(a) + len(b) >= 1 + 3 + 1 + 1 = 5`.
+=> `len(M[a]) = len(message[j:j+k]) + 3 + len(a) + len(b) >= 1 + 3 + 1 + 1 = 6`.
 
 From the requirements:
 
@@ -85,7 +85,7 @@ We have
 
 - `len(M[a]) <= limit`.
 
-=> `limit >= 5`.
+=> `limit >= 6`.
 
 - The maximum length of each message part is `limit`, so
 
@@ -96,7 +96,7 @@ We have
 
 From the above analysis, the logic can be presented as below:
 
-- If `limit < 5`, it is impossible to split message as required, then return the empty string array immediately.
+- If `limit < 6`, it is impossible to split message as required, then return the empty string array immediately.
 - Otherwise, iterate from 1 to len(message) and for each index `a`, we will check if it is possible to split `message`
   into `a` parts that satisfies the requirements.
 - If we find the number of total message parts, it is simple to build the output array.
@@ -112,7 +112,7 @@ import (
 )
 
 func splitMessage(message string, limit int) []string {
-	if limit < 5 {
+	if limit < 6 {
 		return []string{}
 	}
 
