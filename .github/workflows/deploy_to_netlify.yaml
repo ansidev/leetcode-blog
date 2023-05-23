@@ -165,6 +165,39 @@ jobs:
             echo "netlify_deploy_url=$NETLIFY_PROD_URL" >> $GITHUB_OUTPUT || \
             echo "netlify_deploy_url=$NETLIFY_DRAFT_URL" >> $GITHUB_OUTPUT
 
+      - name: Debug deploy ${{ needs.set_deploy_environment.outputs.github_environment }}
+        id: debug-deploy
+        if: always() && (steps.deploy.outcome == 'failure' || steps.post_deploy.outcome == 'failure' )
+        env:
+          NETLIFY_DEPLOY_PREFIX: ${{ needs.set_deploy_environment.outputs.netlify_deploy_prefix }}
+          NETLIFY_DEPLOY_ALIAS: ${{ needs.set_deploy_environment.outputs.netlify_deploy_alias }}
+          SITE_GA_ID: ${{ vars.SITE_GA_ID }}
+          SITE_SWETRIX_ID: ${{ vars.SITE_SWETRIX_ID }}
+          SITE_COUNTER_ANALYTICS_ID: ${{ vars.SITE_COUNTER_ANALYTICS_ID }}
+          SITE_DISQUS_ID: ${{ vars.SITE_DISQUS_ID }}
+        shell: bash
+        run: |
+          echo "node version $(node -v)"
+          echo "pnpm version $(pnpm -v)"
+          [[ ${PROD:-false} == "true" ]] && \
+            GA_ID=$SITE_GA_ID \
+            SWETRIX_ID=$SITE_SWETRIX_ID \
+            COUNTER_ANALYTICS_ID=$SITE_COUNTER_ANALYTICS_ID \
+            DISQUS_ID=$SITE_DISQUS_ID \
+            pnpm netlify deploy \
+              --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
+              --site ${{ env.NETLIFY_SITE_ID }} \
+              --build \
+              --context production \
+              --message "$(git log -1 --pretty=%s)" \
+              --prod || \
+            pnpm netlify deploy \
+              --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
+              --site ${{ env.NETLIFY_SITE_ID }} \
+              --build \
+              --context deploy-preview \
+              --alias ${NETLIFY_DEPLOY_ALIAS} \
+              --message "$(git log -1 --pretty=%s)"
     outputs:
       success: ${{ steps.deploy.outputs.success }}
 
@@ -172,10 +205,7 @@ jobs:
     needs:
       - set_deploy_environment
       - deploy
-    if: needs.deploy.outputs.success == 'true' &&
-      github.base_ref == 'develop' &&
-      github.event.action == 'closed' &&
-      github.event.pull_request.merged == true
+    if: needs.deploy.outputs.success == 'true' && github.base_ref == 'develop' && github.event.action == 'closed' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Delete the PR branch after merged into develop
