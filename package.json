@@ -44,7 +44,7 @@
     "dayjs": "^1.11.7",
     "dotenv": "^16.0.3",
     "eslint": "^8.41.0",
-    "eslint-plugin-astro": "^0.27.0",
+    "eslint-plugin-astro": "^0.27.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "lodash.get": "^4.4.2",
