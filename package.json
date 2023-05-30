@@ -27,8 +27,8 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.3",
-    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@fontsource/ibm-plex-mono": "^5.0.1",
     "@iconify-json/bi": "^1.1.16",
     "@resvg/resvg-js": "^2.4.1",
