@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^1.11.7
     version: 1.11.7
   dotenv:
-    specifier: ^16.1.0
-    version: 16.1.0
+    specifier: ^16.1.1
+    version: 16.1.1
   eslint:
     specifier: ^8.41.0
     version: 8.41.0
@@ -2734,8 +2734,8 @@ packages:
       is-obj: 2.0.0
     dev: true
 
-  /dotenv@16.1.0:
-    resolution: {integrity: sha512-XiwP/4cqatBNLEnKe169vPZCrovUmYngyVA4DgZ3uIVLJfZaBgr4uT0EF2TrEQqgWDDlekGo0muEYme5SR78Ww==}
+  /dotenv@16.1.1:
+    resolution: {integrity: sha512-UGmzIqXU/4b6Vb3R1Vrfd/4vGgVlB+mO+vEixOdfRhLeppkyW2BMhuK7TL8d0el+q9c4lW9qK2wZYhNLFhXYLA==}
     engines: {node: '>=12'}
     dev: true
 
