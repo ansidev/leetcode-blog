@@ -4,6 +4,34 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.2.5](https://github.com/ansidev/leetcode-blog/compare/v2.2.4...v2.2.5) (2023-06-13)
+
+### Bug Fixes
+
+- wrong github environment url
+
+- **deps:** update dependency astro to v2.6.3
+
+- **deps:** update dependency astro to v2.6.2
+
+- **deps:** update dependency astro to v2.6.1
+
+- **deps:** update dependency astro to v2.6.0
+
+- **deps:** update dependency astro-compress to ^1.1.47
+
+- **deps:** update dependency astro to v2.5.7
+
+- **deps:** update dependency [@astrojs](https://github.com/astrojs)/sitemap to ^1.3.3
+
+### Code Refactoring
+
+- **github-workflow:** apply GitHub Actions from ghacts
+
+- **github-workflow:** apply GitHub Actions from ghacts/gitflow
+
+Full Changelog: [v2.2.4...v2.2.5](https://github.com/ansidev/leetcode-blog/compare/v2.2.4...v2.2.5)
+
 ## [v2.2.4](https://github.com/ansidev/leetcode-blog/compare/v2.2.3...v2.2.4) (2023-05-31)
 
 ### Content
