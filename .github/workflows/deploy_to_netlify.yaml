@@ -13,6 +13,7 @@ on:
 env:
   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+  NETLIFY_SITE_NAME: ${{ vars.NETLIFY_SITE_NAME }}
   DEPLOY_DIR: dist
 
 jobs:
@@ -83,137 +84,43 @@ jobs:
       url: ${{ steps.post_deploy.outputs.netlify_deploy_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Set app environment variables
+        env:
+          NETLIFY_DEPLOY_PREFIX: ${{ needs.set_deploy_environment.outputs.netlify_deploy_prefix }}
+          NETLIFY_DEPLOY_ALIAS: ${{ needs.set_deploy_environment.outputs.netlify_deploy_alias }}
+          SITE_GA_ID: ${{ vars.SITE_GA_ID }}
+          SITE_SWETRIX_ID: ${{ vars.SITE_SWETRIX_ID }}
+          SITE_COUNTER_ANALYTICS_ID: ${{ vars.SITE_COUNTER_ANALYTICS_ID }}
+          SITE_DISQUS_ID: ${{ vars.SITE_DISQUS_ID }}
+        run: |
+          {
+            echo "ASTRO_BASE_URL=https://${NETLIFY_DEPLOY_PREFIX}${NETLIFY_SITE_NAME}.netlify.app"
+            echo "NETLIFY_DEPLOY_ALIAS=${NETLIFY_DEPLOY_ALIAS}"
+            echo "GA_ID=${SITE_GA_ID}"
+            echo "SWETRIX_ID=${SITE_SWETRIX_ID}"
+            echo "COUNTER_ANALYTICS_ID=${SITE_COUNTER_ANALYTICS_ID}"
+            echo "DISQUS_ID=${SITE_DISQUS_ID}"
+          } >> "$GITHUB_ENV"
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - name: Build
+        uses: ghacts/static-site@main
         with:
           node-version: 18
+          skip-test: true
+          lint-script: "lint:js"
 
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: false
-
-      - name: Get PNPM store directory
-        id: pnpm-cache
-        run: echo "pnpm_store_path=$(pnpm store path)" >> "$GITHUB_OUTPUT"
-
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_store_path }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Install Netlify CLI
-        run: pnpm add --save-dev netlify-cli
-
-      - name: Set as production environment
-        if: needs.set_deploy_environment.outputs.github_environment == 'production'
-        run: echo "PROD=true" >> "$GITHUB_ENV"
-
-      - name: Deploy ${{ needs.set_deploy_environment.outputs.github_environment }}
+      - name: Deploy
         id: deploy
-        if: success()
+        uses: ghacts/manual-deploy-to-netlify@main
         env:
-          NETLIFY_DEPLOY_PREFIX: ${{ needs.set_deploy_environment.outputs.netlify_deploy_prefix }}
-          NETLIFY_DEPLOY_ALIAS: ${{ needs.set_deploy_environment.outputs.netlify_deploy_alias }}
-          SITE_GA_ID: ${{ vars.SITE_GA_ID }}
-          SITE_SWETRIX_ID: ${{ vars.SITE_SWETRIX_ID }}
-          SITE_COUNTER_ANALYTICS_ID: ${{ vars.SITE_COUNTER_ANALYTICS_ID }}
-          SITE_DISQUS_ID: ${{ vars.SITE_DISQUS_ID }}
-        shell: bash
-        run: |
-          set -e
-          ([[ ${PROD:-false} == "true" ]] && \
-            OUTPUT=$(GA_ID=$SITE_GA_ID \
-              SWETRIX_ID="${SITE_SWETRIX_ID}" \
-              COUNTER_ANALYTICS_ID="${SITE_COUNTER_ANALYTICS_ID}" \
-              DISQUS_ID="${SITE_DISQUS_ID}" \
-              pnpm netlify deploy \
-              --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
-              --site ${{ env.NETLIFY_SITE_ID }} \
-              --json \
-              --build \
-              --context production \
-              --message "$(git log -1 --pretty=%s)" \
-              --prod \
-              | tr '\n' ' ')) || \
-            OUTPUT=$(
-              SWETRIX_ID="${SITE_SWETRIX_ID}" \
-              COUNTER_ANALYTICS_ID="${SITE_COUNTER_ANALYTICS_ID}" \
-              DISQUS_ID="${SITE_DISQUS_ID}" \
-              pnpm netlify deploy \
-                --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
-                --site ${{ env.NETLIFY_SITE_ID }} \
-                --json \
-                --build \
-                --context deploy-preview \
-                --alias "${NETLIFY_DEPLOY_ALIAS}" \
-                --message "$(git log -1 --pretty=%s)" \
-                | tr '\n' ' ')
-          set +e
+          PROD: ${{ needs.set_deploy_environment.outputs.github_environment == 'production' }}
+        with:
+          auth-token: ${{ env.NETLIFY_AUTH_TOKEN }}
+          site-id: ${{ env.NETLIFY_SITE_ID }}
+          dir: ${{ env.DEPLOY_DIR }}
+          alias: ${{ env.NETLIFY_DEPLOY_ALIAS }}
+          prod: ${{ env.PROD }}
 
-          NETLIFY_OUTPUT="$OUTPUT"
-
-          echo "netlify_output=$NETLIFY_OUTPUT" >> "$GITHUB_OUTPUT"
-          echo "success=true" >> "$GITHUB_OUTPUT"
-
-      - name: Post deploy ${{ needs.set_deploy_environment.outputs.github_environment }}
-        id: post_deploy
-        if: success()
-        env:
-          NETLIFY_DRAFT_URL: ${{ fromJson(steps.deploy.outputs.netlify_output).deploy_url }}
-          NETLIFY_PROD_URL: ${{ fromJson(steps.deploy.outputs.netlify_output).url }}
-        run: |
-          [[ ${PROD:-false} == "true" ]] && \
-            echo "netlify_deploy_url=$NETLIFY_PROD_URL" >> "$GITHUB_OUTPUT" || \
-            echo "netlify_deploy_url=$NETLIFY_DRAFT_URL" >> "$GITHUB_OUTPUT"
-
-      - name: Debug deploy ${{ needs.set_deploy_environment.outputs.github_environment }}
-        id: debug-deploy
-        if: always() && (steps.deploy.outcome == 'failure' || steps.post_deploy.outcome == 'failure' )
-        env:
-          NETLIFY_DEPLOY_PREFIX: ${{ needs.set_deploy_environment.outputs.netlify_deploy_prefix }}
-          NETLIFY_DEPLOY_ALIAS: ${{ needs.set_deploy_environment.outputs.netlify_deploy_alias }}
-          SITE_GA_ID: ${{ vars.SITE_GA_ID }}
-          SITE_SWETRIX_ID: ${{ vars.SITE_SWETRIX_ID }}
-          SITE_COUNTER_ANALYTICS_ID: ${{ vars.SITE_COUNTER_ANALYTICS_ID }}
-          SITE_DISQUS_ID: ${{ vars.SITE_DISQUS_ID }}
-        shell: bash
-        run: |
-          echo "node version $(node -v)"
-          echo "pnpm version $(pnpm -v)"
-          ([[ ${PROD:-false} == "true" ]] && \
-            GA_ID=$SITE_GA_ID \
-            SWETRIX_ID="${SITE_SWETRIX_ID}" \
-            COUNTER_ANALYTICS_ID="${SITE_COUNTER_ANALYTICS_ID}" \
-            DISQUS_ID="${SITE_DISQUS_ID}" \
-            pnpm netlify deploy \
-              --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
-              --site ${{ env.NETLIFY_SITE_ID }} \
-              --build \
-              --context production \
-              --message "$(git log -1 --pretty=%s)" \
-              --prod) || \
-            GA_ID=$SITE_GA_ID \
-            SWETRIX_ID="${SITE_SWETRIX_ID}" \
-            COUNTER_ANALYTICS_ID="${SITE_COUNTER_ANALYTICS_ID}" \
-            DISQUS_ID="${SITE_DISQUS_ID}" \
-            pnpm netlify deploy \
-              --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
-              --site ${{ env.NETLIFY_SITE_ID }} \
-              --build \
-              --context deploy-preview \
-              --alias "${NETLIFY_DEPLOY_ALIAS}" \
-              --message "$(git log -1 --pretty=%s)"
     outputs:
       success: ${{ steps.deploy.outputs.success }}
 
