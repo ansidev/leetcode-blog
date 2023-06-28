@@ -56,6 +56,6 @@
     "satori-html": "^0.3.2",
     "tailwindcss-themer": "^3.1.0",
     "tsx": "^3.12.7",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.5"
   }
 }
