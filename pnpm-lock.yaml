@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^17.6.6
     version: 17.6.6
   '@fontsource/ibm-plex-mono':
-    specifier: ^5.0.4
-    version: 5.0.4
+    specifier: ^5.0.5
+    version: 5.0.5
   '@iconify-json/bi':
     specifier: ^1.1.17
     version: 1.1.17
@@ -1134,8 +1134,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fontsource/ibm-plex-mono@5.0.4:
-    resolution: {integrity: sha512-SOP9L156TEGe/b0c11JMrHKtLGfIRseKG6xZDzSdVB9N1G6JYHcfvzp6RVaEHc0DCHJJfdoahld2K0u53FAzcw==}
+  /@fontsource/ibm-plex-mono@5.0.5:
+    resolution: {integrity: sha512-A1rDiQB7X7oOgsZbjeSQV3r/ZOBEZDjKEnlLvWqd4sMBZwGKTDnCxQYoqedY/8if2NXyiQoLXPdV5RpQ/3BerQ==}
     dev: true
 
   /@humanwhocodes/config-array@0.11.10:
