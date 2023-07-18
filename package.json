@@ -4,7 +4,7 @@
   "type": "module",
   "version": "2.2.5",
   "license": "MIT",
-  "packageManager": "pnpm@8.6.8",
+  "packageManager": "pnpm@8.6.9",
   "scripts": {
     "lc:new": "tsx ./src/cmd/leetcode.ts",
     "dev": "astro dev",
