@@ -24,8 +24,8 @@ dependencies:
     specifier: ^1.1.48
     version: 1.1.48
   astro-purgecss:
-    specifier: ^2.2.0
-    version: 2.2.0(astro@2.8.5)
+    specifier: ^2.3.0
+    version: 2.3.0(astro@2.8.5)
   tailwindcss:
     specifier: ^3.3.3
     version: 3.3.3(ts-node@10.9.1)
@@ -1872,8 +1872,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@2.2.0(astro@2.8.5):
-    resolution: {integrity: sha512-FQMtQr8HCeHZOFJBltcRLceRFu8xQRk/dYyp8r6WEL4OmuNgkrqG1tJbBlkcBHeNf+gogiHYtQXuFanUOzsimA==}
+  /astro-purgecss@2.3.0(astro@2.8.5):
+    resolution: {integrity: sha512-HeIhTFjNupoPP7w8rQpadAmc1Y7zrUOq2jbF6z66DwZ5+bshh/jNf5pviz6JsSQrNviiIL/mLw4EyVK69krz+w==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
@@ -4856,15 +4856,6 @@ packages:
   /postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  /postcss@8.4.23:
-    resolution: {integrity: sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.6
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: false
-
   /postcss@8.4.24:
     resolution: {integrity: sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -4958,7 +4949,7 @@ packages:
     dependencies:
       commander: 9.5.0
       glob: 8.1.0
-      postcss: 8.4.23
+      postcss: 8.4.24
       postcss-selector-parser: 6.0.11
     dev: false
 
