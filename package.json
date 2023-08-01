@@ -51,7 +51,7 @@
     "lodash.get": "^4.4.2",
     "lodash.kebabcase": "^4.1.1",
     "mustache": "^4.2.0",
-    "sass": "^1.64.1",
+    "sass": "^1.64.2",
     "satori": "^0.10.1",
     "satori-html": "^0.3.2",
     "tailwindcss-themer": "^3.1.0",
