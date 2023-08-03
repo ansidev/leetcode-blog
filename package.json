@@ -30,7 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.7",
     "@commitlint/config-conventional": "^17.6.7",
-    "@fontsource/ibm-plex-mono": "^5.0.5",
+    "@fontsource/ibm-plex-mono": "^5.0.7",
     "@iconify-json/bi": "^1.1.17",
     "@resvg/resvg-js": "^2.4.1",
     "@tailwindcss/typography": "^0.5.9",
