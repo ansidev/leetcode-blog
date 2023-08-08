@@ -41,8 +41,8 @@ devDependencies:
     specifier: ^5.0.8
     version: 5.0.8
   '@iconify-json/bi':
-    specifier: ^1.1.17
-    version: 1.1.17
+    specifier: ^1.1.18
+    version: 1.1.18
   '@resvg/resvg-js':
     specifier: ^2.4.1
     version: 2.4.1
@@ -1356,8 +1356,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify-json/bi@1.1.17:
-    resolution: {integrity: sha512-wWu0uLe3STp9JiE7TIZLvlZwQ7DJkup8lr59A4Ayl6b41KLBiAxnCi8l+Ohmtkdr6auNo8UM//gO0Pcx48GhOg==}
+  /@iconify-json/bi@1.1.18:
+    resolution: {integrity: sha512-nAQd+4Eb2SuYKg/5oa/dlvIudgF5d57VYGkF7P0JbuUipFHk0l2vAQ0CdKYaz0L66PO0rabWDln449lhBE2UJQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
