@@ -4,31 +4,70 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.2.6](https://github.com/ansidev/leetcode-blog/compare/v2.2.5...v2.2.6) (2023-08-08)
+
+### Bug Fixes
+
+- **github-workflow:** update parameter name
+
+- **deps:** replace astro-compress by [@otterlord/astro-compress](https://www.npmjs.com/package/@otterlord/astro-compress)
+
+### Dependencies
+
+| Package                            | Version                  |
+| ---------------------------------- | ------------------------ |
+| `@astrojs/rss`                     | `^2.4.3` `->` `^2.4.4`   |
+| `@astrojs/sitemap`                 | `^1.3.3` `->` `^2.0.1`   |
+| `@astrojs/tailwind`                | `^3.1.3` `->` `^4.0.0`   |
+| `astro`                            | `^2.6.3` `->` `^2.10.3`  |
+| `astro-purgecss`                   | `^2.0.1` `->` `^2.3.0`   |
+| `tailwindcss`                      | `^3.3.2` `->` `^3.3.3`   |
+| `@commitlint/cli`                  | `^17.6.5` `->` `^17.6.7` |
+| `@commitlint/config-conventional`  | `^17.6.5` `->` `^17.6.7` |
+| `@fontsource/ibm-plex-mono`        | `^5.0.3` `->` `^5.0.8`   |
+| `@iconify-json/bi`                 | `^1.1.17` `->` `^1.1.18` |
+| `@types/node`                      | `^20.2.1` `->` `^20.4.8` |
+| `@typescript-eslint/eslint-plugin` | `^5.59.11` `->` `^6.3.0` |
+| `@typescript-eslint/parser`        | `^5.59.11` `->` `^6.3.0` |
+| `dayjs`                            | `^1.11.8` `->` `^1.11.9` |
+| `dotenv`                           | `^16.1.4` `->` `^16.3.1` |
+| `eslint`                           | `^8.42.0` `->` `^8.46.0` |
+| `eslint-plugin-astro`              | `^0.27.1` `->` `^0.28.0` |
+| `sass`                             | `^1.63.3` `->` `^1.64.2` |
+| `satori`                           | `^0.10.1` `->` `^0.10.2` |
+| `typescript`                       | `^5.1.3` `->` `^5.1.6`   |
+
+Full Changelog: [v2.2.5...v2.2.6](https://github.com/ansidev/leetcode-blog/compare/v2.2.5...v2.2.6)
+
 ## [v2.2.5](https://github.com/ansidev/leetcode-blog/compare/v2.2.4...v2.2.5) (2023-06-13)
 
 ### Bug Fixes
 
-- wrong github environment url
-
-- **deps:** update dependency astro to v2.6.3
-
-- **deps:** update dependency astro to v2.6.2
-
-- **deps:** update dependency astro to v2.6.1
-
-- **deps:** update dependency astro to v2.6.0
-
-- **deps:** update dependency astro-compress to ^1.1.47
-
-- **deps:** update dependency astro to v2.5.7
-
-- **deps:** update dependency [@astrojs](https://github.com/astrojs)/sitemap to ^1.3.3
+- **github-workflow:** wrong github environment url
 
 ### Code Refactoring
 
 - **github-workflow:** apply GitHub Actions from ghacts
 
 - **github-workflow:** apply GitHub Actions from ghacts/gitflow
+
+### Dependencies
+
+| Package                            | Version                   |
+| ---------------------------------- | ------------------------- |
+| `@astrojs/sitemap`                 | `^1.3.2` `->` `^1.3.3`    |
+| `astro`                            | `^2.5.6` `->` `2.6.3`     |
+| `astro-compress`                   | `^1.1.46` `->` `^1.1.47`  |
+| `@fontsource/ibm-plex-mono`        | `^5.0.2` `->` `^5.0.3`    |
+| `@iconify-json/bi`                 | `^1.1.16` `->` `^1.1.17`  |
+| `@typescript-eslint/eslint-plugin` | `^5.59.8` `->` `^5.59.11` |
+| `@typescript-eslint/parser`        | `^5.59.8` `->` `^5.59.11` |
+| `dayjs`                            | `^1.11.7` `->` `^1.11.8`  |
+| `dotenv`                           | `^16.1.1` `->` `^16.1.4`  |
+| `eslint`                           | `^8.41.0` `->` `^8.42.0`  |
+| `sass`                             | `^1.62.1` `->` `^1.63.3`  |
+| `satori`                           | `^0.9.1` `->` `^0.10.1`   |
+| `typescript`                       | `^5.0.4` `->` `^5.1.3`    |
 
 Full Changelog: [v2.2.4...v2.2.5](https://github.com/ansidev/leetcode-blog/compare/v2.2.4...v2.2.5)
 
