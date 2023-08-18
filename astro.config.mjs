@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import partytown from '@astrojs/partytown'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
-import compress from '@otterlord/astro-compress'
+import compress from 'astro-compress'
 import { defineConfig } from 'astro/config'
 import purgecss from 'astro-purgecss'
 
