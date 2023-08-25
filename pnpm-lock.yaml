@@ -18,8 +18,8 @@ dependencies:
     specifier: ^4.0.0
     version: 4.0.0(astro@2.10.14)(tailwindcss@3.3.3)(ts-node@10.9.1)
   '@otterlord/astro-compress':
-    specifier: ^1.1.48
-    version: 1.1.48
+    specifier: ^1.1.51
+    version: 1.1.51
   astro:
     specifier: 2.10.14
     version: 2.10.14(@types/node@20.5.4)(sass@1.66.1)
@@ -1433,14 +1433,12 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@otterlord/astro-compress@1.1.48:
-    resolution: {integrity: sha512-1AUSUMk0WMSMOg/qSmJ7K/0xUsl4hYrAlmcpxzunVFen2r6QmvQDE+51nrPJljzYcXPil+aFrzGe+jfWVChz6A==}
+  /@otterlord/astro-compress@1.1.51:
+    resolution: {integrity: sha512-Vlc21lvJjDfXp7mk2FJ75ka+e3mKwwT8rIXMdpewdAV0x9mOMQ9zvhJpOlTfgL9WP9JW7TVcLJnjYXOyVHN6MQ==}
     dependencies:
       '@types/csso': 5.0.0
       '@types/html-minifier-terser': 7.0.0
       csso: 5.0.5
-      deepmerge-ts: 5.1.0
-      fast-glob: 3.2.12
       html-minifier-terser: 7.2.0
       sharp: 0.32.4
       svgo: 3.0.2
@@ -2780,11 +2778,6 @@ packages:
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
-
-  /deepmerge-ts@5.1.0:
-    resolution: {integrity: sha512-eS8dRJOckyo9maw9Tu5O5RUi/4inFLrnoLkBe3cPfDMx3WZioXtmOew4TXQaxq7Rhl4xjDtR7c6x8nNTxOvbFw==}
-    engines: {node: '>=16.0.0'}
-    dev: false
 
   /defaults@1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
