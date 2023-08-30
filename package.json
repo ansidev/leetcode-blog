@@ -21,7 +21,7 @@
     "@astrojs/partytown": "^2.0.0",
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.2",
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/tailwind": "^5.0.0",
     "astro": "2.10.15",
     "astro-compress": "^2.0.14",
     "astro-purgecss": "^2.3.0",
