@@ -18,7 +18,7 @@
     "lint": "pnpm run lint:js && pnpm run lint:ts"
   },
   "dependencies": {
-    "@astrojs/partytown": "^1.2.3",
+    "@astrojs/partytown": "^2.0.0",
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.2",
     "@astrojs/tailwind": "^4.0.0",
