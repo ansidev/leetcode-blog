@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.3.3)
   '@types/lodash.get':
-    specifier: ^4.4.7
-    version: 4.4.7
+    specifier: ^4.4.8
+    version: 4.4.8
   '@types/lodash.kebabcase':
     specifier: ^4.1.8
     version: 4.1.8
@@ -1387,8 +1387,8 @@ packages:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==}
     dev: true
 
-  /@types/lodash.get@4.4.7:
-    resolution: {integrity: sha512-af34Mj+KdDeuzsJBxc/XeTtOx0SZHZNLd+hdrn+PcKGQs0EG2TJTzQAOTCZTgDJCArahlCzLWSy8c2w59JRz7Q==}
+  /@types/lodash.get@4.4.8:
+    resolution: {integrity: sha512-XK+co6sBkJxh1vaVP8al6cAA17dX//RNCknGG8JhpHFJfxq/GXKAYB9NKheG22pu2xpWpxfFd65W08EhH2IFlg==}
     dependencies:
       '@types/lodash': 4.14.191
     dev: true
