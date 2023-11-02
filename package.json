@@ -20,7 +20,7 @@
   "dependencies": {
     "@astrojs/partytown": "^2.0.1",
     "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.2",
+    "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.2",
     "astro": "3.4.0",
     "astro-compress": "^2.2.2",
