@@ -21,8 +21,8 @@ dependencies:
     specifier: 3.4.2
     version: 3.4.2(@types/node@20.8.10)(sass@1.69.5)(typescript@5.2.2)
   astro-compress:
-    specifier: ^2.2.2
-    version: 2.2.2
+    specifier: ^2.2.3
+    version: 2.2.3
   astro-purgecss:
     specifier: ^3.2.1
     version: 3.2.1(astro@3.4.2)(purgecss@5.0.0)
@@ -1726,8 +1726,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /astro-compress@2.2.2:
-    resolution: {integrity: sha512-XEGHH6mJZHii0MCcQorCETrdme0tJTv5sU+PiLIUpekjv5GU3STHZ9pk09actvco6nlK9iWONTOuWg3vPmlJ6w==}
+  /astro-compress@2.2.3:
+    resolution: {integrity: sha512-aU4yiTOsnrFdMQnfzxL3bxTCaa/4vIvGXR8e+Ngxr6jpZvzV1pOy7hIthzmt4vjHe6m4VfRSZwtc3/x16/fJcQ==}
     dependencies:
       '@types/csso': 5.0.2
       '@types/html-minifier-terser': 7.0.1
@@ -6564,10 +6564,6 @@ packages:
   /yoga-wasm-web@0.3.3:
     resolution: {integrity: sha512-N+d4UJSJbt/R3wqY7Coqs5pcV0aUj2j9IaQ3rNj9bVCLld8tTGKRa2USARjnvZJWVx1NDmQev8EknoczaOQDOA==}
     dev: true
-
-  /zod@3.21.1:
-    resolution: {integrity: sha512-+dTu2m6gmCbO9Ahm4ZBDapx2O6ZY9QSPXst2WXjcznPMwf2YNpn3RevLx4KkZp1OPW/ouFcoBtBzFz/LeY69oA==}
-    dev: false
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
