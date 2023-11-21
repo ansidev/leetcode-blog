@@ -113,8 +113,8 @@ devDependencies:
     specifier: ^3.1.2
     version: 3.1.2(tailwindcss@3.3.5)
   tsx:
-    specifier: ^3.14.0
-    version: 3.14.0
+    specifier: ^4.2.0
+    version: 4.2.0
   typescript:
     specifier: ^5.2.2
     version: 5.2.2
@@ -6041,8 +6041,9 @@ packages:
   /tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
 
-  /tsx@3.14.0:
-    resolution: {integrity: sha512-xHtFaKtHxM9LOklMmJdI3BEnQq/D5F73Of2E1GDrITi9sgoVkvIsrQUTY1G8FlmGtA+awCI4EBlTRRYxkL2sRg==}
+  /tsx@4.2.0:
+    resolution: {integrity: sha512-hvAXAz4KUYNyjXOjJJgyjT7YOGFUNLC8jnODI6Omc/wGKaZ7z0FvW5d2haqg1GLfX49H3nZOpLYRlHMYGI8Wbw==}
+    engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
       esbuild: 0.18.20
@@ -6564,10 +6565,6 @@ packages:
   /yoga-wasm-web@0.3.3:
     resolution: {integrity: sha512-N+d4UJSJbt/R3wqY7Coqs5pcV0aUj2j9IaQ3rNj9bVCLld8tTGKRa2USARjnvZJWVx1NDmQev8EknoczaOQDOA==}
     dev: true
-
-  /zod@3.21.1:
-    resolution: {integrity: sha512-+dTu2m6gmCbO9Ahm4ZBDapx2O6ZY9QSPXst2WXjcznPMwf2YNpn3RevLx4KkZp1OPW/ouFcoBtBzFz/LeY69oA==}
-    dev: false
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
