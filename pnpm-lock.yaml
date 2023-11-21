@@ -110,8 +110,8 @@ devDependencies:
     specifier: ^0.3.2
     version: 0.3.2
   tailwindcss-themer:
-    specifier: ^3.1.2
-    version: 3.1.2(tailwindcss@3.3.5)
+    specifier: ^3.1.3
+    version: 3.1.3(tailwindcss@3.3.5)
   tsx:
     specifier: ^4.2.0
     version: 4.2.0
@@ -5943,8 +5943,8 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /tailwindcss-themer@3.1.2(tailwindcss@3.3.5):
-    resolution: {integrity: sha512-KZ67y/OY72rzZdEVKFFzCRYjQK6mmu4jlsSe5ae3iFV9yI8Se1L6/mfgphvjRgR9TQIaTwk9WYM2AF9hN6u3Ow==}
+  /tailwindcss-themer@3.1.3(tailwindcss@3.3.5):
+    resolution: {integrity: sha512-P9f0cBXNZ744EdbEdCta56mGsoWWRLyTaek2D2KAhqeIpOoPzDTohh+F3hfPQpM/qw4kVlitptXiwdl0tFgipg==}
     peerDependencies:
       tailwindcss: ^3.1.0
     dependencies:
