@@ -24,8 +24,8 @@ dependencies:
     specifier: ^2.2.2
     version: 2.2.2
   astro-purgecss:
-    specifier: ^3.2.1
-    version: 3.2.1(astro@4.0.2)(purgecss@5.0.0)
+    specifier: ^4.0.0
+    version: 4.0.0(astro@4.0.2)(purgecss@5.0.0)
   tailwindcss:
     specifier: ^3.3.5
     version: 3.3.5
@@ -2095,10 +2095,10 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@3.2.1(astro@4.0.2)(purgecss@5.0.0):
-    resolution: {integrity: sha512-dMQJxTkh1MaGRmf2GInQAYIjHKm8qRBbnSCrGoaqeHqG3vTXE+CGPUu0xiDO6kQkQfn+YMoID8sDy3wYgwP87g==}
+  /astro-purgecss@4.0.0(astro@4.0.2)(purgecss@5.0.0):
+    resolution: {integrity: sha512-6cOX2MNG2NEQ18/h1PngxvJT98NzwDmV3ivVN1wERV5GH+QR1Fi83cew3IZa/t8kLWDXuvgG83VpcwcCMrzRGA==}
     peerDependencies:
-      astro: ^3.0.0
+      astro: ^4.0.0
       purgecss: ^5.0.0
     dependencies:
       astro: 4.0.2(@types/node@20.9.3)(sass@1.69.5)(typescript@5.2.2)
@@ -5496,7 +5496,7 @@ packages:
     dependencies:
       commander: 9.5.0
       glob: 8.1.0
-      postcss: 8.4.29
+      postcss: 8.4.32
       postcss-selector-parser: 6.0.11
     dev: false
 
