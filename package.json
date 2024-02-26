@@ -12,7 +12,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "astro telemetry disable && husky install",
+    "prepare": "astro telemetry disable && husky",
     "lint:js": "eslint .",
     "lint:ts": "astro check && tsc --noEmit",
     "lint": "pnpm run lint:js && pnpm run lint:ts"
@@ -48,7 +48,7 @@
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "globals": "^14.0.0",
-    "husky": "^9.0.0",
+    "husky": "^9.0.11",
     "lodash.get": "^4.4.2",
     "lodash.kebabcase": "^4.1.1",
     "mustache": "^4.2.0",
