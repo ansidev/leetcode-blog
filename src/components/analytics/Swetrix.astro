@@ -6,8 +6,8 @@ interface Props {
 const { projectId } = Astro.props
 ---
 
-<script src="https://swetrix.org/swetrix.js" defer></script>
-<script define:vars={{ projectId }}>
+<script is:inline src="https://swetrix.org/swetrix.js" defer></script>
+<script is:inline define:vars={{ projectId }}>
   document.addEventListener('DOMContentLoaded', function () {
     swetrix.init(projectId)
     swetrix.trackViews()
