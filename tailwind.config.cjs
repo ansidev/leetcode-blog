@@ -17,13 +17,13 @@ module.exports = {
       typography: theme => ({
         DEFAULT: {
           css: {
-            color: theme('textColor.style.primary'),
-            '--tw-prose-headings': theme('textColor.style.primary'),
-            '--tw-prose-bold': theme('textColor.style.primary'),
-            '--tw-prose-quotes': theme('textColor.style.primary'),
+            color: 'rgb(var(--textColor-style-primary))',
+            '--tw-prose-headings': 'rgb(var(--textColor-style-primary))',
+            '--tw-prose-bold': 'rgb(var(--textColor-style-primary))',
+            '--tw-prose-quotes': 'rgb(var(--textColor-style-primary))',
             '--tw-prose-pre-bg': '#0d1117',
             code: {
-              backgroundColor: theme('backgroundColor.style.primary'),
+              backgroundColor: 'rgb(var(--backgroundColor-style-primary))',
               padding: '5px',
               borderRadius: '3px',
             },
