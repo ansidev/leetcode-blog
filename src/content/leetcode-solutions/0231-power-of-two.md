@@ -103,7 +103,7 @@ For `i > 0`, we have:
 <pre>
 n - 1 = <code>2<sup>i</sup><sub>10</sub> - 1</code> ≥ 0
 n & (n-1) = <code>2<sup>i</sup><sub>10</sub></code> & <code>2<sup>i</sup><sub>10</sub> - 1</code> = <code>100...00<sub>2</sub></code> & <code>011...11<sub>2</sub></code> = 0
-                 |__i__|     |__i__|
+                             |___i___|   |__i__|
 </pre>
 
 ```
