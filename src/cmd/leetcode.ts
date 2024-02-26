@@ -117,7 +117,7 @@ const generateNewPost: () => void = async () => {
 
   const templateData: LeetCodePostFrontMatter = { title, slug, keywords, author, pubDate, difficulty, tags }
 
-  const output = await render('leetcode.md', templateData)
+  const output = render('leetcode.md', templateData)
 
   writeToFile(path.join(__dirname, '../content/leetcode-solutions', `${slug}.md`), output)
 }
