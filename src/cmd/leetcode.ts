@@ -23,20 +23,17 @@ const templateBaseDir = path.join(__dirname, '../leetcode/templates')
 const templateExtension = 'mustache'
 const questionList = lc.data.problemsetQuestionList
 
-const getQuestionNumber: () => number = () => {
-  program.parse()
-
-  const question: string = program.args[0] || ''
+const getQuestionNumber: (questionNumberAsString: string) => number = (questionNumberAsString: string = '') => {
   const regex = new RegExp('\\d+')
 
-  if (!regex.test(question)) {
-    throw new InvalidArgumentError(`Input must be number: ${program.args[0]}`)
+  if (!regex.test(questionNumberAsString)) {
+    throw new InvalidArgumentError(`Input must be number: ${questionNumberAsString}`)
   }
 
-  const questionNumber = Number(question)
+  const questionNumber = Number(questionNumberAsString)
 
   if (questionNumber < 0) {
-    throw new InvalidArgumentError(`Input must be a positive integer: ${program.args[0]}`)
+    throw new InvalidArgumentError(`Input must be a positive integer: ${questionNumberAsString}`)
   }
 
   return questionNumber
@@ -99,8 +96,7 @@ const render: (fileName: string, templateData: object) => string = (fileName: st
 }
 
 // Main program
-const generateNewPost: () => void = async () => {
-  const questionNumber: number = getQuestionNumber()
+const generateNewPost: (questionNumber: number) => void = async (questionNumber: number) => {
   const question = getQuestion(questionNumber)
 
   if (question === undefined) {
@@ -122,4 +118,13 @@ const generateNewPost: () => void = async () => {
   writeToFile(path.join(__dirname, '../content/leetcode-solutions', `${slug}.md`), output)
 }
 
-generateNewPost()
+program.name('pnpm lc:new')
+  .description('Utility to generate new blog post')
+  .version('1.0.0')
+  .argument('<leetcode-question-number>', 'Leetcode question number')
+  .action((questionNumberAsString, _) => {
+    const questionNumber: number = getQuestionNumber(questionNumberAsString)
+    generateNewPost(questionNumber)
+  });
+
+program.parse()
