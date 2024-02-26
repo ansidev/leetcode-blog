@@ -25,7 +25,7 @@ dependencies:
     version: 2.2.10
   astro-purgecss:
     specifier: ^4.0.0
-    version: 4.0.0(astro@4.4.4)(purgecss@5.0.0)
+    version: 4.1.0(astro@4.4.4)(purgecss@5.0.0)
   tailwindcss:
     specifier: ^3.3.5
     version: 3.4.1
@@ -2094,8 +2094,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@4.0.0(astro@4.4.4)(purgecss@5.0.0):
-    resolution: {integrity: sha512-6cOX2MNG2NEQ18/h1PngxvJT98NzwDmV3ivVN1wERV5GH+QR1Fi83cew3IZa/t8kLWDXuvgG83VpcwcCMrzRGA==}
+  /astro-purgecss@4.1.0(astro@4.4.4)(purgecss@5.0.0):
+    resolution: {integrity: sha512-CVxAXVuKYJZS2lbFEJJ9lKCnUx0FSd9+5muZTLdhXBWHiNpx1PKmR9WNJykP4ArCdpDPjkWSudyYUqMDAAA43w==}
     peerDependencies:
       astro: ^4.0.0
       purgecss: ^5.0.0
