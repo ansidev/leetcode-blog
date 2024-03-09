@@ -19,16 +19,16 @@ dependencies:
     version: 3.1.1
   '@astrojs/tailwind':
     specifier: ^5.0.2
-    version: 5.1.0(astro@4.4.12)(tailwindcss@3.4.1)
+    version: 5.1.0(astro@4.4.15)(tailwindcss@3.4.1)
   astro:
-    specifier: 4.4.12
-    version: 4.4.12(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2)
+    specifier: 4.4.15
+    version: 4.4.15(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2)
   astro-compress:
     specifier: ^2.2.2
     version: 2.2.13
   astro-purgecss:
     specifier: ^4.0.0
-    version: 4.1.0(astro@4.4.12)(purgecss@5.0.0)
+    version: 4.1.0(astro@4.4.15)(purgecss@5.0.0)
   tailwindcss:
     specifier: ^3.3.5
     version: 3.4.1
@@ -256,13 +256,13 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.4.12)(tailwindcss@3.4.1):
+  /@astrojs/tailwind@5.1.0(astro@4.4.15)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.4.12(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2)
       autoprefixer: 10.4.17(postcss@8.4.35)
       postcss: 8.4.35
       postcss-load-config: 4.0.2(postcss@8.4.35)
@@ -2007,18 +2007,18 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@4.1.0(astro@4.4.12)(purgecss@5.0.0):
+  /astro-purgecss@4.1.0(astro@4.4.15)(purgecss@5.0.0):
     resolution: {integrity: sha512-CVxAXVuKYJZS2lbFEJJ9lKCnUx0FSd9+5muZTLdhXBWHiNpx1PKmR9WNJykP4ArCdpDPjkWSudyYUqMDAAA43w==}
     peerDependencies:
       astro: ^4.0.0
       purgecss: ^5.0.0
     dependencies:
-      astro: 4.4.12(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2)
       purgecss: 5.0.0
     dev: false
 
-  /astro@4.4.12(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2):
-    resolution: {integrity: sha512-1mHleqg6M/vU8RtEYlGr2CALYRGkRvQSJOUih/tGi12K4AVE8Dd+9uSDoMCnWH1OP9phe2HmwHEx2gDWlPksGQ==}
+  /astro@4.4.15(@types/node@20.11.24)(sass@1.71.1)(typescript@5.4.2):
+    resolution: {integrity: sha512-RTiAnlO8hDp6GqMVvaeJxyuCJhHNEho09lHshMNQBqgRabYPOJGW0HZZrbLRGNOqN9I14ivhZIunYGgAaGQpWw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
