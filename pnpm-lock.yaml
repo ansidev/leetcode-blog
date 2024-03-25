@@ -25,7 +25,7 @@ dependencies:
     version: 4.5.9(@types/node@20.11.30)(sass@1.72.0)(typescript@5.4.3)
   astro-compress:
     specifier: ^2.2.2
-    version: 2.2.16
+    version: 2.2.17
   astro-purgecss:
     specifier: ^4.0.0
     version: 4.1.0(astro@4.5.9)(purgecss@5.0.0)
@@ -1997,8 +1997,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /astro-compress@2.2.16:
-    resolution: {integrity: sha512-U9fq0sE25XViCjgNnWMFwjXA02VPemLS0/bPTnSj3FvJxB4LI12Wbu2zpvBY3qXQeYlzo/Dd813zFVwzrcCCug==}
+  /astro-compress@2.2.17:
+    resolution: {integrity: sha512-nqwLZApVtoMyRjvvsWIyBkzj31YSHtzWPOCLdZZLSu94ieWxIzoapa0jD7Vt+K6Mzc+KfXPdB9dK+hDcJCy9wQ==}
     dependencies:
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
