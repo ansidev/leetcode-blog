@@ -22,10 +22,10 @@ dependencies:
     version: 5.1.0(astro@4.6.0)(tailwindcss@3.4.3)
   astro:
     specifier: 4.6.0
-    version: 4.6.0(@types/node@20.12.7)(sass@1.74.1)(typescript@5.4.5)
+    version: 4.6.0(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
   astro-compress:
     specifier: ^2.2.2
-    version: 2.2.22(@types/node@20.12.7)(sass@1.74.1)(typescript@5.4.5)
+    version: 2.2.22(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
   astro-purgecss:
     specifier: ^4.0.0
     version: 4.1.0(astro@4.6.0)(purgecss@5.0.0)
@@ -108,7 +108,7 @@ devDependencies:
     version: 0.13.0
   sass:
     specifier: ^1.69.5
-    version: 1.74.1
+    version: 1.75.0
   satori:
     specifier: ^0.10.11
     version: 0.10.13
@@ -291,7 +291,7 @@ packages:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.6.0(@types/node@20.12.7)(sass@1.74.1)(typescript@5.4.5)
+      astro: 4.6.0(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -2305,7 +2305,7 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
-  /astro-compress@2.2.22(@types/node@20.12.7)(sass@1.74.1)(typescript@5.4.5):
+  /astro-compress@2.2.22(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5):
     resolution: {integrity: sha512-0oGFjm0T+3eA+gsx75r3WnujWBSb72H3Ihn5wgrLFqAl0h/vopgt6ew8JzL5xogrLqeqs1EbpZwmCK5lLOaZUQ==}
     deprecated: astro-compress has been deprecated, use @playform/compress
     dependencies:
@@ -2314,7 +2314,7 @@ packages:
       '@playform/pipe': 0.0.2
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.5.16(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.74.1)(terser@5.30.3)(typescript@5.4.5)
+      astro: 4.5.16(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5)
       csso: 5.0.5
       html-minifier-terser: 7.2.0
       kleur: 4.1.5
@@ -2359,11 +2359,11 @@ packages:
       astro: ^4.0.0
       purgecss: ^5.0.0
     dependencies:
-      astro: 4.6.0(@types/node@20.12.7)(sass@1.74.1)(typescript@5.4.5)
+      astro: 4.6.0(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
       purgecss: 5.0.0
     dev: false
 
-  /astro@4.5.16(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.74.1)(terser@5.30.3)(typescript@5.4.5):
+  /astro@4.5.16(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5):
     resolution: {integrity: sha512-1nOVsMq2OJiXnG6gO0Y77vTAboGN9nLQSy/8SGazq4h6x+alzbsMbQbArBgvaLzOSUXD0m91XLs3D8bOSuavrQ==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -2424,7 +2424,7 @@ packages:
       tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.74.1)(terser@5.30.3)
+      vite: 5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)
       vitefu: 0.2.5(vite@5.2.8)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -2444,7 +2444,7 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.6.0(@types/node@20.12.7)(sass@1.74.1)(typescript@5.4.5):
+  /astro@4.6.0(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5):
     resolution: {integrity: sha512-zys+COED1Zs/PurkgAFc/f93e2jACMv7XeC+CyDNBgdE9v2b7rlVPRu054j2nTrQTzGQ7kst2/waQrDbs6e1aA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
@@ -2505,7 +2505,7 @@ packages:
       tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.74.1)(terser@5.30.3)
+      vite: 5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)
       vitefu: 0.2.5(vite@5.2.8)
       which-pm: 2.1.1
       yargs-parser: 21.1.1
@@ -6022,8 +6022,8 @@ packages:
     dependencies:
       suf-log: 2.5.3
 
-  /sass@1.74.1:
-    resolution: {integrity: sha512-w0Z9p/rWZWelb88ISOLyvqTWGmtmu2QJICqDBGyNnfG4OUnPX9BBjjYIXUpXCMOOg5MQWNpqzt876la1fsTvUA==}
+  /sass@1.75.0:
+    resolution: {integrity: sha512-ShMYi3WkrDWxExyxSZPst4/okE9ts46xZmJDSawJQrnte7M1V9fScVB+uNXOVKRBt0PggHOwoZcn8mYX4trnBw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -6941,7 +6941,7 @@ packages:
       vfile-message: 4.0.2
     dev: false
 
-  /vite@5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.74.1)(terser@5.30.3):
+  /vite@5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3):
     resolution: {integrity: sha512-OyZR+c1CE8yeHw5V5t59aXsUPPVTHMDjEZz8MgguLL/Q7NblxhZUlTu9xSPqlsUO/y+X7dlU05jdhvyycD55DA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -6974,7 +6974,7 @@ packages:
       lightningcss: 1.24.1
       postcss: 8.4.38
       rollup: 4.14.1
-      sass: 1.74.1
+      sass: 1.75.0
       terser: 5.30.3
     optionalDependencies:
       fsevents: 2.3.3
@@ -6988,7 +6988,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.74.1)(terser@5.30.3)
+      vite: 5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)
     dev: false
 
   /volar-service-css@0.0.34(@volar/language-service@2.1.6):
