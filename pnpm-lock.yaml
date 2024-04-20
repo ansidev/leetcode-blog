@@ -19,16 +19,16 @@ dependencies:
     version: 3.1.4
   '@astrojs/tailwind':
     specifier: ^5.0.2
-    version: 5.1.0(astro@4.6.2)(tailwindcss@3.4.3)
+    version: 5.1.0(astro@4.6.3)(tailwindcss@3.4.3)
   astro:
-    specifier: 4.6.2
-    version: 4.6.2(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
+    specifier: 4.6.3
+    version: 4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
   astro-compress:
     specifier: ^2.2.2
     version: 2.2.22(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
   astro-purgecss:
     specifier: ^4.0.0
-    version: 4.1.0(astro@4.6.2)(purgecss@5.0.0)
+    version: 4.1.0(astro@4.6.3)(purgecss@5.0.0)
   tailwindcss:
     specifier: ^3.3.5
     version: 3.4.3
@@ -286,13 +286,13 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.6.2)(tailwindcss@3.4.3):
+  /@astrojs/tailwind@5.1.0(astro@4.6.3)(tailwindcss@3.4.3):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.6.2(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
+      astro: 4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -2363,13 +2363,13 @@ packages:
       - typescript
     dev: true
 
-  /astro-purgecss@4.1.0(astro@4.6.2)(purgecss@5.0.0):
+  /astro-purgecss@4.1.0(astro@4.6.3)(purgecss@5.0.0):
     resolution: {integrity: sha512-CVxAXVuKYJZS2lbFEJJ9lKCnUx0FSd9+5muZTLdhXBWHiNpx1PKmR9WNJykP4ArCdpDPjkWSudyYUqMDAAA43w==}
     peerDependencies:
       astro: ^4.0.0
       purgecss: ^5.0.0
     dependencies:
-      astro: 4.6.2(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
+      astro: 4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
       purgecss: 5.0.0
     dev: false
 
@@ -2454,8 +2454,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.6.2(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-Kl+Wd7MJMQFnI3+V0JxF4HPbs8M67eltqQgtztReOwDLSl0VnOd39rM61W/3LEh10FZ0F13xrDgtdgfXzuLVbg==}
+  /astro@4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-p2zs1Gac+ysdc/yFCoc8pOXTZE5L9foAtmqUzUVL22WX68bYTRovd03GRs7J1MDpwzsl9kJtlK20ROpjyIFpNw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
