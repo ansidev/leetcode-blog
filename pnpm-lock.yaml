@@ -31,7 +31,7 @@ importers:
         version: 2.2.22(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
       astro-purgecss:
         specifier: ^4.0.0
-        version: 4.1.0(astro@4.7.0(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0)
+        version: 4.1.1(astro@4.7.0(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0)
       tailwindcss:
         specifier: ^3.3.5
         version: 3.4.3
@@ -1320,11 +1320,11 @@ packages:
     resolution: {integrity: sha512-dbBnHjxLjX4G6mFo9GCl8VcHIM8xwtxfqzqefUjOU1PwRJ48qWrVeIl2/mz4Usl3YyT+BFO2AP3it17oLjdqtQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro-purgecss@4.1.0:
-    resolution: {integrity: sha512-CVxAXVuKYJZS2lbFEJJ9lKCnUx0FSd9+5muZTLdhXBWHiNpx1PKmR9WNJykP4ArCdpDPjkWSudyYUqMDAAA43w==}
+  astro-purgecss@4.1.1:
+    resolution: {integrity: sha512-Lrtd+8iwznjQUBW1aqgdEYyc5xSgRa+Ir97EMsX17WvI6aVXGLoEWsVxQD9qtcGfLU5Qoq1hQOUKzVbCJSHcAg==}
     peerDependencies:
       astro: ^4.0.0
-      purgecss: ^5.0.0
+      purgecss: ^6.0.0
 
   astro@4.5.16:
     resolution: {integrity: sha512-1nOVsMq2OJiXnG6gO0Y77vTAboGN9nLQSy/8SGazq4h6x+alzbsMbQbArBgvaLzOSUXD0m91XLs3D8bOSuavrQ==}
@@ -5178,7 +5178,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@4.1.0(astro@4.7.0(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0):
+  astro-purgecss@4.1.1(astro@4.7.0(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0):
     dependencies:
       astro: 4.7.0(@types/node@20.12.7)(lightningcss@1.24.1)(sass@1.75.0)(terser@5.30.3)(typescript@5.4.5)
       purgecss: 5.0.0
