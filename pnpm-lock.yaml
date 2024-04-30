@@ -86,7 +86,7 @@ importers:
         version: 9.1.1
       eslint-plugin-astro:
         specifier: ^1.0.3
-        version: 1.1.0(eslint@9.1.1)(typescript@5.4.5)
+        version: 1.1.1(eslint@9.1.1)(typescript@5.4.5)
       eslint-plugin-simple-import-sort:
         specifier: ^12.0.0
         version: 12.1.0(eslint@9.1.1)
@@ -1175,10 +1175,6 @@ packages:
       typescript:
         optional: true
 
-  '@typescript-eslint/types@7.7.1':
-    resolution: {integrity: sha512-AmPmnGW1ZLTpWa+/2omPrPfR7BcbUU4oha5VIbSbS1a1Tv966bklvLNXxp3mrbc+P2j4MNOTfDffNsk4o0c6/w==}
-    engines: {node: ^18.18.0 || >=20.0.0}
-
   '@typescript-eslint/types@7.8.0':
     resolution: {integrity: sha512-wf0peJ+ZGlcH+2ZS23aJbOv+ztjeeP8uQ9GgwMJGVLx/Nj9CJt17GWgWWoSmoRVKAX2X+7fzEnAjxdvK2gqCLw==}
     engines: {node: ^18.18.0 || >=20.0.0}
@@ -1873,8 +1869,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-plugin-astro@1.1.0:
-    resolution: {integrity: sha512-fvvy7nYRqtr9V7hMgpZ3lKXLhbxZdPzerGhesq6bLBl49lRF944EsJsIRNt5kcvRD0ZJlNL7nXbw09xOWXGTqg==}
+  eslint-plugin-astro@1.1.1:
+    resolution: {integrity: sha512-DDRPLz25oahOHpET5ubbK/G/O8D2CP18XKhQmf8r2jF4BJ5JCk8YGfK4kNmInsw5J41eeZiK1T8aey5ItLrr/g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.57.0'
@@ -4967,8 +4963,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/types@7.7.1': {}
-
   '@typescript-eslint/types@7.8.0': {}
 
   '@typescript-eslint/typescript-estree@7.8.0(typescript@5.4.5)':
@@ -5169,7 +5163,7 @@ snapshots:
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@typescript-eslint/scope-manager': 7.8.0
-      '@typescript-eslint/types': 7.7.1
+      '@typescript-eslint/types': 7.8.0
       '@typescript-eslint/typescript-estree': 7.8.0(typescript@5.4.5)
       astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.7.1)
       debug: 4.3.4
@@ -5899,11 +5893,11 @@ snapshots:
       eslint: 9.1.1
       semver: 7.6.0
 
-  eslint-plugin-astro@1.1.0(eslint@9.1.1)(typescript@5.4.5):
+  eslint-plugin-astro@1.1.1(eslint@9.1.1)(typescript@5.4.5):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.1.1)
       '@jridgewell/sourcemap-codec': 1.4.15
-      '@typescript-eslint/types': 7.7.1
+      '@typescript-eslint/types': 7.8.0
       astro-eslint-parser: 1.0.1(typescript@5.4.5)
       eslint: 9.1.1
       eslint-compat-utils: 0.5.0(eslint@9.1.1)
