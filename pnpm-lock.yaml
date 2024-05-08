@@ -22,16 +22,16 @@ importers:
         version: 3.1.4
       '@astrojs/tailwind':
         specifier: ^5.0.2
-        version: 5.1.0(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)
       astro:
         specifier: 4.7.1
-        version: 4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5)
+        version: 4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5)
       astro-compress:
         specifier: ^2.2.2
-        version: 2.2.22(@types/node@20.12.11)(sass@1.76.0)(typescript@5.4.5)
+        version: 2.2.22(@types/node@20.12.11)(sass@1.77.0)(typescript@5.4.5)
       astro-purgecss:
         specifier: ^4.0.0
-        version: 4.1.1(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0)
+        version: 4.1.1(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0)
       tailwindcss:
         specifier: ^3.3.5
         version: 3.4.3
@@ -110,7 +110,7 @@ importers:
         version: 0.13.0
       sass:
         specifier: ^1.69.5
-        version: 1.76.0
+        version: 1.77.0
       satori:
         specifier: ^0.10.11
         version: 0.10.13
@@ -3306,8 +3306,8 @@ packages:
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
 
-  sass@1.76.0:
-    resolution: {integrity: sha512-nc3LeqvF2FNW5xGF1zxZifdW3ffIz5aBb7I7tSvOoNu7z1RQ6pFt9MBuiPtjgaI62YWrM/txjWlOCFiGtf2xpw==}
+  sass@1.77.0:
+    resolution: {integrity: sha512-eGj4HNfXqBWtSnvItNkn7B6icqH14i3CiCGbzMKs3BAPTq62pp9NBYsBgyN4cA+qssqo9r26lW4JSvlaUUWbgw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -4109,9 +4109,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.4
 
-  '@astrojs/tailwind@5.1.0(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5)
+      astro: 4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -5281,14 +5281,14 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro-compress@2.2.22(@types/node@20.12.11)(sass@1.76.0)(typescript@5.4.5):
+  astro-compress@2.2.22(@types/node@20.12.11)(sass@1.77.0)(typescript@5.4.5):
     dependencies:
       '@playform/build': 0.0.5(@playform/document@0.0.6(typescript@5.4.5))
       '@playform/document': 0.0.6(typescript@5.4.5)
       '@playform/pipe': 0.0.2
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.5.16(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5)
+      astro: 4.5.16(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5)
       csso: 5.0.5
       html-minifier-terser: 7.2.0
       kleur: 4.1.5
@@ -5324,12 +5324,12 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@4.1.1(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0):
+  astro-purgecss@4.1.1(astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5))(purgecss@5.0.0):
     dependencies:
-      astro: 4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5)
+      astro: 4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5)
       purgecss: 5.0.0
 
-  astro@4.5.16(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5):
+  astro@4.5.16(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@astrojs/internal-helpers': 0.4.0
@@ -5387,8 +5387,8 @@ snapshots:
       tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)
-      vitefu: 0.2.5(vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3))
+      vite: 5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)
+      vitefu: 0.2.5(vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.23.4
@@ -5406,7 +5406,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)(typescript@5.4.5):
+  astro@4.7.1(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@astrojs/internal-helpers': 0.4.0
@@ -5465,8 +5465,8 @@ snapshots:
       tsconfck: 3.0.3(typescript@5.4.5)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)
-      vitefu: 0.2.5(vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3))
+      vite: 5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)
+      vitefu: 0.2.5(vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.23.5
@@ -7701,7 +7701,7 @@ snapshots:
     dependencies:
       suf-log: 2.5.3
 
-  sass@1.76.0:
+  sass@1.77.0:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.5
@@ -8284,7 +8284,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3):
+  vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
@@ -8293,12 +8293,12 @@ snapshots:
       '@types/node': 20.12.11
       fsevents: 2.3.3
       lightningcss: 1.24.1
-      sass: 1.76.0
+      sass: 1.77.0
       terser: 5.30.3
 
-  vitefu@0.2.5(vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)):
+  vitefu@0.2.5(vite@5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)):
     optionalDependencies:
-      vite: 5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.76.0)(terser@5.30.3)
+      vite: 5.2.10(@types/node@20.12.11)(lightningcss@1.24.1)(sass@1.77.0)(terser@5.30.3)
 
   volar-service-css@0.0.43(@volar/language-service@2.2.1):
     dependencies:
