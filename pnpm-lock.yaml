@@ -19,19 +19,19 @@ importers:
         version: 4.0.6
       '@astrojs/sitemap':
         specifier: ^3.0.3
-        version: 3.1.4
+        version: 3.1.5
       '@astrojs/tailwind':
         specifier: ^5.0.2
-        version: 5.1.0(astro@4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.3)
+        version: 5.1.0(astro@4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.3)
       astro:
-        specifier: 4.8.6
-        version: 4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)
+        specifier: 4.8.7
+        version: 4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)
       astro-compress:
         specifier: ^2.2.2
         version: 2.2.23(@types/node@20.12.12)(sass@1.77.2)(typescript@5.4.5)
       astro-purgecss:
         specifier: ^4.0.0
-        version: 4.1.1(astro@4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0)
+        version: 4.1.1(astro@4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0)
       tailwindcss:
         specifier: ^3.3.5
         version: 3.4.3
@@ -180,8 +180,8 @@ packages:
   '@astrojs/rss@4.0.6':
     resolution: {integrity: sha512-hpfHz6OZVD4ME1ZmpNQim0yV0AOetVFUHv0vmL8+Bw4GNcmL0ibGkGtMv+PY72HLJUVfDtizrBjfN5HHg+LScA==}
 
-  '@astrojs/sitemap@3.1.4':
-    resolution: {integrity: sha512-po8CqDCK14O6phU1mB5C8SyVLyQEa+7pJM8oXxs1mVh8DgvxxaA5E7lak1vzOmBcyyyHBW32jakGqNYc66sBRw==}
+  '@astrojs/sitemap@3.1.5':
+    resolution: {integrity: sha512-GLdzJ01387Uzb8RKYpsYLlg/GzoPnGbmDeQNkarSE11i2+l9Qp8Nj/WoTEy9nkTS25fxxy0kxDfJmreeVleCqg==}
 
   '@astrojs/tailwind@5.1.0':
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
@@ -1336,8 +1336,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@4.8.6:
-    resolution: {integrity: sha512-psHIfK+e+bMPhRwghV9yCGH/uc1jvY4DHmDZdoEepax9yA7kzYH0wt3dpkqlcrO2zxl5jzSC3DmqZfkD6wnW9A==}
+  astro@4.8.7:
+    resolution: {integrity: sha512-bTtv6zv94+U5cQdwy89LWTnocEfJ2Tfy6vpYYSUthfj12HtOpk0ykGW7YBe9a69NHqPwivSOvRjXOxGKigL9qA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3197,8 +3197,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  sitemap@7.1.1:
-    resolution: {integrity: sha512-mK3aFtjz4VdJN0igpIJrinf3EO8U8mxOPsTBzSsy06UtjZQJ3YY3o3Xa7zSc5nMqcMrRwlChHZ18Kxg0caiPBg==}
+  sitemap@7.1.2:
+    resolution: {integrity: sha512-ARCqzHJ0p4gWt+j7NlU5eDlIO9+Rkr/JhPFZKKQ1l5GCus7rJH4UdrlVAh0xC/gDS/Qir2UMxqYNHtsKr2rpCw==}
     engines: {node: '>=12.0.0', npm: '>=5.6.0'}
     hasBin: true
 
@@ -3724,9 +3724,6 @@ packages:
     peerDependencies:
       zod: ^3.23.3
 
-  zod@3.23.4:
-    resolution: {integrity: sha512-/AtWOKbBgjzEYYQRNfoGKHObgfAZag6qUJX1VbHo2PRBgS+wfWagEY2mizjfyAPcGesrJOcx/wcl0L9WnVrHFw==}
-
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
@@ -3821,15 +3818,15 @@ snapshots:
       fast-xml-parser: 4.3.6
       kleur: 4.1.5
 
-  '@astrojs/sitemap@3.1.4':
+  '@astrojs/sitemap@3.1.5':
     dependencies:
-      sitemap: 7.1.1
+      sitemap: 7.1.2
       stream-replace-string: 2.0.0
-      zod: 3.23.4
+      zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.3)':
+  '@astrojs/tailwind@5.1.0(astro@4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.3)':
     dependencies:
-      astro: 4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)
+      astro: 4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -4939,9 +4936,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@4.1.1(astro@4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0):
+  astro-purgecss@4.1.1(astro@4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0):
     dependencies:
-      astro: 4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)
+      astro: 4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5)
       purgecss: 5.0.0
 
   astro@4.8.1(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5):
@@ -5022,7 +5019,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.8.6(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5):
+  astro@4.8.7(@types/node@20.12.12)(lightningcss@1.24.1)(sass@1.77.2)(terser@5.31.0)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
@@ -7245,7 +7242,7 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  sitemap@7.1.1:
+  sitemap@7.1.2:
     dependencies:
       '@types/node': 17.0.45
       '@types/sax': 1.2.7
@@ -7786,8 +7783,6 @@ snapshots:
   zod-to-json-schema@3.23.0(zod@3.23.8):
     dependencies:
       zod: 3.23.8
-
-  zod@3.23.4: {}
 
   zod@3.23.8: {}
 
