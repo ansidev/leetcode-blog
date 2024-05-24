@@ -52,7 +52,7 @@
     "lodash.get": "^4.4.2",
     "lodash.kebabcase": "^4.1.1",
     "mustache": "^4.2.0",
-    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-astro": "^0.14.0",
     "sass": "^1.69.5",
     "satori": "^0.10.11",
     "satori-html": "^0.3.2",
