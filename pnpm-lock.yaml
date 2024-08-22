@@ -22,16 +22,16 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: ^5.0.2
-        version: 5.1.0(astro@4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.10)
+        version: 5.1.0(astro@4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.10)
       astro:
-        specifier: 4.14.3
-        version: 4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
+        specifier: 4.14.4
+        version: 4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
       astro-compress:
         specifier: ^2.2.2
         version: 2.3.1(@types/node@20.16.1)(rollup@4.21.0)(sass@1.77.8)(typescript@5.5.4)
       astro-purgecss:
         specifier: ^4.0.0
-        version: 4.3.0(astro@4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0)
+        version: 4.3.0(astro@4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0)
       tailwindcss:
         specifier: ^3.3.5
         version: 3.4.10
@@ -1323,8 +1323,8 @@ packages:
       astro: ^4.0.0
       purgecss: ^6.0.0
 
-  astro@4.14.3:
-    resolution: {integrity: sha512-+Hox1EhiS5iHy4pfZaLidpD9x7WVAcgGgjTo1JOYSQ0+a2ZA9mbLtGVEXbUeeYweviNc0ZNHMnI4r9S2e8xnXg==}
+  astro@4.14.4:
+    resolution: {integrity: sha512-gpHGyY9qVJg1WXD/0UFoV3cdGZifhmCkJ3fuYV1zUlh+lWbjEB7/cE+KoSvj6aXHJGyLuTbvWOoxZs2yAdnREw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1655,15 +1655,6 @@ packages:
 
   dayjs@1.11.13:
     resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
-
-  debug@4.3.5:
-    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
 
   debug@4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
@@ -3209,11 +3200,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.6.2:
-    resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.6.3:
     resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
     engines: {node: '>=10'}
@@ -3903,9 +3889,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.10)':
+  '@astrojs/tailwind@5.1.0(astro@4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.10)':
     dependencies:
-      astro: 4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -4791,7 +4777,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 7.16.0
       '@typescript-eslint/visitor-keys': 7.16.0
-      debug: 4.3.5
+      debug: 4.3.6
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -4967,7 +4953,7 @@ snapshots:
       '@playform/pipe': 0.1.0
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
       csso: 5.0.5
       deepmerge-ts: 7.1.0
       html-minifier-terser: 7.2.0
@@ -4989,29 +4975,29 @@ snapshots:
 
   astro-eslint-parser@1.0.2(typescript@5.5.4):
     dependencies:
-      '@astrojs/compiler': 2.9.1
+      '@astrojs/compiler': 2.10.3
       '@typescript-eslint/scope-manager': 7.16.0
       '@typescript-eslint/types': 7.16.0
       '@typescript-eslint/typescript-estree': 7.16.0(typescript@5.5.4)
-      astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.9.1)
-      debug: 4.3.5
+      astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.10.3)
+      debug: 4.3.6
       entities: 4.5.0
       eslint-scope: 8.0.2
       eslint-visitor-keys: 4.0.0
       espree: 10.1.0
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.2
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  astro-purgecss@4.3.0(astro@4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0):
+  astro-purgecss@4.3.0(astro@4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0):
     dependencies:
-      astro: 4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4)
       purgecss: 5.0.0
 
-  astro@4.14.3(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4):
+  astro@4.14.4(@types/node@20.16.1)(lightningcss@1.25.1)(rollup@4.21.0)(sass@1.77.8)(terser@5.31.3)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -5095,9 +5081,9 @@ snapshots:
       - terser
       - typescript
 
-  astrojs-compiler-sync@1.0.0(@astrojs/compiler@2.9.1):
+  astrojs-compiler-sync@1.0.0(@astrojs/compiler@2.10.3):
     dependencies:
-      '@astrojs/compiler': 2.9.1
+      '@astrojs/compiler': 2.10.3
       synckit: 0.9.0
 
   at-least-node@1.0.0: {}
@@ -5427,10 +5413,6 @@ snapshots:
 
   dayjs@1.11.13: {}
 
-  debug@4.3.5:
-    dependencies:
-      ms: 2.1.2
-
   debug@4.3.6:
     dependencies:
       ms: 2.1.2
@@ -5603,7 +5585,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@9.9.0(jiti@1.21.6)):
     dependencies:
       eslint: 9.9.0(jiti@1.21.6)
-      semver: 7.6.2
+      semver: 7.6.3
 
   eslint-plugin-astro@1.2.3(eslint@9.9.0(jiti@1.21.6))(typescript@5.5.4):
     dependencies:
@@ -7242,8 +7224,6 @@ snapshots:
       kind-of: 6.0.3
 
   semver@6.3.1: {}
-
-  semver@7.6.2: {}
 
   semver@7.6.3: {}
 
