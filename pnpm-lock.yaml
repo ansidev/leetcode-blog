@@ -7671,7 +7671,7 @@ snapshots:
   vite@5.4.2(@types/node@20.16.2)(lightningcss@1.25.1)(sass@1.78.0)(terser@5.31.3):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.4.44
+      postcss: 8.4.45
       rollup: 4.21.0
     optionalDependencies:
       '@types/node': 20.16.2
