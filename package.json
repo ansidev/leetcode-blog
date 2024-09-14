@@ -54,7 +54,7 @@
     "mustache": "^4.2.0",
     "prettier-plugin-astro": "^0.14.0",
     "sass": "^1.77.8",
-    "satori": "^0.10.11",
+    "satori": "^0.11.0",
     "satori-html": "^0.3.2",
     "tailwindcss-themer": "^4.0.0",
     "tsx": "^4.2.0",
