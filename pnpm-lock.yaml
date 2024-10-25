@@ -28,7 +28,7 @@ importers:
         version: 4.16.7(@types/node@20.17.0)(lightningcss@1.27.0)(rollup@4.21.0)(sass@1.80.4)(terser@5.36.0)(typescript@5.6.3)
       astro-compress:
         specifier: ^2.2.2
-        version: 2.3.4(@types/node@20.17.0)(rollup@4.21.0)(sass@1.80.4)(typescript@5.6.3)
+        version: 2.3.5(@types/node@20.17.0)(rollup@4.21.0)(sass@1.80.4)(typescript@5.6.3)
       astro-purgecss:
         specifier: ^4.0.0
         version: 4.6.1(astro@4.16.7(@types/node@20.17.0)(lightningcss@1.27.0)(rollup@4.21.0)(sass@1.80.4)(terser@5.36.0)(typescript@5.6.3))(purgecss@5.0.0)
@@ -1414,8 +1414,8 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
 
-  astro-compress@2.3.4:
-    resolution: {integrity: sha512-uzNct3y30DBAY0ISoac0GrE0aX9kCQBolWpkqSt//KVtOs9Y8Atygk3O63KGtMnJ4cEwExVwacZ9RmDxwV6nDQ==}
+  astro-compress@2.3.5:
+    resolution: {integrity: sha512-TWZr/7IbIyi5e4vjuVN8UgkKMOhFqH25466Ct1jIG9UoDz50uNP5iPFQ2zPqO/Oe2541kYU7CchZt7cJ32w0Wg==}
 
   astro-eslint-parser@1.0.3:
     resolution: {integrity: sha512-AGsGgcg7Jg9UpyCDgvl/EkdYpe1oMkFdmC2Zl+KWneoieLCtQIFjmcY8yt41gcNx4mby0w8BBJQcBmPuf8UAoQ==}
@@ -5128,7 +5128,7 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro-compress@2.3.4(@types/node@20.17.0)(rollup@4.21.0)(sass@1.80.4)(typescript@5.6.3):
+  astro-compress@2.3.5(@types/node@20.17.0)(rollup@4.21.0)(sass@1.80.4)(typescript@5.6.3):
     dependencies:
       '@playform/pipe': 0.1.1
       '@types/csso': 5.0.4
@@ -7107,7 +7107,7 @@ snapshots:
   postcss@8.4.47:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.1.0
+      picocolors: 1.1.1
       source-map-js: 1.2.1
 
   preferred-pm@4.0.0:
