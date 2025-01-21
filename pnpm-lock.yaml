@@ -71,7 +71,7 @@ importers:
         version: 8.21.0(eslint@9.18.0(jiti@2.4.1))(typescript@5.7.3)
       commander:
         specifier: ^13.0.0
-        version: 13.0.0
+        version: 13.1.0
       commitizen:
         specifier: ^4.3.0
         version: 4.3.1(@types/node@22.10.7)(typescript@5.7.3)
@@ -1577,6 +1577,10 @@ packages:
 
   commander@13.0.0:
     resolution: {integrity: sha512-oPYleIY8wmTVzkvQq10AEok6YcTC4sRUBl8F9gVuwchGVUCTbl/vhLTaQqutuuySYOsu8YTgV+OxKc/8Yvx+mQ==}
+    engines: {node: '>=18'}
+
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
   commander@2.20.3:
@@ -5375,6 +5379,8 @@ snapshots:
   commander@10.0.1: {}
 
   commander@13.0.0: {}
+
+  commander@13.1.0: {}
 
   commander@2.20.3: {}
 
