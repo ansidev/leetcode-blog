@@ -22,23 +22,23 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: ^6.0.0
-        version: 6.0.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)
+        version: 6.0.0(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)
       astro:
         specifier: 5.3.0
-        version: 5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
       astro-compress:
         specifier: ^2.2.2
-        version: 2.3.6(@types/node@22.13.4)(jiti@2.4.2)(rollup@4.28.1)(sass@1.85.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
+        version: 2.3.6(@types/node@22.13.5)(jiti@2.4.2)(rollup@4.28.1)(sass@1.85.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
       astro-purgecss:
         specifier: ^5.0.0
-        version: 5.2.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(purgecss@5.0.0)
+        version: 5.2.0(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(purgecss@5.0.0)
       tailwindcss:
         specifier: ^3.3.5
         version: 3.4.17
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.0.0
-        version: 19.7.1(@types/node@22.13.4)(typescript@5.7.3)
+        version: 19.7.1(@types/node@22.13.5)(typescript@5.7.3)
       '@commitlint/config-conventional':
         specifier: ^19.0.0
         version: 19.7.1
@@ -65,7 +65,7 @@ importers:
         version: 4.2.5
       '@types/node':
         specifier: ^22.0.0
-        version: 22.13.4
+        version: 22.13.5
       '@typescript-eslint/parser':
         specifier: ^8.0.0
         version: 8.24.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
@@ -74,7 +74,7 @@ importers:
         version: 13.1.0
       commitizen:
         specifier: ^4.3.0
-        version: 4.3.1(@types/node@22.13.4)(typescript@5.7.3)
+        version: 4.3.1(@types/node@22.13.5)(typescript@5.7.3)
       dayjs:
         specifier: ^1.11.10
         version: 1.11.13
@@ -1185,8 +1185,8 @@ packages:
   '@types/node@22.10.5':
     resolution: {integrity: sha512-F8Q+SeGimwOo86fiovQh8qiXfFEh2/ocYv7tU5pJ3EXMSSxk1Joj5wefpFK2fHTf/N6HKGSxIDBT9f3gCxXPkQ==}
 
-  '@types/node@22.13.4':
-    resolution: {integrity: sha512-ywP2X0DYtX3y08eFVx5fNIw7/uIv8hYUKgXoK8oayJlLnKcRfEYCxWMVE1XagUdVtCJlZT1AU4LXEABW+L1Peg==}
+  '@types/node@22.13.5':
+    resolution: {integrity: sha512-+lTU0PxZXn0Dr1NBtC7Y8cR21AJr87dLLU953CWA6pMxxv/UDc7jYAY90upcrie1nRcD6XNG5HOYEDtgW5TxAg==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -3033,6 +3033,10 @@ packages:
     resolution: {integrity: sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postcss@8.5.3:
+    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
+    engines: {node: ^10 || ^12 || >=14}
+
   preferred-pm@4.1.1:
     resolution: {integrity: sha512-rU+ZAv1Ur9jAUZtGPebQVQPzdGhNzaEiQ7VL9+cjsAWPHFYOccNXPNiev1CCDSOg/2j7UujM7ojNhpkuILEVNQ==}
     engines: {node: '>=18.12'}
@@ -3996,9 +4000,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@6.0.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.0(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17)':
     dependencies:
-      astro: 5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)
@@ -4041,11 +4045,11 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@commitlint/cli@19.7.1(@types/node@22.13.4)(typescript@5.7.3)':
+  '@commitlint/cli@19.7.1(@types/node@22.13.5)(typescript@5.7.3)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.7.1
-      '@commitlint/load': 19.6.1(@types/node@22.13.4)(typescript@5.7.3)
+      '@commitlint/load': 19.6.1(@types/node@22.13.5)(typescript@5.7.3)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.2
@@ -4092,7 +4096,7 @@ snapshots:
       '@commitlint/rules': 19.6.0
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.6.1(@types/node@22.13.4)(typescript@5.7.3)':
+  '@commitlint/load@19.6.1(@types/node@22.13.5)(typescript@5.7.3)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -4100,7 +4104,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.4.1
       cosmiconfig: 9.0.0(typescript@5.7.3)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.13.4)(cosmiconfig@9.0.0(typescript@5.7.3))(typescript@5.7.3)
+      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.13.5)(cosmiconfig@9.0.0(typescript@5.7.3))(typescript@5.7.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -4760,7 +4764,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
 
   '@types/cookie@0.6.0': {}
 
@@ -4812,13 +4816,13 @@ snapshots:
     dependencies:
       undici-types: 6.20.0
 
-  '@types/node@22.13.4':
+  '@types/node@22.13.5':
     dependencies:
       undici-types: 6.20.0
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
 
   '@types/unist@3.0.2': {}
 
@@ -5048,12 +5052,12 @@ snapshots:
 
   array-union@2.1.0: {}
 
-  astro-compress@2.3.6(@types/node@22.13.4)(jiti@2.4.2)(rollup@4.28.1)(sass@1.85.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0):
+  astro-compress@2.3.6(@types/node@22.13.5)(jiti@2.4.2)(rollup@4.28.1)(sass@1.85.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@playform/pipe': 0.1.2
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
       commander: 13.0.0
       csso: 5.0.5
       deepmerge-ts: 7.1.3
@@ -5115,12 +5119,12 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@5.2.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(purgecss@5.0.0):
+  astro-purgecss@5.2.0(astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0))(purgecss@5.0.0):
     dependencies:
-      astro: 5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0)
       purgecss: 5.0.0
 
-  astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.3.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(rollup@4.28.1)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.1
@@ -5172,8 +5176,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
       vfile: 6.0.3
-      vite: 6.0.11(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0)
-      vitefu: 1.0.5(vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0))
+      vite: 6.0.11(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0)
+      vitefu: 1.0.5(vite@6.0.11(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0))
       which-pm: 3.0.1
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -5418,10 +5422,10 @@ snapshots:
 
   commander@9.5.0: {}
 
-  commitizen@4.3.1(@types/node@22.13.4)(typescript@5.7.3):
+  commitizen@4.3.1(@types/node@22.13.5)(typescript@5.7.3):
     dependencies:
       cachedir: 2.3.0
-      cz-conventional-changelog: 3.3.0(@types/node@22.13.4)(typescript@5.7.3)
+      cz-conventional-changelog: 3.3.0(@types/node@22.13.5)(typescript@5.7.3)
       dedent: 0.7.0
       detect-indent: 6.1.0
       find-node-modules: 2.1.3
@@ -5470,9 +5474,9 @@ snapshots:
 
   cookie@0.7.2: {}
 
-  cosmiconfig-typescript-loader@6.1.0(@types/node@22.13.4)(cosmiconfig@9.0.0(typescript@5.7.3))(typescript@5.7.3):
+  cosmiconfig-typescript-loader@6.1.0(@types/node@22.13.5)(cosmiconfig@9.0.0(typescript@5.7.3))(typescript@5.7.3):
     dependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
       cosmiconfig: 9.0.0(typescript@5.7.3)
       jiti: 2.4.2
       typescript: 5.7.3
@@ -5536,16 +5540,16 @@ snapshots:
     dependencies:
       css-tree: 2.2.1
 
-  cz-conventional-changelog@3.3.0(@types/node@22.13.4)(typescript@5.7.3):
+  cz-conventional-changelog@3.3.0(@types/node@22.13.5)(typescript@5.7.3):
     dependencies:
       chalk: 2.4.2
-      commitizen: 4.3.1(@types/node@22.13.4)(typescript@5.7.3)
+      commitizen: 4.3.1(@types/node@22.13.5)(typescript@5.7.3)
       conventional-commit-types: 3.0.0
       lodash.map: 4.6.0
       longest: 2.0.1
       word-wrap: 1.2.5
     optionalDependencies:
-      '@commitlint/load': 19.6.1(@types/node@22.13.4)(typescript@5.7.3)
+      '@commitlint/load': 19.6.1(@types/node@22.13.5)(typescript@5.7.3)
     transitivePeerDependencies:
       - '@types/node'
       - typescript
@@ -7093,6 +7097,12 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
+  postcss@8.5.3:
+    dependencies:
+      nanoid: 3.3.8
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
   preferred-pm@4.1.1:
     dependencies:
       find-up-simple: 1.0.0
@@ -7127,7 +7137,7 @@ snapshots:
     dependencies:
       commander: 9.5.0
       glob: 8.1.0
-      postcss: 8.5.2
+      postcss: 8.5.3
       postcss-selector-parser: 6.1.2
 
   queue-microtask@1.2.3: {}
@@ -7764,13 +7774,13 @@ snapshots:
       '@types/unist': 3.0.2
       vfile-message: 4.0.2
 
-  vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0):
+  vite@6.0.11(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.2
       rollup: 4.28.1
     optionalDependencies:
-      '@types/node': 22.13.4
+      '@types/node': 22.13.5
       fsevents: 2.3.3
       jiti: 2.4.2
       lightningcss: 1.28.2
@@ -7779,9 +7789,9 @@ snapshots:
       tsx: 4.19.3
       yaml: 2.7.0
 
-  vitefu@1.0.5(vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0)):
+  vitefu@1.0.5(vite@6.0.11(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0)):
     optionalDependencies:
-      vite: 6.0.11(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.28.2)(sass@1.85.0)(terser@5.37.0)(tsx@4.19.3)(yaml@2.7.0)
 
   volar-service-css@0.0.61(@volar/language-service@2.4.5):
     dependencies:
