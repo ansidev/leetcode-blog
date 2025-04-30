@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.2.7](https://github.com/ansidev/leetcode-blog/compare/v2.2.6...v2.2.7) (2025-04-30)
+
+### Features
+
+- **config:** update renovate config
+
+Full Changelog: [v2.2.6...v2.2.7](https://github.com/ansidev/leetcode-blog/compare/v2.2.6...v2.2.7)
+
 ## [v2.2.6](https://github.com/ansidev/leetcode-blog/compare/v2.2.5...v2.2.6) (2023-08-08)
 
 ### Bug Fixes
