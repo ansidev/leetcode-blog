@@ -17,7 +17,7 @@ const socialNetworks: Record<string, string> = {
 }
 ---
 
-<footer class="my-9 text-style-primary">
+<footer class="my-9 text-style-primary-text">
   <div class="flex justify-center items-center mb-3">
     <a href={`mailto:${email}`} class="footer-icon">
       <Icon name={'bi:envelope-fill'} size={32} />
@@ -58,7 +58,8 @@ const socialNetworks: Record<string, string> = {
 }
 
 <style>
+  @reference '../styles/base.css';
   a.footer-icon {
-    @apply text-style-primary hover:text-style-secondary mx-1;
+    @apply text-style-primary-text hover:text-style-secondary-text mx-1;
   }
 </style>

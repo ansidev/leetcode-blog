@@ -46,9 +46,10 @@ const hasIcon = (item: BreadcrumbItem) => item.icon.length > 0
   )}
 </ul>
 <style is:global>
+  @reference '../styles/base.css';
 .breadcrumb {
   @apply inline-flex mb-3;
-  @apply list-none pl-0 !important;
+  @apply list-none! pl-0!;
 }
 
 .breadcrumb .breadcrumb-item {
@@ -56,6 +57,6 @@ const hasIcon = (item: BreadcrumbItem) => item.icon.length > 0
 }
 
 .breadcrumb li:not(:first-child) {
-  @apply text-style-primary;
+  @apply text-style-primary-text;
 }
 </style>

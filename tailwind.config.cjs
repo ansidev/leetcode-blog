@@ -1,11 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const tailwindCssTheme = require('tailwindcss-themer')
-const themeConfig = require('./theme.config.cjs')
-const typography = require('@tailwindcss/typography')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
       fontFamily: {
@@ -14,16 +10,16 @@ module.exports = {
       colors: {
         transparent: 'transparent',
       },
-      typography: theme => ({
+      typography: {
         DEFAULT: {
           css: {
-            color: 'rgb(var(--textColor-style-primary))',
-            '--tw-prose-headings': 'rgb(var(--textColor-style-primary))',
-            '--tw-prose-bold': 'rgb(var(--textColor-style-primary))',
-            '--tw-prose-quotes': 'rgb(var(--textColor-style-primary))',
+            color: 'var(--color-style-primary-text)',
+            '--tw-prose-headings': 'var(--color-style-primary-text)',
+            '--tw-prose-bold': 'var(--color-style-primary-text)',
+            '--tw-prose-quotes': 'var(--color-style-primary-text)',
             '--tw-prose-pre-bg': '#0d1117',
             code: {
-              backgroundColor: 'rgb(var(--backgroundColor-style-primary))',
+              backgroundColor: 'var(--color-style-primary-bg)',
               padding: '5px',
               borderRadius: '3px',
             },
@@ -35,11 +31,7 @@ module.exports = {
             },
           }
         },
-      }),
+      },
     },
   },
-  plugins: [
-    tailwindCssTheme(themeConfig),
-    typography(),
-  ],
 }

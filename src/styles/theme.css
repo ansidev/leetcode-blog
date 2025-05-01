@@ -1,0 +1,21 @@
+@theme {
+  @import './theme_leetcode_dark.css';
+}
+
+@layer base {
+  .leetcode-light {
+    @import './theme_leetcode_light.css';
+  }
+
+  .google {
+    @import './theme_google.css';
+  }
+
+  .microsoft {
+    @import './theme_microsoft.css';
+  }
+
+  .twitter {
+    @import './theme_twitter.css';
+  }
+}
