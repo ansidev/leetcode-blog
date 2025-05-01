@@ -2,11 +2,11 @@ import rss from '@astrojs/rss'
 import type { APIContext } from 'astro'
 import { getCollection } from 'astro:content'
 
-import siteConfig from '@/configs/site'
+import siteConfig from '@/configs/site.ts'
 
 const { title, description } = siteConfig
 
-export const get = async ({ site }: APIContext) => {
+export const GET = async ({ site }: APIContext) => {
   if (site === undefined || site.toString().length === 0) {
     return {
       body: ''
