@@ -25,7 +25,7 @@ const formattedDate = formatDate(pubDate)
     {
       tags.map((tag) => (
         <a href={`/tags/${kebabCase(tag)}`} class="mx-1 my-3">
-          <span class="p-2 bg-style-secondary text-style-primary-inverted hover:bg-style-secondary-inverted hover:text-style-primary">
+          <span class="p-2 bg-style-secondary-bg text-style-primary-inverted-text hover:bg-style-secondary-inverted-bg hover:text-style-primary-text">
             {tag}
           </span>
         </a>
@@ -48,7 +48,8 @@ const formattedDate = formatDate(pubDate)
 </div>
 
 <style>
+  @reference '../../styles/base.css';
   .post-header {
-    @apply p-4 mb-4 bg-style-primary text-center text-style-primary-inverted;
+    @apply p-4 mb-4 bg-style-primary-bg text-center text-style-primary-inverted-text;
   }
 </style>
