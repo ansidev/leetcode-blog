@@ -34,7 +34,7 @@ const getDifficultyCssClass: (difficulty: string) => string = (
 <Tag
   {...tagProps}
   class:list={[
-    'px-2 py-1',
+    'px-4 py-2',
     getDifficultyCssClass(difficulty),
     tag === 'a' ? 'link' : '',
     props.class,
@@ -44,18 +44,19 @@ const getDifficultyCssClass: (difficulty: string) => string = (
 </Tag>
 
 <style lang="scss">
+  @reference '../styles/base.css';
   $difficulties: 'easy', 'medium', 'hard';
 
   @each $difficulty in $difficulties {
     .difficulty-#{$difficulty} {
-      @apply bg-difficulty-#{$difficulty};
+      @apply bg-difficulty-#{$difficulty}-bg;
       @apply border-2;
-      @apply border-difficulty-#{$difficulty};
-      @apply text-difficulty-#{$difficulty};
+      @apply border-difficulty-#{$difficulty}-border;
+      @apply text-difficulty-#{$difficulty}-text;
       &.link {
         @apply hover:bg-site-bg;
-        @apply hover:border-difficulty-#{$difficulty}-hover;
-        @apply hover:text-difficulty-#{$difficulty}-hover;
+        @apply hover:border-difficulty-#{$difficulty}-hover-border;
+        @apply hover:text-difficulty-#{$difficulty}-hover-border;
       }
     }
   }

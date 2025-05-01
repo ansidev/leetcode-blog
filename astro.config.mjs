@@ -2,9 +2,9 @@ import fs from 'node:fs'
 
 import partytown from '@astrojs/partytown'
 import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
-import compress from '@otterlord/astro-compress'
+import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
+import compress from 'astro-compress'
 import purgecss from 'astro-purgecss'
 
 import { loadEnv } from './dotenv.config'
@@ -22,7 +22,6 @@ if (baseURL.length === 0) {
 export default defineConfig({
   site: baseURL,
   integrations: [
-    tailwind(),
     partytown({
       config: {
         forward: ['dataLayer.push'],
@@ -33,7 +32,10 @@ export default defineConfig({
     compress(),
   ],
   vite: {
-    plugins: [rawFonts(['.ttf', '.woff'])],
+    plugins: [
+      rawFonts(['.ttf', '.woff']),
+      tailwindcss()
+    ],
     optimizeDeps: {
       exclude: [
         '@resvg/resvg-js',

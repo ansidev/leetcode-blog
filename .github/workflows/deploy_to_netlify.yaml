@@ -106,6 +106,8 @@ jobs:
         uses: ghacts/static-site@main
         with:
           node-version: 18
+          package-manager: pnpm
+          package-manager-version: 9
           skip-test: true
           lint-script: "lint:js"
 

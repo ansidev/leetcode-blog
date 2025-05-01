@@ -53,13 +53,14 @@ const { title, description, author, themes } = siteConfig
 </div>
 
 <style lang="scss">
+  @reference '../styles/base.css';
   .header-container {
     @apply sticky top-0 z-50 px-4 md:px-7 py-4 border-b;
     @apply bg-site-header-bg border-b-site-header-border;
   }
 
   .site-title {
-    @apply text-site-title hover:text-site-header-text-hover;
+    @apply text-site-title-text hover:text-site-header-text-hover;
   }
 
   .site-description {

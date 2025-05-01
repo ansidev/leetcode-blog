@@ -4,6 +4,74 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v3.0.0](https://github.com/ansidev/leetcode-blog/compare/v2.2.7...v3.0.0) (2025-05-01)
+
+### Bug Fixes
+
+- **config**: migrate husky configurations
+- **config**: migrate to eslint flat config
+- **config**: ts check errors
+
+### BREAKING CHANGES
+
+- **tailwindcss:** upgrade TailwindCSS to v4
+- **astro:** upgrade Astro to v5
+- **astro-plugin:** upgrade astro-purgecss to v5
+- **deps:** upgrade pnpm to v10
+- **cli**: upgrade commander to v12 and refactor the utility command `pnpm lc:new`
+- Removed TailwindCSS plugin `tailwindcss-themer`.
+- Removed Astro plugin `@astrojs/tailwind`.
+- Removed package `sass`.
+
+### Dependencies
+
+| Package                            | Version                        |
+| ---------------------------------- | ------------------------------ |
+| `@astrojs/check`                   | `^0.9.0`                       |
+| `@astrojs/partytown`               | `^1.2.3` `->` `^2.0.2`         |
+| `@astrojs/rss`                     | `^2.4.4` `->` `^4.0.0`         |
+| `@astrojs/sitemap`                 | `^2.0.1` `->` `^3.0.3`         |
+| `@astrojs/tailwind`                | removed                        |
+| `@commitlint/cli`                  | `^17.6.7` `->` `^19.0.0`       |
+| `@commitlint/config-conventional`  | `^17.6.7` `->` `^19.0.0`       |
+| `@eslint/js`                       | added `^9.25.1`                |
+| `@iconify-json/bi`                 | `^1.1.18` `->` `^1.1.20`       |
+| `@otterlord/astro-compress`        | replaced with `astro-compress` |
+| `@resvg/resvg-js`                  | `^2.4.1` `->` `^2.6.0`         |
+| `@tailwindcss/postcss`             | added `^4.1.4`                 |
+| `@tailwindcss/typography`          | `^0.5.9` `->` `^0.5.10`        |
+| `@tailwindcss/vite`                | added `^4.1.4`                 |
+| `@types/lodash.get`                | `^4.4.7` `->` `^4.4.8`         |
+| `@types/lodash.kebabcase`          | `^4.1.7` `->` `^4.1.8`         |
+| `@types/mustache`                  | `^4.2.2` `->` `^4.2.4`         |
+| `@types/node`                      | `^20.4.8` `->` `^22.0.8`       |
+| `@typescript-eslint/eslint-plugin` | removed                        |
+| `@typescript-eslint/parser`        | `^6.3.0` `->` `^8.0.0`         |
+| `astro-compress`                   | added `^2.2.2`                 |
+| `astro-purgecss`                   | `^2.3.0` `->` `^5.0.0`         |
+| `astro`                            | `2.10.3` `->` `5.7.10`         |
+| `commander`                        | `^11.0.0` `->` `^13.0.0`       |
+| `dayjs`                            | `^1.11.9` `->` `^1.11.10`      |
+| `eslint-plugin-astro`              | `^0.28.0` `->` `^1.0.3`        |
+| `eslint-plugin-simple-import-sort` | `^10.0.0` `->` `^12.0.0`       |
+| `eslint`                           | `^8.46.0` `->` `^9.0.0`        |
+| `husky`                            | `^8.0.3` `->` `^9.0.11`        |
+| `lodash.get`                       | `^4.4.2` `->` `^4.4.2`         |
+| `lodash.kebabcase`                 | `^4.1.1` `->` `^4.1.1`         |
+| `mustache`                         | `^4.2.0` `->` `^4.2.0`         |
+| `pnpm`                             | `8.6.12` `->` `10.10.0`        |
+| `postcss`                          | added `^8.5.3`                 |
+| `prettier-plugin-astro`            | added `^0.14.0`                |
+| `sass`                             | removed                        |
+| `satori`                           | `^0.10.2` `->` `^0.12.0`       |
+| `tailwindcss-themer`               | removed                        |
+| `tailwindcss`                      | `^3.3.3` `->` `^4.1.4`         |
+| `tsx`                              | `^3.12.7` `->` `^4.2.0`        |
+| `typescript-eslint`                | added `^8.0.0`                 |
+| `typescript`                       | `^5.1.6` `->` `^5.3.3`         |
+
+Full Changelog: [v2.2.7...v3.0.0](https://github.com/ansidev/leetcode-blog/compare/v2.2.7...v3.0.0)
+
 ## [v2.2.7](https://github.com/ansidev/leetcode-blog/compare/v2.2.6...v2.2.7) (2025-04-30)
 
 ### Features

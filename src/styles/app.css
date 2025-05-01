@@ -1,0 +1,4 @@
+@import "./base.css";
+@plugin "@tailwindcss/typography";
+@config "../../tailwind.config.cjs";
+@import "./style.css";

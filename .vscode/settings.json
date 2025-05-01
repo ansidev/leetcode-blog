@@ -8,4 +8,7 @@
   "typescriptHero.imports.insertSemicolons": false,
   "typescript.preferences.quoteStyle": "single",
   "javascript.preferences.quoteStyle": "single",
+  "cSpell.words": [
+    "leetcode"
+  ],
 }
