@@ -56,7 +56,7 @@ importers:
         version: 5.2.5
       '@iconify-json/bi':
         specifier: ^1.1.20
-        version: 1.2.3
+        version: 1.2.4
       '@resvg/resvg-js':
         specifier: ^2.6.0
         version: 2.6.2
@@ -533,8 +533,8 @@ packages:
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/bi@1.2.3':
-    resolution: {integrity: sha512-pDNU9mIKDfvVEGxWsExiuVEqyhyJ5q5bOwBTgtM7I2hGk9ACQaiogMaA6lBRJ82sJPj+Uv21Oi+ujThGnMW2jA==}
+  '@iconify-json/bi@1.2.4':
+    resolution: {integrity: sha512-ipD8nm86ovjgXGEJj/B5oSJGaEIsGgzrKqNT1ei66nRExzK6Mgh4an/efG30Xtvp2eQjz9eWN5kHmadbnjUmzw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -4411,7 +4411,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@iconify-json/bi@1.2.3':
+  '@iconify-json/bi@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
