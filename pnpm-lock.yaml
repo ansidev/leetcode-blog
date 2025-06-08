@@ -53,7 +53,7 @@ importers:
         version: 9.28.0
       '@fontsource/ibm-plex-mono':
         specifier: ^5.0.8
-        version: 5.2.5
+        version: 5.2.6
       '@iconify-json/bi':
         specifier: ^1.1.20
         version: 1.2.4
@@ -510,8 +510,8 @@ packages:
     resolution: {integrity: sha512-0J+zgWxHN+xXONWIyPWKFMgVuJoZuGiIFu8yxk7RJjxkzpGmyja5wRFqZIVtjDVOQpV+Rw0iOAjYPE2eQyjr0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/ibm-plex-mono@5.2.5':
-    resolution: {integrity: sha512-G09N3GfuT9qj3Ax2FDZvKqZttzM3v+cco2l8uXamhKyXLdmlaUDH5o88/C3vtTHj2oT7yRKsvxz9F+BXbWKMYA==}
+  '@fontsource/ibm-plex-mono@5.2.6':
+    resolution: {integrity: sha512-LTZJNTcpoT19fmwERZNMDI+ljHueuyhF2Qn+bICJ4Y4hxBLAAoJ2MRsGnyp0QNutW6t/25eyZpvaUK1LDrCo7Q==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -4144,7 +4144,7 @@ snapshots:
       '@eslint/core': 0.14.0
       levn: 0.4.1
 
-  '@fontsource/ibm-plex-mono@5.2.5': {}
+  '@fontsource/ibm-plex-mono@5.2.6': {}
 
   '@humanfs/core@0.19.1': {}
 
