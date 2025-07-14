@@ -27,14 +27,14 @@ importers:
         specifier: ^4.1.4
         version: 4.1.11(vite@6.3.4(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(yaml@2.7.1))
       astro:
-        specifier: 5.11.0
-        version: 5.11.0(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1)
+        specifier: 5.11.1
+        version: 5.11.1(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1)
       astro-compress:
         specifier: ^2.2.2
         version: 2.3.8(@types/node@22.16.3)(jiti@2.4.2)(rollup@4.34.9)(sass@1.86.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1)
       astro-purgecss:
         specifier: ^5.0.0
-        version: 5.3.0(astro@5.11.0(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1))(purgecss@5.0.0)
+        version: 5.3.0(astro@5.11.1(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1))(purgecss@5.0.0)
       postcss:
         specifier: ^8.5.3
         version: 8.5.6
@@ -1361,8 +1361,8 @@ packages:
       astro: ^5.0.0
       purgecss: ^7.0.0
 
-  astro@5.11.0:
-    resolution: {integrity: sha512-MEICntERthUxJPSSDsDiZuwiCMrsaYy3fnDhp4c6ScUfldCB8RBnB/myYdpTFXpwYBy6SgVsHQ1H4MuuA7ro/Q==}
+  astro@5.11.1:
+    resolution: {integrity: sha512-32dpUh0tXSV/FR2q2/z7LOA6IXl7RqET9J51IA0pPSSi3exhRP3EOSQGjBq10DzXT7VrvplDrFqwfiiWBS8oYA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4958,7 +4958,7 @@ snapshots:
       '@playform/pipe': 0.1.3
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 5.11.0(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1)
+      astro: 5.11.1(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1)
       commander: 13.1.0
       csso: 5.0.5
       deepmerge-ts: 7.1.5
@@ -5021,12 +5021,12 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@5.3.0(astro@5.11.0(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1))(purgecss@5.0.0):
+  astro-purgecss@5.3.0(astro@5.11.1(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1))(purgecss@5.0.0):
     dependencies:
-      astro: 5.11.0(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1)
+      astro: 5.11.1(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1)
       purgecss: 5.0.0
 
-  astro@5.11.0(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1):
+  astro@5.11.1(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -5126,7 +5126,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.11.0(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1):
+  astro@5.11.1(@types/node@22.16.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.34.9)(sass@1.86.0)(terser@5.39.0)(tsx@4.20.3)(typescript@5.8.3)(yaml@2.7.1):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
