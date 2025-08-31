@@ -86,7 +86,7 @@ importers:
         version: 4.3.1(@types/node@22.18.0)(typescript@5.9.2)
       dayjs:
         specifier: ^1.11.10
-        version: 1.11.14
+        version: 1.11.18
       dotenv:
         specifier: ^17.0.0
         version: 17.2.1
@@ -1706,8 +1706,8 @@ packages:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
 
-  dayjs@1.11.14:
-    resolution: {integrity: sha512-E8fIdSxUlyqSA8XYGnNa3IkIzxtEmFjI+JU/6ic0P1zmSqyL6HyG5jHnpPjRguDNiaHLpfvHKWFiohNsJLqcJQ==}
+  dayjs@1.11.18:
+    resolution: {integrity: sha512-zFBQ7WFRvVRhKcWoUh+ZA1g2HVgUbsZm9sbddh8EC5iv93sui8DVVz1Npvz+r6meo9VKfa8NyLWBsQK1VvIKPA==}
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
@@ -5585,7 +5585,7 @@ snapshots:
 
   dargs@8.1.0: {}
 
-  dayjs@1.11.14: {}
+  dayjs@1.11.18: {}
 
   debug@4.4.1:
     dependencies:
