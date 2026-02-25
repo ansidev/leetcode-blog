@@ -27,14 +27,14 @@ importers:
         specifier: ^4.1.4
         version: 4.1.14(vite@6.4.1(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.1))
       astro:
-        specifier: 5.17.3
-        version: 5.17.3(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1)
+        specifier: 5.18.0
+        version: 5.18.0(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1)
       astro-compress:
         specifier: ^2.2.2
         version: 2.3.9(@types/node@24.10.13)(jiti@2.6.1)(rollup@4.34.9)(sass@1.86.0)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1)
       astro-purgecss:
         specifier: ^5.0.0
-        version: 5.5.0(astro@5.17.3(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1))(purgecss@5.0.0)
+        version: 5.5.0(astro@5.18.0(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1))(purgecss@5.0.0)
       postcss:
         specifier: ^8.5.3
         version: 8.5.6
@@ -1621,11 +1621,6 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn@8.15.0:
-    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-
   acorn@8.16.0:
     resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
@@ -1710,8 +1705,8 @@ packages:
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@5.17.3:
-    resolution: {integrity: sha512-69dcfPe8LsHzklwj+hl+vunWUbpMB6pmg35mACjetxbJeUNNys90JaBM8ZiwsPK689SAj/4Zqb1ayaANls9/MA==}
+  astro@5.18.0:
+    resolution: {integrity: sha512-CHiohwJIS4L0G6/IzE1Fx3dgWqXBCXus/od0eGUfxrZJD2um2pE7ehclMmgL/fXqbU7NfE1Ze2pq34h2QaA6iQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -5242,8 +5237,6 @@ snapshots:
     dependencies:
       acorn: 8.16.0
 
-  acorn@8.15.0: {}
-
   acorn@8.16.0: {}
 
   ajv-draft-04@1.0.0(ajv@8.18.0):
@@ -5367,9 +5360,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-purgecss@5.5.0(astro@5.17.3(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1))(purgecss@5.0.0):
+  astro-purgecss@5.5.0(astro@5.18.0(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1))(purgecss@5.0.0):
     dependencies:
-      astro: 5.17.3(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.18.0(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1)
       purgecss: 5.0.0
 
   astro@5.16.8(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1):
@@ -5474,7 +5467,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.17.3(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1):
+  astro@5.18.0(@types/node@24.10.13)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.34.9)(sass@1.86.0)(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.13.1
       '@astrojs/internal-helpers': 0.7.5
@@ -5483,7 +5476,7 @@ snapshots:
       '@capsizecss/unpack': 4.0.0
       '@oslojs/encoding': 1.1.0
       '@rollup/pluginutils': 5.3.0(rollup@4.34.9)
-      acorn: 8.15.0
+      acorn: 8.16.0
       aria-query: 5.3.2
       axobject-query: 4.1.0
       boxen: 8.0.1
