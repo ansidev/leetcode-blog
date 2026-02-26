@@ -1,2 +1,4 @@
 @import "./color_dark.css";
---color-primary: #ffa116;
+@theme {
+  --color-primary: #ffa116;
+}
