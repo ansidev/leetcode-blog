@@ -22,13 +22,13 @@
     "@astrojs/partytown": "^2.0.2",
     "@astrojs/rss": "^4.0.0",
     "@astrojs/sitemap": "^3.0.3",
-    "@tailwindcss/postcss": "^4.1.4",
-    "@tailwindcss/vite": "^4.1.4",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.1",
     "astro": "5.18.0",
     "astro-compress": "^2.2.2",
     "astro-purgecss": "^5.0.0",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.0.0",
@@ -37,7 +37,7 @@
     "@fontsource/ibm-plex-mono": "^5.0.8",
     "@iconify-json/bi": "^1.1.20",
     "@resvg/resvg-js": "^2.6.0",
-    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/lodash.get": "^4.4.8",
     "@types/lodash.kebabcase": "^4.1.8",
     "@types/mustache": "^4.2.4",

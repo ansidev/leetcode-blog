@@ -1,6 +1,4 @@
-@theme {
-  @import './theme_leetcode_dark.css';
-}
+@import './theme_leetcode_dark.css';
 
 @layer base {
   .leetcode-light {
