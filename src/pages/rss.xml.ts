@@ -23,7 +23,7 @@ export const GET = async ({ site }: APIContext) => {
       title: post.data.title,
       description: `LeetCode Problem #${post.data.title}`,
       pubDate: new Date(post.data.pubDate),
-      link: `/${post.slug}`,
+      link: `/${post.id}`,
     })),
     customData: '<language>en-US</language>',
   })
