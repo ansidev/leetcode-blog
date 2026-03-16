@@ -26,7 +26,7 @@
     "@tailwindcss/vite": "^4.2.1",
     "astro": "5.18.1",
     "astro-compress": "^2.2.2",
-    "astro-purgecss": "^5.0.0",
+    "astro-purgecss": "^6.0.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.2.1"
   },
