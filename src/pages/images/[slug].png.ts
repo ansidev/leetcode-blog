@@ -2,7 +2,7 @@ import IBMPlexMonoRegular from '@fontsource/ibm-plex-mono/files/ibm-plex-mono-la
 import IBMPlexMonoBold from '@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-700-normal.woff'
 import { Resvg } from '@resvg/resvg-js'
 import type { APIContext } from 'astro'
-import { getCollection, getEntryBySlug } from 'astro:content'
+import { getCollection, getEntry } from 'astro:content'
 import satori from 'satori'
 import { html } from 'satori-html'
 
@@ -15,11 +15,11 @@ const dimensions = {
 
 const { author } = siteConfig
 
-export async function get({ site, params }: APIContext) {
+export async function GET({ site, params }: APIContext) {
   const url = new URL(site)
   const siteAddr = url.host
 
-  const post = await getEntryBySlug('leetcode-solutions', params.slug)
+  const post = await getEntry('leetcode-solutions', params.slug)
   const { title, pubDate } = post?.data || { title: '', pubDate: new Date() }
 
   const titleArr = title.split('. ')
@@ -93,10 +93,9 @@ export async function get({ site, params }: APIContext) {
     },
   }).render()
 
-  return {
-    body: image.asPng(),
-    encoding: 'binary',
-  }
+  return new Response(image.asPng(), {
+    headers: { 'Content-Type': 'image/png' },
+  })
 }
 
 export async function getStaticPaths() {
@@ -104,7 +103,7 @@ export async function getStaticPaths() {
   const paths = posts.map((post) => {
     return {
       params: {
-        slug: post.slug,
+        slug: post.id,
       },
     }
   })

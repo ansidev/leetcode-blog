@@ -15,7 +15,7 @@ const { posts = [] } = Astro.props
     posts.map((p) => (
       <PostItem
         title={p.data.title}
-        href={`/${p.slug}`}
+        href={`/${p.id}`}
         difficulty={p.data.difficulty}
       />
     ))

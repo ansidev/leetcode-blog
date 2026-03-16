@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection, render } from 'astro:content'
 
 import Disqus from '@/components/Disqus.astro'
 import PostLayout from '@/layouts/PostLayout.astro'
@@ -9,7 +9,7 @@ export async function getStaticPaths() {
   const allPosts = await getCollection('leetcode-solutions')
   return allPosts.map((entry) => ({
     params: {
-      slug: entry.slug,
+      slug: entry.id,
     },
     props: {
       entry,
@@ -20,10 +20,10 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'leetcode-solutions'>
 
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content } = await render(entry)
 ---
 
-<PostLayout frontmatter={entry.data} slug={entry.slug}>
+<PostLayout frontmatter={entry.data} slug={entry.id}>
   <Content />
   {
     isPluginEnabled('disqus') && (
