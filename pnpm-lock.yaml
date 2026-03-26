@@ -27,14 +27,14 @@ importers:
         specifier: ^4.2.1
         version: 4.2.2(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))
       astro:
-        specifier: 6.1.0
-        version: 6.1.0(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2)
+        specifier: 6.1.1
+        version: 6.1.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2)
       astro-compress:
         specifier: ^2.2.2
         version: 2.4.0(@types/node@24.12.0)(jiti@2.6.1)(rollup@4.59.0)(sass@1.86.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2)
       astro-purgecss:
         specifier: ^6.0.0
-        version: 6.0.1(astro@6.1.0(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2))(purgecss@5.0.0)
+        version: 6.0.1(astro@6.1.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2))(purgecss@5.0.0)
       postcss:
         specifier: ^8.5.3
         version: 8.5.8
@@ -1598,8 +1598,8 @@ packages:
       astro: ^6.0.0
       purgecss: ^8.0.0
 
-  astro@6.1.0:
-    resolution: {integrity: sha512-J8XGJQo5+W2wJLdUbQHVho4DHWDM6V4Dp8s+z0Fs3O/mcu3WjbTBELOv/MC7ueoqmQ/Jts6Bz7FJwbAopbFd+g==}
+  astro@6.1.1:
+    resolution: {integrity: sha512-vq8sHpu1JsY1fWAunn+tdKNbVDmLQNiVdyuGsVT2csgITdFGXXVAyEXFWc1DzkMN0ehElPeiHnqItyQOJK+GqA==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3171,10 +3171,6 @@ packages:
   satori@0.26.0:
     resolution: {integrity: sha512-tkMFrfIs3l2mQ2JEcyW0ADTy3zGggFRFzi6Ef8YozQSFsFKEqaSO1Y8F9wJg4//PJGQauMalHGTUEkPrFwhVPA==}
     engines: {node: '>=16'}
-
-  sax@1.5.0:
-    resolution: {integrity: sha512-21IYA3Q5cQf089Z6tgaUTr7lDAyzoTPx5HRtbhsME8Udispad8dC/+sziTNugOEx54ilvatQ9YCzl4KQLPcRHA==}
-    engines: {node: '>=11.0.0'}
 
   sax@1.6.0:
     resolution: {integrity: sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==}
@@ -5001,7 +4997,7 @@ snapshots:
       '@playform/pipe': 0.1.4
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 6.1.0(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2)
+      astro: 6.1.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2)
       commander: 14.0.3
       csso: 5.0.5
       deepmerge-ts: 7.1.5
@@ -5062,12 +5058,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-purgecss@6.0.1(astro@6.1.0(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2))(purgecss@5.0.0):
+  astro-purgecss@6.0.1(astro@6.1.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2))(purgecss@5.0.0):
     dependencies:
-      astro: 6.1.0(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2)
+      astro: 6.1.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2)
       purgecss: 5.0.0
 
-  astro@6.1.0(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2):
+  astro@6.1.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.0)(tsx@4.21.0)(typescript@6.0.2)(yaml@2.8.2):
     dependencies:
       '@astrojs/compiler': 3.0.1
       '@astrojs/internal-helpers': 0.8.0
@@ -7019,8 +7015,6 @@ snapshots:
       postcss-value-parser: 4.2.0
       yoga-layout: 3.2.1
 
-  sax@1.5.0: {}
-
   sax@1.6.0: {}
 
   semver@7.7.4: {}
@@ -7146,7 +7140,7 @@ snapshots:
       css-what: 6.2.2
       csso: 5.0.5
       picocolors: 1.1.1
-      sax: 1.5.0
+      sax: 1.6.0
 
   synckit@0.11.12:
     dependencies:
