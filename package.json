@@ -23,7 +23,7 @@
     "@astrojs/sitemap": "^3.0.3",
     "@tailwindcss/postcss": "^4.2.1",
     "@tailwindcss/vite": "^4.2.1",
-    "astro": "6.1.6",
+    "astro": "6.1.7",
     "astro-compress": "^2.2.2",
     "astro-purgecss": "^6.0.0",
     "postcss": "^8.5.3",
