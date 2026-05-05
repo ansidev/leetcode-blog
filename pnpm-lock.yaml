@@ -27,14 +27,14 @@ importers:
         specifier: ^4.2.1
         version: 4.2.4(vite@7.3.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))
       astro:
-        specifier: 6.2.1
-        version: 6.2.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3)
+        specifier: 6.2.2
+        version: 6.2.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
       astro-compress:
         specifier: ^2.2.2
-        version: 2.4.1(@types/node@24.12.2)(jiti@2.6.1)(rollup@4.59.0)(sass@1.86.0)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3)
+        version: 2.4.1(@types/node@24.12.2)(jiti@2.6.1)(rollup@4.59.0)(sass@1.86.0)(tsx@4.21.0)(yaml@2.8.3)
       astro-purgecss:
         specifier: ^6.0.0
-        version: 6.0.1(astro@6.2.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3))(purgecss@5.0.0)
+        version: 6.0.1(astro@6.2.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(purgecss@5.0.0)
       postcss:
         specifier: ^8.5.3
         version: 8.5.14
@@ -1598,8 +1598,8 @@ packages:
       astro: ^6.0.0
       purgecss: ^8.0.0
 
-  astro@6.2.1:
-    resolution: {integrity: sha512-3g1sYNly+QAkuO5ErNEQBYvsxorNDSCUNIeStBs+kcXGchvKQl1Q9EuDNOvSg010XLlHJFLVFZs9LV18Jjp4Hg==}
+  astro@6.2.2:
+    resolution: {integrity: sha512-zkne2lZU+iTZPBK8F4gbMfrw5f11bT4VXiBxcdFHcPvYyH+Hox7V1sZu97RDpvwmHi+wQ0efKv89KY5744a0jQ==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2226,6 +2226,10 @@ packages:
 
   get-tsconfig@4.13.0:
     resolution: {integrity: sha512-1VKTZJCwBrvbd+Wn3AOgQP/2Av+TfTCOlE4AcRJE72W1ksZXbAx8PPBR9RzgTeSPzlPMHrbANMH3LbltH73wxQ==}
+
+  get-tsconfig@5.0.0-beta.4:
+    resolution: {integrity: sha512-7nF7C9fIPFEMHgEMEfgIlO9wDdZ8CyHw27rWciFZfHvHDReIiPhsYuzPRXsfvBCqFy1l8RRyyWV7QLM+ZhUJsQ==}
+    engines: {node: '>=20.20.0'}
 
   git-raw-commits@5.0.1:
     resolution: {integrity: sha512-Y+csSm2GD/PCSh6Isd/WiMjNAydu0VBiG9J7EdQsNA5P9uXvLayqjmTsNlK5Gs9IhblFZqOU0yid5Il5JPoLiQ==}
@@ -3319,16 +3323,6 @@ packages:
     engines: {node: '>=18.12'}
     peerDependencies:
       typescript: '>=4.8.4'
-
-  tsconfck@3.1.6:
-    resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
-    engines: {node: ^18 || >=20}
-    hasBin: true
-    peerDependencies:
-      typescript: ^5.0.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
@@ -4959,12 +4953,12 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro-compress@2.4.1(@types/node@24.12.2)(jiti@2.6.1)(rollup@4.59.0)(sass@1.86.0)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3):
+  astro-compress@2.4.1(@types/node@24.12.2)(jiti@2.6.1)(rollup@4.59.0)(sass@1.86.0)(tsx@4.21.0)(yaml@2.8.3):
     dependencies:
       '@playform/pipe': 0.1.5
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 6.2.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3)
+      astro: 6.2.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
       commander: 14.0.3
       csso: 5.0.5
       deepmerge-ts: 7.1.5
@@ -5004,7 +4998,6 @@ snapshots:
       - sugarss
       - supports-color
       - tsx
-      - typescript
       - uploadthing
       - yaml
 
@@ -5025,12 +5018,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-purgecss@6.0.1(astro@6.2.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3))(purgecss@5.0.0):
+  astro-purgecss@6.0.1(astro@6.2.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3))(purgecss@5.0.0):
     dependencies:
-      astro: 6.2.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3)
+      astro: 6.2.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3)
       purgecss: 5.0.0
 
-  astro@6.2.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(typescript@6.0.3)(yaml@2.8.3):
+  astro@6.2.2(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.59.0)(sass@1.86.0)(terser@5.46.1)(tsx@4.21.0)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.9.0
@@ -5053,10 +5046,12 @@ snapshots:
       esbuild: 0.27.3
       flattie: 1.1.1
       fontace: 0.4.1
+      get-tsconfig: 5.0.0-beta.4
       github-slugger: 2.0.0
       html-escaper: 3.0.3
       http-cache-semantics: 4.2.0
       js-yaml: 4.1.1
+      jsonc-parser: 3.3.1
       magic-string: 0.30.21
       magicast: 0.5.2
       mrmime: 2.0.1
@@ -5075,7 +5070,6 @@ snapshots:
       tinyclip: 0.1.12
       tinyexec: 1.1.2
       tinyglobby: 0.2.16
-      tsconfck: 3.1.6(typescript@6.0.3)
       ultrahtml: 1.6.0
       unifont: 0.7.4
       unist-util-visit: 5.1.0
@@ -5119,7 +5113,6 @@ snapshots:
       - supports-color
       - terser
       - tsx
-      - typescript
       - uploadthing
       - yaml
 
@@ -5778,6 +5771,10 @@ snapshots:
   get-caller-file@2.0.5: {}
 
   get-tsconfig@4.13.0:
+    dependencies:
+      resolve-pkg-maps: 1.0.0
+
+  get-tsconfig@5.0.0-beta.4:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
@@ -7144,10 +7141,6 @@ snapshots:
 
   ts-api-utils@2.5.0(typescript@6.0.3):
     dependencies:
-      typescript: 6.0.3
-
-  tsconfck@3.1.6(typescript@6.0.3):
-    optionalDependencies:
       typescript: 6.0.3
 
   tslib@2.7.0: {}
