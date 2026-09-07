@@ -42,7 +42,7 @@
     "@types/mustache": "^4.2.4",
     "@types/node": "^24.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "commander": "^14.0.0",
+    "commander": "^15.0.0",
     "commitizen": "^4.3.0",
     "dayjs": "^1.11.10",
     "dotenv": "^17.0.0",
