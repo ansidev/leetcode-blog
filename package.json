@@ -30,8 +30,8 @@
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.0.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
     "@eslint/js": "^10.0.0",
     "@fontsource/ibm-plex-mono": "^5.0.8",
     "@iconify-json/bi": "^1.1.20",
